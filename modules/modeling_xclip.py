@@ -334,6 +334,24 @@ class XCLIP(CLIP4ClipPreTrainedModel):
 
         return logits
 
+    def _seqtransf(self, sequence_output, visual_output, video_mask):
+        sequence_output, visual_output = sequence_output.contiguous(), visual_output.contiguous()
+        # Sequential type: Transformer Encoder
+        visual_output_original = visual_output
+        seq_length = visual_output.size(1)
+        position_ids = torch.arange(seq_length, dtype=torch.long, device=visual_output.device)
+        position_ids = position_ids.unsqueeze(0).expand(visual_output.size(0), -1)
+        frame_position_embeddings = self.frame_position_embeddings(position_ids)
+        visual_output = visual_output + frame_position_embeddings
+
+        extended_video_mask = (1.0 - video_mask.unsqueeze(1)) * -1000000.0
+        extended_video_mask = extended_video_mask.expand(-1, video_mask.size(1), -1)
+        visual_output = visual_output.permute(1, 0, 2)  # NLD -> LND
+        visual_output = self.transformerClip(visual_output, extended_video_mask)
+        visual_output = visual_output.permute(1, 0, 2)  # LND -> NLD
+        visual_output = visual_output + visual_output_original
+        return visual_output
+    
     def _attenion_over_fine_grained_sim_matrix(self, word_features, frame_features):
         bs_video, num_frames, dim_video = frame_features.shape
         bs_text, num_words, dim_text = word_features.shape

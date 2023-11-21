@@ -1,0 +1,1760 @@
+10/14/2023 14:26:12 - INFO -   Effective parameters:
+10/14/2023 14:26:12 - INFO -     <<< batch_size: 64
+10/14/2023 14:26:12 - INFO -     <<< batch_size_val: 1
+10/14/2023 14:26:12 - INFO -     <<< cache_dir: 
+10/14/2023 14:26:12 - INFO -     <<< coef_lr: 0.001
+10/14/2023 14:26:12 - INFO -     <<< cross_model: cross-base
+10/14/2023 14:26:12 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 14:26:12 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 14:26:12 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 14:26:12 - INFO -     <<< datatype: moviegraph
+10/14/2023 14:26:12 - INFO -     <<< do_eval: True
+10/14/2023 14:26:12 - INFO -     <<< do_lower_case: False
+10/14/2023 14:26:12 - INFO -     <<< do_pretrain: False
+10/14/2023 14:26:12 - INFO -     <<< do_train: False
+10/14/2023 14:26:12 - INFO -     <<< epochs: 10
+10/14/2023 14:26:12 - INFO -     <<< eval_frame_order: 0
+10/14/2023 14:26:12 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 14:26:12 - INFO -     <<< feature_framerate: 1
+10/14/2023 14:26:12 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 14:26:12 - INFO -     <<< fp16: False
+10/14/2023 14:26:12 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 14:26:12 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 14:26:12 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 14:26:12 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 14:26:12 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 14:26:12 - INFO -     <<< linear_patch: 2d
+10/14/2023 14:26:12 - INFO -     <<< local_rank: 0
+10/14/2023 14:26:12 - INFO -     <<< loose_type: True
+10/14/2023 14:26:12 - INFO -     <<< lr: 0.0001
+10/14/2023 14:26:12 - INFO -     <<< lr_decay: 0.9
+10/14/2023 14:26:12 - INFO -     <<< manipulation: temporal_contact_swap
+10/14/2023 14:26:12 - INFO -     <<< margin: 0.1
+10/14/2023 14:26:12 - INFO -     <<< max_frames: 12
+10/14/2023 14:26:12 - INFO -     <<< max_words: 60
+10/14/2023 14:26:12 - INFO -     <<< n_display: 1
+10/14/2023 14:26:12 - INFO -     <<< n_gpu: 1
+10/14/2023 14:26:12 - INFO -     <<< n_pair: 1
+10/14/2023 14:26:12 - INFO -     <<< negative_weighting: 1
+10/14/2023 14:26:12 - INFO -     <<< num_thread_reader: 8
+10/14/2023 14:26:12 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 14:26:12 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 14:26:12 - INFO -     <<< rank: 0
+10/14/2023 14:26:12 - INFO -     <<< resume_model: None
+10/14/2023 14:26:12 - INFO -     <<< sampled_use_mil: False
+10/14/2023 14:26:12 - INFO -     <<< scale: 0
+10/14/2023 14:26:12 - INFO -     <<< seed: 2
+10/14/2023 14:26:12 - INFO -     <<< sim_header: seqTransf
+10/14/2023 14:26:12 - INFO -     <<< slice_framepos: 2
+10/14/2023 14:26:12 - INFO -     <<< task_type: retrieval
+10/14/2023 14:26:12 - INFO -     <<< test_file: temporal_contact_swap.csv
+10/14/2023 14:26:12 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 14:26:12 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 14:26:12 - INFO -     <<< train_file: train_1.csv
+10/14/2023 14:26:12 - INFO -     <<< train_frame_order: 0
+10/14/2023 14:26:12 - INFO -     <<< use_mil: False
+10/14/2023 14:26:12 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 14:26:12 - INFO -     <<< val_file: temporal_contact_swap.csv
+10/14/2023 14:26:12 - INFO -     <<< video_dim: 1024
+10/14/2023 14:26:12 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 14:26:12 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 14:26:12 - INFO -     <<< world_size: 1
+10/14/2023 14:26:12 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 14:26:19 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 14:26:19 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 14:26:19 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 14:26:19 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 14:26:19 - WARNING -   Test retrieval by loose type.
+10/14/2023 14:26:19 - WARNING -   	 embed_dim: 512
+10/14/2023 14:26:19 - WARNING -   	 image_resolution: 224
+10/14/2023 14:26:19 - WARNING -   	 vision_layers: 12
+10/14/2023 14:26:19 - WARNING -   	 vision_width: 768
+10/14/2023 14:26:19 - WARNING -   	 vision_patch_size: 32
+10/14/2023 14:26:19 - WARNING -   	 context_length: 77
+10/14/2023 14:26:19 - WARNING -   	 vocab_size: 49408
+10/14/2023 14:26:19 - WARNING -   	 transformer_width: 512
+10/14/2023 14:26:19 - WARNING -   	 transformer_heads: 8
+10/14/2023 14:26:19 - WARNING -   	 transformer_layers: 12
+10/14/2023 14:26:19 - WARNING -   		 linear_patch: 2d
+10/14/2023 14:26:19 - WARNING -   	 cut_top_layer: 0
+10/14/2023 14:26:22 - WARNING -   	 sim_header: seqTransf
+10/14/2023 14:26:33 - INFO -   --------------------
+10/14/2023 14:26:33 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 14:26:37 - INFO -   ***** Running test *****
+10/14/2023 14:26:37 - INFO -     Num examples = 184
+10/14/2023 14:26:37 - INFO -     Batch size = 1
+10/14/2023 14:26:37 - INFO -     Num steps = 184
+10/14/2023 14:26:37 - INFO -   ***** Running val *****
+10/14/2023 14:26:37 - INFO -     Num examples = 184
+10/14/2023 14:51:38 - INFO -   sim matrix size: 184, 184
+10/14/2023 14:51:38 - INFO -   	 Length-T: 184, Length-V:184
+10/14/2023 14:51:38 - INFO -   Text-to-Video:
+10/14/2023 14:51:38 - INFO -   	>>>  R@1: 58.7 - R@5: 84.2 - R@10: 90.8 - Median R: 1.0 - Mean R: 3.8
+10/14/2023 14:51:38 - INFO -   Video-to-Text:
+10/14/2023 14:51:38 - INFO -   	>>>  V2T$R@1: 59.2 - V2T$R@5: 83.7 - V2T$R@10: 91.8 - V2T$Median R: 1.0 - V2T$Mean R: 4.3
+10/14/2023 14:51:44 - INFO -   Effective parameters:
+10/14/2023 14:51:44 - INFO -     <<< batch_size: 64
+10/14/2023 14:51:44 - INFO -     <<< batch_size_val: 1
+10/14/2023 14:51:44 - INFO -     <<< cache_dir: 
+10/14/2023 14:51:44 - INFO -     <<< coef_lr: 0.001
+10/14/2023 14:51:44 - INFO -     <<< cross_model: cross-base
+10/14/2023 14:51:44 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 14:51:44 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 14:51:44 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 14:51:44 - INFO -     <<< datatype: moviegraph
+10/14/2023 14:51:44 - INFO -     <<< do_eval: True
+10/14/2023 14:51:44 - INFO -     <<< do_lower_case: False
+10/14/2023 14:51:44 - INFO -     <<< do_pretrain: False
+10/14/2023 14:51:44 - INFO -     <<< do_train: False
+10/14/2023 14:51:44 - INFO -     <<< epochs: 10
+10/14/2023 14:51:44 - INFO -     <<< eval_frame_order: 0
+10/14/2023 14:51:44 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 14:51:44 - INFO -     <<< feature_framerate: 1
+10/14/2023 14:51:44 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 14:51:44 - INFO -     <<< fp16: False
+10/14/2023 14:51:44 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 14:51:44 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 14:51:44 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 14:51:44 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 14:51:44 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 14:51:44 - INFO -     <<< linear_patch: 2d
+10/14/2023 14:51:44 - INFO -     <<< local_rank: 0
+10/14/2023 14:51:44 - INFO -     <<< loose_type: True
+10/14/2023 14:51:44 - INFO -     <<< lr: 0.0001
+10/14/2023 14:51:44 - INFO -     <<< lr_decay: 0.9
+10/14/2023 14:51:44 - INFO -     <<< manipulation: temporal_contact_swap_mani
+10/14/2023 14:51:44 - INFO -     <<< margin: 0.1
+10/14/2023 14:51:44 - INFO -     <<< max_frames: 12
+10/14/2023 14:51:44 - INFO -     <<< max_words: 60
+10/14/2023 14:51:44 - INFO -     <<< n_display: 1
+10/14/2023 14:51:44 - INFO -     <<< n_gpu: 1
+10/14/2023 14:51:44 - INFO -     <<< n_pair: 1
+10/14/2023 14:51:44 - INFO -     <<< negative_weighting: 1
+10/14/2023 14:51:44 - INFO -     <<< num_thread_reader: 8
+10/14/2023 14:51:44 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 14:51:44 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 14:51:44 - INFO -     <<< rank: 0
+10/14/2023 14:51:44 - INFO -     <<< resume_model: None
+10/14/2023 14:51:44 - INFO -     <<< sampled_use_mil: False
+10/14/2023 14:51:44 - INFO -     <<< scale: 1
+10/14/2023 14:51:44 - INFO -     <<< seed: 2
+10/14/2023 14:51:44 - INFO -     <<< sim_header: seqTransf
+10/14/2023 14:51:44 - INFO -     <<< slice_framepos: 2
+10/14/2023 14:51:44 - INFO -     <<< task_type: retrieval
+10/14/2023 14:51:44 - INFO -     <<< test_file: temporal_contact_swap_mani.csv
+10/14/2023 14:51:44 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 14:51:44 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 14:51:44 - INFO -     <<< train_file: train_1.csv
+10/14/2023 14:51:44 - INFO -     <<< train_frame_order: 0
+10/14/2023 14:51:44 - INFO -     <<< use_mil: False
+10/14/2023 14:51:44 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 14:51:44 - INFO -     <<< val_file: temporal_contact_swap_mani.csv
+10/14/2023 14:51:44 - INFO -     <<< video_dim: 1024
+10/14/2023 14:51:44 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 14:51:44 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 14:51:44 - INFO -     <<< world_size: 1
+10/14/2023 14:51:44 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 14:51:45 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 14:51:45 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 14:51:45 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 14:51:45 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 14:51:45 - WARNING -   Test retrieval by loose type.
+10/14/2023 14:51:45 - WARNING -   	 embed_dim: 512
+10/14/2023 14:51:45 - WARNING -   	 image_resolution: 224
+10/14/2023 14:51:45 - WARNING -   	 vision_layers: 12
+10/14/2023 14:51:45 - WARNING -   	 vision_width: 768
+10/14/2023 14:51:45 - WARNING -   	 vision_patch_size: 32
+10/14/2023 14:51:45 - WARNING -   	 context_length: 77
+10/14/2023 14:51:45 - WARNING -   	 vocab_size: 49408
+10/14/2023 14:51:45 - WARNING -   	 transformer_width: 512
+10/14/2023 14:51:45 - WARNING -   	 transformer_heads: 8
+10/14/2023 14:51:45 - WARNING -   	 transformer_layers: 12
+10/14/2023 14:51:45 - WARNING -   		 linear_patch: 2d
+10/14/2023 14:51:45 - WARNING -   	 cut_top_layer: 0
+10/14/2023 14:51:48 - WARNING -   	 sim_header: seqTransf
+10/14/2023 14:51:58 - INFO -   --------------------
+10/14/2023 14:51:58 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 14:51:58 - INFO -   ***** Running test *****
+10/14/2023 14:51:58 - INFO -     Num examples = 184
+10/14/2023 14:51:58 - INFO -     Batch size = 1
+10/14/2023 14:51:58 - INFO -     Num steps = 184
+10/14/2023 14:51:58 - INFO -   ***** Running val *****
+10/14/2023 14:51:58 - INFO -     Num examples = 184
+10/14/2023 15:17:01 - INFO -   sim matrix size: 184, 184
+10/14/2023 15:17:01 - INFO -   	 Length-T: 184, Length-V:184
+10/14/2023 15:17:01 - INFO -   Text-to-Video:
+10/14/2023 15:17:01 - INFO -   	>>>  R@1: 59.2 - R@5: 84.8 - R@10: 92.9 - Median R: 1.0 - Mean R: 3.4
+10/14/2023 15:17:01 - INFO -   Video-to-Text:
+10/14/2023 15:17:01 - INFO -   	>>>  V2T$R@1: 57.6 - V2T$R@5: 85.9 - V2T$R@10: 92.9 - V2T$Median R: 1.0 - V2T$Mean R: 3.8
+10/14/2023 15:17:06 - INFO -   Effective parameters:
+10/14/2023 15:17:06 - INFO -     <<< batch_size: 64
+10/14/2023 15:17:06 - INFO -     <<< batch_size_val: 1
+10/14/2023 15:17:06 - INFO -     <<< cache_dir: 
+10/14/2023 15:17:06 - INFO -     <<< coef_lr: 0.001
+10/14/2023 15:17:06 - INFO -     <<< cross_model: cross-base
+10/14/2023 15:17:06 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 15:17:06 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 15:17:06 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 15:17:06 - INFO -     <<< datatype: moviegraph
+10/14/2023 15:17:06 - INFO -     <<< do_eval: True
+10/14/2023 15:17:06 - INFO -     <<< do_lower_case: False
+10/14/2023 15:17:06 - INFO -     <<< do_pretrain: False
+10/14/2023 15:17:06 - INFO -     <<< do_train: False
+10/14/2023 15:17:06 - INFO -     <<< epochs: 10
+10/14/2023 15:17:06 - INFO -     <<< eval_frame_order: 0
+10/14/2023 15:17:06 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 15:17:06 - INFO -     <<< feature_framerate: 1
+10/14/2023 15:17:06 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 15:17:06 - INFO -     <<< fp16: False
+10/14/2023 15:17:06 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 15:17:06 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 15:17:06 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 15:17:06 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 15:17:06 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 15:17:06 - INFO -     <<< linear_patch: 2d
+10/14/2023 15:17:06 - INFO -     <<< local_rank: 0
+10/14/2023 15:17:06 - INFO -     <<< loose_type: True
+10/14/2023 15:17:06 - INFO -     <<< lr: 0.0001
+10/14/2023 15:17:06 - INFO -     <<< lr_decay: 0.9
+10/14/2023 15:17:06 - INFO -     <<< manipulation: temporal_action_swap
+10/14/2023 15:17:06 - INFO -     <<< margin: 0.1
+10/14/2023 15:17:06 - INFO -     <<< max_frames: 12
+10/14/2023 15:17:06 - INFO -     <<< max_words: 60
+10/14/2023 15:17:06 - INFO -     <<< n_display: 1
+10/14/2023 15:17:06 - INFO -     <<< n_gpu: 1
+10/14/2023 15:17:06 - INFO -     <<< n_pair: 1
+10/14/2023 15:17:06 - INFO -     <<< negative_weighting: 1
+10/14/2023 15:17:06 - INFO -     <<< num_thread_reader: 8
+10/14/2023 15:17:06 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 15:17:06 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 15:17:06 - INFO -     <<< rank: 0
+10/14/2023 15:17:06 - INFO -     <<< resume_model: None
+10/14/2023 15:17:06 - INFO -     <<< sampled_use_mil: False
+10/14/2023 15:17:06 - INFO -     <<< scale: 0
+10/14/2023 15:17:06 - INFO -     <<< seed: 2
+10/14/2023 15:17:06 - INFO -     <<< sim_header: seqTransf
+10/14/2023 15:17:06 - INFO -     <<< slice_framepos: 2
+10/14/2023 15:17:06 - INFO -     <<< task_type: retrieval
+10/14/2023 15:17:06 - INFO -     <<< test_file: temporal_action_swap.csv
+10/14/2023 15:17:06 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 15:17:06 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 15:17:06 - INFO -     <<< train_file: train_1.csv
+10/14/2023 15:17:06 - INFO -     <<< train_frame_order: 0
+10/14/2023 15:17:06 - INFO -     <<< use_mil: False
+10/14/2023 15:17:06 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 15:17:06 - INFO -     <<< val_file: temporal_action_swap.csv
+10/14/2023 15:17:06 - INFO -     <<< video_dim: 1024
+10/14/2023 15:17:06 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 15:17:06 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 15:17:06 - INFO -     <<< world_size: 1
+10/14/2023 15:17:06 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 15:17:07 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 15:17:07 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 15:17:07 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 15:17:07 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 15:17:07 - WARNING -   Test retrieval by loose type.
+10/14/2023 15:17:07 - WARNING -   	 embed_dim: 512
+10/14/2023 15:17:07 - WARNING -   	 image_resolution: 224
+10/14/2023 15:17:07 - WARNING -   	 vision_layers: 12
+10/14/2023 15:17:07 - WARNING -   	 vision_width: 768
+10/14/2023 15:17:07 - WARNING -   	 vision_patch_size: 32
+10/14/2023 15:17:07 - WARNING -   	 context_length: 77
+10/14/2023 15:17:07 - WARNING -   	 vocab_size: 49408
+10/14/2023 15:17:07 - WARNING -   	 transformer_width: 512
+10/14/2023 15:17:07 - WARNING -   	 transformer_heads: 8
+10/14/2023 15:17:07 - WARNING -   	 transformer_layers: 12
+10/14/2023 15:17:07 - WARNING -   		 linear_patch: 2d
+10/14/2023 15:17:07 - WARNING -   	 cut_top_layer: 0
+10/14/2023 15:17:10 - WARNING -   	 sim_header: seqTransf
+10/14/2023 15:17:20 - INFO -   --------------------
+10/14/2023 15:17:20 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 15:17:20 - INFO -   ***** Running test *****
+10/14/2023 15:17:20 - INFO -     Num examples = 62
+10/14/2023 15:17:20 - INFO -     Batch size = 1
+10/14/2023 15:17:20 - INFO -     Num steps = 62
+10/14/2023 15:17:20 - INFO -   ***** Running val *****
+10/14/2023 15:17:20 - INFO -     Num examples = 62
+10/14/2023 15:24:16 - INFO -   sim matrix size: 62, 62
+10/14/2023 15:24:16 - INFO -   	 Length-T: 62, Length-V:62
+10/14/2023 15:24:16 - INFO -   Text-to-Video:
+10/14/2023 15:24:16 - INFO -   	>>>  R@1: 53.2 - R@5: 88.7 - R@10: 96.8 - Median R: 1.0 - Mean R: 2.8
+10/14/2023 15:24:16 - INFO -   Video-to-Text:
+10/14/2023 15:24:16 - INFO -   	>>>  V2T$R@1: 58.1 - V2T$R@5: 85.5 - V2T$R@10: 93.5 - V2T$Median R: 1.0 - V2T$Mean R: 3.1
+10/14/2023 15:24:22 - INFO -   Effective parameters:
+10/14/2023 15:24:22 - INFO -     <<< batch_size: 64
+10/14/2023 15:24:22 - INFO -     <<< batch_size_val: 1
+10/14/2023 15:24:22 - INFO -     <<< cache_dir: 
+10/14/2023 15:24:22 - INFO -     <<< coef_lr: 0.001
+10/14/2023 15:24:22 - INFO -     <<< cross_model: cross-base
+10/14/2023 15:24:22 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 15:24:22 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 15:24:22 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 15:24:22 - INFO -     <<< datatype: moviegraph
+10/14/2023 15:24:22 - INFO -     <<< do_eval: True
+10/14/2023 15:24:22 - INFO -     <<< do_lower_case: False
+10/14/2023 15:24:22 - INFO -     <<< do_pretrain: False
+10/14/2023 15:24:22 - INFO -     <<< do_train: False
+10/14/2023 15:24:22 - INFO -     <<< epochs: 10
+10/14/2023 15:24:22 - INFO -     <<< eval_frame_order: 0
+10/14/2023 15:24:22 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 15:24:22 - INFO -     <<< feature_framerate: 1
+10/14/2023 15:24:22 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 15:24:22 - INFO -     <<< fp16: False
+10/14/2023 15:24:22 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 15:24:22 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 15:24:22 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 15:24:22 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 15:24:22 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 15:24:22 - INFO -     <<< linear_patch: 2d
+10/14/2023 15:24:22 - INFO -     <<< local_rank: 0
+10/14/2023 15:24:22 - INFO -     <<< loose_type: True
+10/14/2023 15:24:22 - INFO -     <<< lr: 0.0001
+10/14/2023 15:24:22 - INFO -     <<< lr_decay: 0.9
+10/14/2023 15:24:22 - INFO -     <<< manipulation: temporal_action_swap_mani
+10/14/2023 15:24:22 - INFO -     <<< margin: 0.1
+10/14/2023 15:24:22 - INFO -     <<< max_frames: 12
+10/14/2023 15:24:22 - INFO -     <<< max_words: 60
+10/14/2023 15:24:22 - INFO -     <<< n_display: 1
+10/14/2023 15:24:22 - INFO -     <<< n_gpu: 1
+10/14/2023 15:24:22 - INFO -     <<< n_pair: 1
+10/14/2023 15:24:22 - INFO -     <<< negative_weighting: 1
+10/14/2023 15:24:22 - INFO -     <<< num_thread_reader: 8
+10/14/2023 15:24:22 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 15:24:22 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 15:24:22 - INFO -     <<< rank: 0
+10/14/2023 15:24:22 - INFO -     <<< resume_model: None
+10/14/2023 15:24:22 - INFO -     <<< sampled_use_mil: False
+10/14/2023 15:24:22 - INFO -     <<< scale: 1
+10/14/2023 15:24:22 - INFO -     <<< seed: 2
+10/14/2023 15:24:22 - INFO -     <<< sim_header: seqTransf
+10/14/2023 15:24:22 - INFO -     <<< slice_framepos: 2
+10/14/2023 15:24:22 - INFO -     <<< task_type: retrieval
+10/14/2023 15:24:22 - INFO -     <<< test_file: temporal_action_swap_mani.csv
+10/14/2023 15:24:22 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 15:24:22 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 15:24:22 - INFO -     <<< train_file: train_1.csv
+10/14/2023 15:24:22 - INFO -     <<< train_frame_order: 0
+10/14/2023 15:24:22 - INFO -     <<< use_mil: False
+10/14/2023 15:24:22 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 15:24:22 - INFO -     <<< val_file: temporal_action_swap_mani.csv
+10/14/2023 15:24:22 - INFO -     <<< video_dim: 1024
+10/14/2023 15:24:22 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 15:24:22 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 15:24:22 - INFO -     <<< world_size: 1
+10/14/2023 15:24:22 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 15:24:22 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 15:24:22 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 15:24:22 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 15:24:22 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 15:24:22 - WARNING -   Test retrieval by loose type.
+10/14/2023 15:24:22 - WARNING -   	 embed_dim: 512
+10/14/2023 15:24:22 - WARNING -   	 image_resolution: 224
+10/14/2023 15:24:22 - WARNING -   	 vision_layers: 12
+10/14/2023 15:24:22 - WARNING -   	 vision_width: 768
+10/14/2023 15:24:22 - WARNING -   	 vision_patch_size: 32
+10/14/2023 15:24:22 - WARNING -   	 context_length: 77
+10/14/2023 15:24:22 - WARNING -   	 vocab_size: 49408
+10/14/2023 15:24:22 - WARNING -   	 transformer_width: 512
+10/14/2023 15:24:22 - WARNING -   	 transformer_heads: 8
+10/14/2023 15:24:22 - WARNING -   	 transformer_layers: 12
+10/14/2023 15:24:22 - WARNING -   		 linear_patch: 2d
+10/14/2023 15:24:22 - WARNING -   	 cut_top_layer: 0
+10/14/2023 15:24:25 - WARNING -   	 sim_header: seqTransf
+10/14/2023 15:24:35 - INFO -   --------------------
+10/14/2023 15:24:35 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 15:24:35 - INFO -   ***** Running test *****
+10/14/2023 15:24:35 - INFO -     Num examples = 62
+10/14/2023 15:24:35 - INFO -     Batch size = 1
+10/14/2023 15:24:35 - INFO -     Num steps = 62
+10/14/2023 15:24:35 - INFO -   ***** Running val *****
+10/14/2023 15:24:35 - INFO -     Num examples = 62
+10/14/2023 15:31:29 - INFO -   sim matrix size: 62, 62
+10/14/2023 15:31:29 - INFO -   	 Length-T: 62, Length-V:62
+10/14/2023 15:31:29 - INFO -   Text-to-Video:
+10/14/2023 15:31:29 - INFO -   	>>>  R@1: 53.2 - R@5: 82.3 - R@10: 93.5 - Median R: 1.0 - Mean R: 3.3
+10/14/2023 15:31:29 - INFO -   Video-to-Text:
+10/14/2023 15:31:29 - INFO -   	>>>  V2T$R@1: 54.8 - V2T$R@5: 77.4 - V2T$R@10: 91.9 - V2T$Median R: 1.0 - V2T$Mean R: 3.7
+10/14/2023 15:31:35 - INFO -   Effective parameters:
+10/14/2023 15:31:35 - INFO -     <<< batch_size: 64
+10/14/2023 15:31:35 - INFO -     <<< batch_size_val: 1
+10/14/2023 15:31:35 - INFO -     <<< cache_dir: 
+10/14/2023 15:31:35 - INFO -     <<< coef_lr: 0.001
+10/14/2023 15:31:35 - INFO -     <<< cross_model: cross-base
+10/14/2023 15:31:35 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 15:31:35 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 15:31:35 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 15:31:35 - INFO -     <<< datatype: moviegraph
+10/14/2023 15:31:35 - INFO -     <<< do_eval: True
+10/14/2023 15:31:35 - INFO -     <<< do_lower_case: False
+10/14/2023 15:31:35 - INFO -     <<< do_pretrain: False
+10/14/2023 15:31:35 - INFO -     <<< do_train: False
+10/14/2023 15:31:35 - INFO -     <<< epochs: 10
+10/14/2023 15:31:35 - INFO -     <<< eval_frame_order: 0
+10/14/2023 15:31:35 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 15:31:35 - INFO -     <<< feature_framerate: 1
+10/14/2023 15:31:35 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 15:31:35 - INFO -     <<< fp16: False
+10/14/2023 15:31:35 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 15:31:35 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 15:31:35 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 15:31:35 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 15:31:35 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 15:31:35 - INFO -     <<< linear_patch: 2d
+10/14/2023 15:31:35 - INFO -     <<< local_rank: 0
+10/14/2023 15:31:35 - INFO -     <<< loose_type: True
+10/14/2023 15:31:35 - INFO -     <<< lr: 0.0001
+10/14/2023 15:31:35 - INFO -     <<< lr_decay: 0.9
+10/14/2023 15:31:35 - INFO -     <<< manipulation: neighborhood_same_entity
+10/14/2023 15:31:35 - INFO -     <<< margin: 0.1
+10/14/2023 15:31:35 - INFO -     <<< max_frames: 12
+10/14/2023 15:31:35 - INFO -     <<< max_words: 60
+10/14/2023 15:31:35 - INFO -     <<< n_display: 1
+10/14/2023 15:31:35 - INFO -     <<< n_gpu: 1
+10/14/2023 15:31:35 - INFO -     <<< n_pair: 1
+10/14/2023 15:31:35 - INFO -     <<< negative_weighting: 1
+10/14/2023 15:31:35 - INFO -     <<< num_thread_reader: 8
+10/14/2023 15:31:35 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 15:31:35 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 15:31:35 - INFO -     <<< rank: 0
+10/14/2023 15:31:35 - INFO -     <<< resume_model: None
+10/14/2023 15:31:35 - INFO -     <<< sampled_use_mil: False
+10/14/2023 15:31:35 - INFO -     <<< scale: 0
+10/14/2023 15:31:35 - INFO -     <<< seed: 2
+10/14/2023 15:31:35 - INFO -     <<< sim_header: seqTransf
+10/14/2023 15:31:35 - INFO -     <<< slice_framepos: 2
+10/14/2023 15:31:35 - INFO -     <<< task_type: retrieval
+10/14/2023 15:31:35 - INFO -     <<< test_file: neighborhood_same_entity.csv
+10/14/2023 15:31:35 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 15:31:35 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 15:31:35 - INFO -     <<< train_file: train_1.csv
+10/14/2023 15:31:35 - INFO -     <<< train_frame_order: 0
+10/14/2023 15:31:35 - INFO -     <<< use_mil: False
+10/14/2023 15:31:35 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 15:31:35 - INFO -     <<< val_file: neighborhood_same_entity.csv
+10/14/2023 15:31:35 - INFO -     <<< video_dim: 1024
+10/14/2023 15:31:35 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 15:31:35 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 15:31:35 - INFO -     <<< world_size: 1
+10/14/2023 15:31:35 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 15:31:35 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 15:31:35 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 15:31:35 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 15:31:35 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 15:31:35 - WARNING -   Test retrieval by loose type.
+10/14/2023 15:31:35 - WARNING -   	 embed_dim: 512
+10/14/2023 15:31:35 - WARNING -   	 image_resolution: 224
+10/14/2023 15:31:35 - WARNING -   	 vision_layers: 12
+10/14/2023 15:31:35 - WARNING -   	 vision_width: 768
+10/14/2023 15:31:35 - WARNING -   	 vision_patch_size: 32
+10/14/2023 15:31:35 - WARNING -   	 context_length: 77
+10/14/2023 15:31:35 - WARNING -   	 vocab_size: 49408
+10/14/2023 15:31:35 - WARNING -   	 transformer_width: 512
+10/14/2023 15:31:35 - WARNING -   	 transformer_heads: 8
+10/14/2023 15:31:35 - WARNING -   	 transformer_layers: 12
+10/14/2023 15:31:35 - WARNING -   		 linear_patch: 2d
+10/14/2023 15:31:35 - WARNING -   	 cut_top_layer: 0
+10/14/2023 15:31:38 - WARNING -   	 sim_header: seqTransf
+10/14/2023 15:31:48 - INFO -   --------------------
+10/14/2023 15:31:48 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 15:31:48 - INFO -   ***** Running test *****
+10/14/2023 15:31:48 - INFO -     Num examples = 102
+10/14/2023 15:31:48 - INFO -     Batch size = 1
+10/14/2023 15:31:48 - INFO -     Num steps = 102
+10/14/2023 15:31:48 - INFO -   ***** Running val *****
+10/14/2023 15:31:48 - INFO -     Num examples = 102
+10/14/2023 15:44:32 - INFO -   sim matrix size: 102, 102
+10/14/2023 15:44:32 - INFO -   	 Length-T: 102, Length-V:102
+10/14/2023 15:44:32 - INFO -   Text-to-Video:
+10/14/2023 15:44:32 - INFO -   	>>>  R@1: 32.4 - R@5: 58.8 - R@10: 74.5 - Median R: 4.0 - Mean R: 12.9
+10/14/2023 15:44:32 - INFO -   Video-to-Text:
+10/14/2023 15:44:32 - INFO -   	>>>  V2T$R@1: 29.4 - V2T$R@5: 62.7 - V2T$R@10: 74.5 - V2T$Median R: 3.5 - V2T$Mean R: 8.3
+10/14/2023 15:44:38 - INFO -   Effective parameters:
+10/14/2023 15:44:38 - INFO -     <<< batch_size: 64
+10/14/2023 15:44:38 - INFO -     <<< batch_size_val: 1
+10/14/2023 15:44:38 - INFO -     <<< cache_dir: 
+10/14/2023 15:44:38 - INFO -     <<< coef_lr: 0.001
+10/14/2023 15:44:38 - INFO -     <<< cross_model: cross-base
+10/14/2023 15:44:38 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 15:44:38 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 15:44:38 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 15:44:38 - INFO -     <<< datatype: moviegraph
+10/14/2023 15:44:38 - INFO -     <<< do_eval: True
+10/14/2023 15:44:38 - INFO -     <<< do_lower_case: False
+10/14/2023 15:44:38 - INFO -     <<< do_pretrain: False
+10/14/2023 15:44:38 - INFO -     <<< do_train: False
+10/14/2023 15:44:38 - INFO -     <<< epochs: 10
+10/14/2023 15:44:38 - INFO -     <<< eval_frame_order: 0
+10/14/2023 15:44:38 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 15:44:38 - INFO -     <<< feature_framerate: 1
+10/14/2023 15:44:38 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 15:44:38 - INFO -     <<< fp16: False
+10/14/2023 15:44:38 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 15:44:38 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 15:44:38 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 15:44:38 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 15:44:38 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 15:44:38 - INFO -     <<< linear_patch: 2d
+10/14/2023 15:44:38 - INFO -     <<< local_rank: 0
+10/14/2023 15:44:38 - INFO -     <<< loose_type: True
+10/14/2023 15:44:38 - INFO -     <<< lr: 0.0001
+10/14/2023 15:44:38 - INFO -     <<< lr_decay: 0.9
+10/14/2023 15:44:38 - INFO -     <<< manipulation: neighborhood_same_entity_mani
+10/14/2023 15:44:38 - INFO -     <<< margin: 0.1
+10/14/2023 15:44:38 - INFO -     <<< max_frames: 12
+10/14/2023 15:44:38 - INFO -     <<< max_words: 60
+10/14/2023 15:44:38 - INFO -     <<< n_display: 1
+10/14/2023 15:44:38 - INFO -     <<< n_gpu: 1
+10/14/2023 15:44:38 - INFO -     <<< n_pair: 1
+10/14/2023 15:44:38 - INFO -     <<< negative_weighting: 1
+10/14/2023 15:44:38 - INFO -     <<< num_thread_reader: 8
+10/14/2023 15:44:38 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 15:44:38 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 15:44:38 - INFO -     <<< rank: 0
+10/14/2023 15:44:38 - INFO -     <<< resume_model: None
+10/14/2023 15:44:38 - INFO -     <<< sampled_use_mil: False
+10/14/2023 15:44:38 - INFO -     <<< scale: 1
+10/14/2023 15:44:38 - INFO -     <<< seed: 2
+10/14/2023 15:44:38 - INFO -     <<< sim_header: seqTransf
+10/14/2023 15:44:38 - INFO -     <<< slice_framepos: 2
+10/14/2023 15:44:38 - INFO -     <<< task_type: retrieval
+10/14/2023 15:44:38 - INFO -     <<< test_file: neighborhood_same_entity_mani.csv
+10/14/2023 15:44:38 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 15:44:38 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 15:44:38 - INFO -     <<< train_file: train_1.csv
+10/14/2023 15:44:38 - INFO -     <<< train_frame_order: 0
+10/14/2023 15:44:38 - INFO -     <<< use_mil: False
+10/14/2023 15:44:38 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 15:44:38 - INFO -     <<< val_file: neighborhood_same_entity_mani.csv
+10/14/2023 15:44:38 - INFO -     <<< video_dim: 1024
+10/14/2023 15:44:38 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 15:44:38 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 15:44:38 - INFO -     <<< world_size: 1
+10/14/2023 15:44:38 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 15:44:39 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 15:44:39 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 15:44:39 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 15:44:39 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 15:44:39 - WARNING -   Test retrieval by loose type.
+10/14/2023 15:44:39 - WARNING -   	 embed_dim: 512
+10/14/2023 15:44:39 - WARNING -   	 image_resolution: 224
+10/14/2023 15:44:39 - WARNING -   	 vision_layers: 12
+10/14/2023 15:44:39 - WARNING -   	 vision_width: 768
+10/14/2023 15:44:39 - WARNING -   	 vision_patch_size: 32
+10/14/2023 15:44:39 - WARNING -   	 context_length: 77
+10/14/2023 15:44:39 - WARNING -   	 vocab_size: 49408
+10/14/2023 15:44:39 - WARNING -   	 transformer_width: 512
+10/14/2023 15:44:39 - WARNING -   	 transformer_heads: 8
+10/14/2023 15:44:39 - WARNING -   	 transformer_layers: 12
+10/14/2023 15:44:39 - WARNING -   		 linear_patch: 2d
+10/14/2023 15:44:39 - WARNING -   	 cut_top_layer: 0
+10/14/2023 15:44:42 - WARNING -   	 sim_header: seqTransf
+10/14/2023 15:44:52 - INFO -   --------------------
+10/14/2023 15:44:52 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 15:44:52 - INFO -   ***** Running test *****
+10/14/2023 15:44:52 - INFO -     Num examples = 102
+10/14/2023 15:44:52 - INFO -     Batch size = 1
+10/14/2023 15:44:52 - INFO -     Num steps = 102
+10/14/2023 15:44:52 - INFO -   ***** Running val *****
+10/14/2023 15:44:52 - INFO -     Num examples = 102
+10/14/2023 15:57:35 - INFO -   sim matrix size: 102, 102
+10/14/2023 15:57:35 - INFO -   	 Length-T: 102, Length-V:102
+10/14/2023 15:57:35 - INFO -   Text-to-Video:
+10/14/2023 15:57:35 - INFO -   	>>>  R@1: 31.4 - R@5: 57.8 - R@10: 70.6 - Median R: 3.0 - Mean R: 14.3
+10/14/2023 15:57:35 - INFO -   Video-to-Text:
+10/14/2023 15:57:35 - INFO -   	>>>  V2T$R@1: 35.3 - V2T$R@5: 59.8 - V2T$R@10: 70.6 - V2T$Median R: 3.5 - V2T$Mean R: 9.2
+10/14/2023 15:57:41 - INFO -   Effective parameters:
+10/14/2023 15:57:41 - INFO -     <<< batch_size: 64
+10/14/2023 15:57:41 - INFO -     <<< batch_size_val: 1
+10/14/2023 15:57:41 - INFO -     <<< cache_dir: 
+10/14/2023 15:57:41 - INFO -     <<< coef_lr: 0.001
+10/14/2023 15:57:41 - INFO -     <<< cross_model: cross-base
+10/14/2023 15:57:41 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 15:57:41 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 15:57:41 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 15:57:41 - INFO -     <<< datatype: moviegraph
+10/14/2023 15:57:41 - INFO -     <<< do_eval: True
+10/14/2023 15:57:41 - INFO -     <<< do_lower_case: False
+10/14/2023 15:57:41 - INFO -     <<< do_pretrain: False
+10/14/2023 15:57:41 - INFO -     <<< do_train: False
+10/14/2023 15:57:41 - INFO -     <<< epochs: 10
+10/14/2023 15:57:41 - INFO -     <<< eval_frame_order: 0
+10/14/2023 15:57:41 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 15:57:41 - INFO -     <<< feature_framerate: 1
+10/14/2023 15:57:41 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 15:57:41 - INFO -     <<< fp16: False
+10/14/2023 15:57:41 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 15:57:41 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 15:57:41 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 15:57:41 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 15:57:41 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 15:57:41 - INFO -     <<< linear_patch: 2d
+10/14/2023 15:57:41 - INFO -     <<< local_rank: 0
+10/14/2023 15:57:41 - INFO -     <<< loose_type: True
+10/14/2023 15:57:41 - INFO -     <<< lr: 0.0001
+10/14/2023 15:57:41 - INFO -     <<< lr_decay: 0.9
+10/14/2023 15:57:41 - INFO -     <<< manipulation: neighborhood_diff_entity
+10/14/2023 15:57:41 - INFO -     <<< margin: 0.1
+10/14/2023 15:57:41 - INFO -     <<< max_frames: 12
+10/14/2023 15:57:41 - INFO -     <<< max_words: 60
+10/14/2023 15:57:41 - INFO -     <<< n_display: 1
+10/14/2023 15:57:41 - INFO -     <<< n_gpu: 1
+10/14/2023 15:57:41 - INFO -     <<< n_pair: 1
+10/14/2023 15:57:41 - INFO -     <<< negative_weighting: 1
+10/14/2023 15:57:41 - INFO -     <<< num_thread_reader: 8
+10/14/2023 15:57:41 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 15:57:41 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 15:57:41 - INFO -     <<< rank: 0
+10/14/2023 15:57:41 - INFO -     <<< resume_model: None
+10/14/2023 15:57:41 - INFO -     <<< sampled_use_mil: False
+10/14/2023 15:57:41 - INFO -     <<< scale: 0
+10/14/2023 15:57:41 - INFO -     <<< seed: 2
+10/14/2023 15:57:41 - INFO -     <<< sim_header: seqTransf
+10/14/2023 15:57:41 - INFO -     <<< slice_framepos: 2
+10/14/2023 15:57:41 - INFO -     <<< task_type: retrieval
+10/14/2023 15:57:41 - INFO -     <<< test_file: neighborhood_diff_entity.csv
+10/14/2023 15:57:41 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 15:57:41 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 15:57:41 - INFO -     <<< train_file: train_1.csv
+10/14/2023 15:57:41 - INFO -     <<< train_frame_order: 0
+10/14/2023 15:57:41 - INFO -     <<< use_mil: False
+10/14/2023 15:57:41 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 15:57:41 - INFO -     <<< val_file: neighborhood_diff_entity.csv
+10/14/2023 15:57:41 - INFO -     <<< video_dim: 1024
+10/14/2023 15:57:41 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 15:57:41 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 15:57:41 - INFO -     <<< world_size: 1
+10/14/2023 15:57:41 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 15:57:42 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 15:57:42 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 15:57:42 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 15:57:42 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 15:57:42 - WARNING -   Test retrieval by loose type.
+10/14/2023 15:57:42 - WARNING -   	 embed_dim: 512
+10/14/2023 15:57:42 - WARNING -   	 image_resolution: 224
+10/14/2023 15:57:42 - WARNING -   	 vision_layers: 12
+10/14/2023 15:57:42 - WARNING -   	 vision_width: 768
+10/14/2023 15:57:42 - WARNING -   	 vision_patch_size: 32
+10/14/2023 15:57:42 - WARNING -   	 context_length: 77
+10/14/2023 15:57:42 - WARNING -   	 vocab_size: 49408
+10/14/2023 15:57:42 - WARNING -   	 transformer_width: 512
+10/14/2023 15:57:42 - WARNING -   	 transformer_heads: 8
+10/14/2023 15:57:42 - WARNING -   	 transformer_layers: 12
+10/14/2023 15:57:42 - WARNING -   		 linear_patch: 2d
+10/14/2023 15:57:42 - WARNING -   	 cut_top_layer: 0
+10/14/2023 15:57:45 - WARNING -   	 sim_header: seqTransf
+10/14/2023 15:57:55 - INFO -   --------------------
+10/14/2023 15:57:55 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 15:57:55 - INFO -   ***** Running test *****
+10/14/2023 15:57:55 - INFO -     Num examples = 35
+10/14/2023 15:57:55 - INFO -     Batch size = 1
+10/14/2023 15:57:55 - INFO -     Num steps = 35
+10/14/2023 15:57:55 - INFO -   ***** Running val *****
+10/14/2023 15:57:55 - INFO -     Num examples = 35
+10/14/2023 16:01:39 - INFO -   sim matrix size: 35, 35
+10/14/2023 16:01:39 - INFO -   	 Length-T: 35, Length-V:35
+10/14/2023 16:01:39 - INFO -   Text-to-Video:
+10/14/2023 16:01:39 - INFO -   	>>>  R@1: 60.0 - R@5: 91.4 - R@10: 100.0 - Median R: 1.0 - Mean R: 2.0
+10/14/2023 16:01:39 - INFO -   Video-to-Text:
+10/14/2023 16:01:39 - INFO -   	>>>  V2T$R@1: 62.9 - V2T$R@5: 91.4 - V2T$R@10: 94.3 - V2T$Median R: 1.0 - V2T$Mean R: 2.3
+10/14/2023 16:01:45 - INFO -   Effective parameters:
+10/14/2023 16:01:45 - INFO -     <<< batch_size: 64
+10/14/2023 16:01:45 - INFO -     <<< batch_size_val: 1
+10/14/2023 16:01:45 - INFO -     <<< cache_dir: 
+10/14/2023 16:01:45 - INFO -     <<< coef_lr: 0.001
+10/14/2023 16:01:45 - INFO -     <<< cross_model: cross-base
+10/14/2023 16:01:45 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 16:01:45 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 16:01:45 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 16:01:45 - INFO -     <<< datatype: moviegraph
+10/14/2023 16:01:45 - INFO -     <<< do_eval: True
+10/14/2023 16:01:45 - INFO -     <<< do_lower_case: False
+10/14/2023 16:01:45 - INFO -     <<< do_pretrain: False
+10/14/2023 16:01:45 - INFO -     <<< do_train: False
+10/14/2023 16:01:45 - INFO -     <<< epochs: 10
+10/14/2023 16:01:45 - INFO -     <<< eval_frame_order: 0
+10/14/2023 16:01:45 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 16:01:45 - INFO -     <<< feature_framerate: 1
+10/14/2023 16:01:45 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 16:01:45 - INFO -     <<< fp16: False
+10/14/2023 16:01:45 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 16:01:45 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 16:01:45 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 16:01:45 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 16:01:45 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 16:01:45 - INFO -     <<< linear_patch: 2d
+10/14/2023 16:01:45 - INFO -     <<< local_rank: 0
+10/14/2023 16:01:45 - INFO -     <<< loose_type: True
+10/14/2023 16:01:45 - INFO -     <<< lr: 0.0001
+10/14/2023 16:01:45 - INFO -     <<< lr_decay: 0.9
+10/14/2023 16:01:45 - INFO -     <<< manipulation: neighborhood_diff_entity_mani
+10/14/2023 16:01:45 - INFO -     <<< margin: 0.1
+10/14/2023 16:01:45 - INFO -     <<< max_frames: 12
+10/14/2023 16:01:45 - INFO -     <<< max_words: 60
+10/14/2023 16:01:45 - INFO -     <<< n_display: 1
+10/14/2023 16:01:45 - INFO -     <<< n_gpu: 1
+10/14/2023 16:01:45 - INFO -     <<< n_pair: 1
+10/14/2023 16:01:45 - INFO -     <<< negative_weighting: 1
+10/14/2023 16:01:45 - INFO -     <<< num_thread_reader: 8
+10/14/2023 16:01:45 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 16:01:45 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 16:01:45 - INFO -     <<< rank: 0
+10/14/2023 16:01:45 - INFO -     <<< resume_model: None
+10/14/2023 16:01:45 - INFO -     <<< sampled_use_mil: False
+10/14/2023 16:01:45 - INFO -     <<< scale: 1
+10/14/2023 16:01:45 - INFO -     <<< seed: 2
+10/14/2023 16:01:45 - INFO -     <<< sim_header: seqTransf
+10/14/2023 16:01:45 - INFO -     <<< slice_framepos: 2
+10/14/2023 16:01:45 - INFO -     <<< task_type: retrieval
+10/14/2023 16:01:45 - INFO -     <<< test_file: neighborhood_diff_entity_mani.csv
+10/14/2023 16:01:45 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 16:01:45 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 16:01:45 - INFO -     <<< train_file: train_1.csv
+10/14/2023 16:01:45 - INFO -     <<< train_frame_order: 0
+10/14/2023 16:01:45 - INFO -     <<< use_mil: False
+10/14/2023 16:01:45 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 16:01:45 - INFO -     <<< val_file: neighborhood_diff_entity_mani.csv
+10/14/2023 16:01:45 - INFO -     <<< video_dim: 1024
+10/14/2023 16:01:45 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 16:01:45 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 16:01:45 - INFO -     <<< world_size: 1
+10/14/2023 16:01:45 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 16:01:46 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 16:01:46 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 16:01:46 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 16:01:46 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 16:01:46 - WARNING -   Test retrieval by loose type.
+10/14/2023 16:01:46 - WARNING -   	 embed_dim: 512
+10/14/2023 16:01:46 - WARNING -   	 image_resolution: 224
+10/14/2023 16:01:46 - WARNING -   	 vision_layers: 12
+10/14/2023 16:01:46 - WARNING -   	 vision_width: 768
+10/14/2023 16:01:46 - WARNING -   	 vision_patch_size: 32
+10/14/2023 16:01:46 - WARNING -   	 context_length: 77
+10/14/2023 16:01:46 - WARNING -   	 vocab_size: 49408
+10/14/2023 16:01:46 - WARNING -   	 transformer_width: 512
+10/14/2023 16:01:46 - WARNING -   	 transformer_heads: 8
+10/14/2023 16:01:46 - WARNING -   	 transformer_layers: 12
+10/14/2023 16:01:46 - WARNING -   		 linear_patch: 2d
+10/14/2023 16:01:46 - WARNING -   	 cut_top_layer: 0
+10/14/2023 16:01:48 - WARNING -   	 sim_header: seqTransf
+10/14/2023 16:01:58 - INFO -   --------------------
+10/14/2023 16:01:58 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 16:01:59 - INFO -   ***** Running test *****
+10/14/2023 16:01:59 - INFO -     Num examples = 35
+10/14/2023 16:01:59 - INFO -     Batch size = 1
+10/14/2023 16:01:59 - INFO -     Num steps = 35
+10/14/2023 16:01:59 - INFO -   ***** Running val *****
+10/14/2023 16:01:59 - INFO -     Num examples = 35
+10/14/2023 16:05:42 - INFO -   sim matrix size: 35, 35
+10/14/2023 16:05:42 - INFO -   	 Length-T: 35, Length-V:35
+10/14/2023 16:05:42 - INFO -   Text-to-Video:
+10/14/2023 16:05:42 - INFO -   	>>>  R@1: 57.1 - R@5: 94.3 - R@10: 97.1 - Median R: 1.0 - Mean R: 2.0
+10/14/2023 16:05:42 - INFO -   Video-to-Text:
+10/14/2023 16:05:42 - INFO -   	>>>  V2T$R@1: 57.1 - V2T$R@5: 94.3 - V2T$R@10: 97.1 - V2T$Median R: 1.0 - V2T$Mean R: 2.3
+10/14/2023 16:05:48 - INFO -   Effective parameters:
+10/14/2023 16:05:48 - INFO -     <<< batch_size: 64
+10/14/2023 16:05:48 - INFO -     <<< batch_size_val: 1
+10/14/2023 16:05:48 - INFO -     <<< cache_dir: 
+10/14/2023 16:05:48 - INFO -     <<< coef_lr: 0.001
+10/14/2023 16:05:48 - INFO -     <<< cross_model: cross-base
+10/14/2023 16:05:48 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 16:05:48 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 16:05:48 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 16:05:48 - INFO -     <<< datatype: moviegraph
+10/14/2023 16:05:48 - INFO -     <<< do_eval: True
+10/14/2023 16:05:48 - INFO -     <<< do_lower_case: False
+10/14/2023 16:05:48 - INFO -     <<< do_pretrain: False
+10/14/2023 16:05:48 - INFO -     <<< do_train: False
+10/14/2023 16:05:48 - INFO -     <<< epochs: 10
+10/14/2023 16:05:48 - INFO -     <<< eval_frame_order: 0
+10/14/2023 16:05:48 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 16:05:48 - INFO -     <<< feature_framerate: 1
+10/14/2023 16:05:48 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 16:05:48 - INFO -     <<< fp16: False
+10/14/2023 16:05:48 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 16:05:48 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 16:05:48 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 16:05:48 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 16:05:48 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 16:05:48 - INFO -     <<< linear_patch: 2d
+10/14/2023 16:05:48 - INFO -     <<< local_rank: 0
+10/14/2023 16:05:48 - INFO -     <<< loose_type: True
+10/14/2023 16:05:48 - INFO -     <<< lr: 0.0001
+10/14/2023 16:05:48 - INFO -     <<< lr_decay: 0.9
+10/14/2023 16:05:48 - INFO -     <<< manipulation: counter_spatial
+10/14/2023 16:05:48 - INFO -     <<< margin: 0.1
+10/14/2023 16:05:48 - INFO -     <<< max_frames: 12
+10/14/2023 16:05:48 - INFO -     <<< max_words: 60
+10/14/2023 16:05:48 - INFO -     <<< n_display: 1
+10/14/2023 16:05:48 - INFO -     <<< n_gpu: 1
+10/14/2023 16:05:48 - INFO -     <<< n_pair: 1
+10/14/2023 16:05:48 - INFO -     <<< negative_weighting: 1
+10/14/2023 16:05:48 - INFO -     <<< num_thread_reader: 8
+10/14/2023 16:05:48 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 16:05:48 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 16:05:48 - INFO -     <<< rank: 0
+10/14/2023 16:05:48 - INFO -     <<< resume_model: None
+10/14/2023 16:05:48 - INFO -     <<< sampled_use_mil: False
+10/14/2023 16:05:48 - INFO -     <<< scale: 0
+10/14/2023 16:05:48 - INFO -     <<< seed: 2
+10/14/2023 16:05:48 - INFO -     <<< sim_header: seqTransf
+10/14/2023 16:05:48 - INFO -     <<< slice_framepos: 2
+10/14/2023 16:05:48 - INFO -     <<< task_type: retrieval
+10/14/2023 16:05:48 - INFO -     <<< test_file: counter_spatial.csv
+10/14/2023 16:05:48 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 16:05:48 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 16:05:48 - INFO -     <<< train_file: train_1.csv
+10/14/2023 16:05:48 - INFO -     <<< train_frame_order: 0
+10/14/2023 16:05:48 - INFO -     <<< use_mil: False
+10/14/2023 16:05:48 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 16:05:48 - INFO -     <<< val_file: counter_spatial.csv
+10/14/2023 16:05:48 - INFO -     <<< video_dim: 1024
+10/14/2023 16:05:48 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 16:05:48 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 16:05:48 - INFO -     <<< world_size: 1
+10/14/2023 16:05:48 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 16:05:49 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 16:05:49 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 16:05:49 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 16:05:49 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 16:05:49 - WARNING -   Test retrieval by loose type.
+10/14/2023 16:05:49 - WARNING -   	 embed_dim: 512
+10/14/2023 16:05:49 - WARNING -   	 image_resolution: 224
+10/14/2023 16:05:49 - WARNING -   	 vision_layers: 12
+10/14/2023 16:05:49 - WARNING -   	 vision_width: 768
+10/14/2023 16:05:49 - WARNING -   	 vision_patch_size: 32
+10/14/2023 16:05:49 - WARNING -   	 context_length: 77
+10/14/2023 16:05:49 - WARNING -   	 vocab_size: 49408
+10/14/2023 16:05:49 - WARNING -   	 transformer_width: 512
+10/14/2023 16:05:49 - WARNING -   	 transformer_heads: 8
+10/14/2023 16:05:49 - WARNING -   	 transformer_layers: 12
+10/14/2023 16:05:49 - WARNING -   		 linear_patch: 2d
+10/14/2023 16:05:49 - WARNING -   	 cut_top_layer: 0
+10/14/2023 16:05:51 - WARNING -   	 sim_header: seqTransf
+10/14/2023 16:06:02 - INFO -   --------------------
+10/14/2023 16:06:02 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 16:06:02 - INFO -   ***** Running test *****
+10/14/2023 16:06:02 - INFO -     Num examples = 935
+10/14/2023 16:06:02 - INFO -     Batch size = 1
+10/14/2023 16:06:02 - INFO -     Num steps = 935
+10/14/2023 16:06:02 - INFO -   ***** Running val *****
+10/14/2023 16:06:02 - INFO -     Num examples = 935
+10/14/2023 19:46:32 - INFO -   sim matrix size: 935, 935
+10/14/2023 19:46:32 - INFO -   	 Length-T: 935, Length-V:935
+10/14/2023 19:46:32 - INFO -   Text-to-Video:
+10/14/2023 19:46:32 - INFO -   	>>>  R@1: 16.6 - R@5: 43.1 - R@10: 54.9 - Median R: 8.0 - Mean R: 58.0
+10/14/2023 19:46:32 - INFO -   Video-to-Text:
+10/14/2023 19:46:32 - INFO -   	>>>  V2T$R@1: 16.3 - V2T$R@5: 41.3 - V2T$R@10: 53.7 - V2T$Median R: 9.0 - V2T$Mean R: 45.1
+10/14/2023 19:46:38 - INFO -   Effective parameters:
+10/14/2023 19:46:38 - INFO -     <<< batch_size: 64
+10/14/2023 19:46:38 - INFO -     <<< batch_size_val: 1
+10/14/2023 19:46:38 - INFO -     <<< cache_dir: 
+10/14/2023 19:46:38 - INFO -     <<< coef_lr: 0.001
+10/14/2023 19:46:38 - INFO -     <<< cross_model: cross-base
+10/14/2023 19:46:38 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 19:46:38 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 19:46:38 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 19:46:38 - INFO -     <<< datatype: moviegraph
+10/14/2023 19:46:38 - INFO -     <<< do_eval: True
+10/14/2023 19:46:38 - INFO -     <<< do_lower_case: False
+10/14/2023 19:46:38 - INFO -     <<< do_pretrain: False
+10/14/2023 19:46:38 - INFO -     <<< do_train: False
+10/14/2023 19:46:38 - INFO -     <<< epochs: 10
+10/14/2023 19:46:38 - INFO -     <<< eval_frame_order: 0
+10/14/2023 19:46:38 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 19:46:38 - INFO -     <<< feature_framerate: 1
+10/14/2023 19:46:38 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 19:46:38 - INFO -     <<< fp16: False
+10/14/2023 19:46:38 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 19:46:38 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 19:46:38 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 19:46:38 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 19:46:38 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 19:46:38 - INFO -     <<< linear_patch: 2d
+10/14/2023 19:46:38 - INFO -     <<< local_rank: 0
+10/14/2023 19:46:38 - INFO -     <<< loose_type: True
+10/14/2023 19:46:38 - INFO -     <<< lr: 0.0001
+10/14/2023 19:46:38 - INFO -     <<< lr_decay: 0.9
+10/14/2023 19:46:38 - INFO -     <<< manipulation: counter_spatial_mani
+10/14/2023 19:46:38 - INFO -     <<< margin: 0.1
+10/14/2023 19:46:38 - INFO -     <<< max_frames: 12
+10/14/2023 19:46:38 - INFO -     <<< max_words: 60
+10/14/2023 19:46:38 - INFO -     <<< n_display: 1
+10/14/2023 19:46:38 - INFO -     <<< n_gpu: 1
+10/14/2023 19:46:38 - INFO -     <<< n_pair: 1
+10/14/2023 19:46:38 - INFO -     <<< negative_weighting: 1
+10/14/2023 19:46:38 - INFO -     <<< num_thread_reader: 8
+10/14/2023 19:46:38 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 19:46:38 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 19:46:38 - INFO -     <<< rank: 0
+10/14/2023 19:46:38 - INFO -     <<< resume_model: None
+10/14/2023 19:46:38 - INFO -     <<< sampled_use_mil: False
+10/14/2023 19:46:38 - INFO -     <<< scale: 1
+10/14/2023 19:46:38 - INFO -     <<< seed: 2
+10/14/2023 19:46:38 - INFO -     <<< sim_header: seqTransf
+10/14/2023 19:46:38 - INFO -     <<< slice_framepos: 2
+10/14/2023 19:46:38 - INFO -     <<< task_type: retrieval
+10/14/2023 19:46:38 - INFO -     <<< test_file: counter_spatial_mani.csv
+10/14/2023 19:46:38 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 19:46:38 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 19:46:38 - INFO -     <<< train_file: train_1.csv
+10/14/2023 19:46:38 - INFO -     <<< train_frame_order: 0
+10/14/2023 19:46:38 - INFO -     <<< use_mil: False
+10/14/2023 19:46:38 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 19:46:38 - INFO -     <<< val_file: counter_spatial_mani.csv
+10/14/2023 19:46:38 - INFO -     <<< video_dim: 1024
+10/14/2023 19:46:38 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 19:46:38 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 19:46:38 - INFO -     <<< world_size: 1
+10/14/2023 19:46:38 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 19:46:39 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 19:46:39 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 19:46:39 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 19:46:39 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 19:46:39 - WARNING -   Test retrieval by loose type.
+10/14/2023 19:46:39 - WARNING -   	 embed_dim: 512
+10/14/2023 19:46:39 - WARNING -   	 image_resolution: 224
+10/14/2023 19:46:39 - WARNING -   	 vision_layers: 12
+10/14/2023 19:46:39 - WARNING -   	 vision_width: 768
+10/14/2023 19:46:39 - WARNING -   	 vision_patch_size: 32
+10/14/2023 19:46:39 - WARNING -   	 context_length: 77
+10/14/2023 19:46:39 - WARNING -   	 vocab_size: 49408
+10/14/2023 19:46:39 - WARNING -   	 transformer_width: 512
+10/14/2023 19:46:39 - WARNING -   	 transformer_heads: 8
+10/14/2023 19:46:39 - WARNING -   	 transformer_layers: 12
+10/14/2023 19:46:39 - WARNING -   		 linear_patch: 2d
+10/14/2023 19:46:39 - WARNING -   	 cut_top_layer: 0
+10/14/2023 19:46:42 - WARNING -   	 sim_header: seqTransf
+10/14/2023 19:46:51 - INFO -   --------------------
+10/14/2023 19:46:51 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 19:46:52 - INFO -   ***** Running test *****
+10/14/2023 19:46:52 - INFO -     Num examples = 935
+10/14/2023 19:46:52 - INFO -     Batch size = 1
+10/14/2023 19:46:52 - INFO -     Num steps = 935
+10/14/2023 19:46:52 - INFO -   ***** Running val *****
+10/14/2023 19:46:52 - INFO -     Num examples = 935
+10/14/2023 23:27:42 - INFO -   sim matrix size: 935, 935
+10/14/2023 23:27:42 - INFO -   	 Length-T: 935, Length-V:935
+10/14/2023 23:27:42 - INFO -   Text-to-Video:
+10/14/2023 23:27:42 - INFO -   	>>>  R@1: 17.0 - R@5: 41.6 - R@10: 52.9 - Median R: 9.0 - Mean R: 59.8
+10/14/2023 23:27:42 - INFO -   Video-to-Text:
+10/14/2023 23:27:42 - INFO -   	>>>  V2T$R@1: 15.8 - V2T$R@5: 39.4 - V2T$R@10: 50.8 - V2T$Median R: 10.0 - V2T$Mean R: 46.4
+10/14/2023 23:27:48 - INFO -   Effective parameters:
+10/14/2023 23:27:48 - INFO -     <<< batch_size: 64
+10/14/2023 23:27:48 - INFO -     <<< batch_size_val: 1
+10/14/2023 23:27:48 - INFO -     <<< cache_dir: 
+10/14/2023 23:27:48 - INFO -     <<< coef_lr: 0.001
+10/14/2023 23:27:48 - INFO -     <<< cross_model: cross-base
+10/14/2023 23:27:48 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 23:27:48 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/14/2023 23:27:48 - INFO -     <<< dataset_ckpt: seed2
+10/14/2023 23:27:48 - INFO -     <<< datatype: moviegraph
+10/14/2023 23:27:48 - INFO -     <<< do_eval: True
+10/14/2023 23:27:48 - INFO -     <<< do_lower_case: False
+10/14/2023 23:27:48 - INFO -     <<< do_pretrain: False
+10/14/2023 23:27:48 - INFO -     <<< do_train: False
+10/14/2023 23:27:48 - INFO -     <<< epochs: 10
+10/14/2023 23:27:48 - INFO -     <<< eval_frame_order: 0
+10/14/2023 23:27:48 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 23:27:48 - INFO -     <<< feature_framerate: 1
+10/14/2023 23:27:48 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/14/2023 23:27:48 - INFO -     <<< fp16: False
+10/14/2023 23:27:48 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 23:27:48 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 23:27:48 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 23:27:48 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 23:27:48 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/14/2023 23:27:48 - INFO -     <<< linear_patch: 2d
+10/14/2023 23:27:48 - INFO -     <<< local_rank: 0
+10/14/2023 23:27:48 - INFO -     <<< loose_type: True
+10/14/2023 23:27:48 - INFO -     <<< lr: 0.0001
+10/14/2023 23:27:48 - INFO -     <<< lr_decay: 0.9
+10/14/2023 23:27:48 - INFO -     <<< manipulation: counter_contact
+10/14/2023 23:27:48 - INFO -     <<< margin: 0.1
+10/14/2023 23:27:48 - INFO -     <<< max_frames: 12
+10/14/2023 23:27:48 - INFO -     <<< max_words: 60
+10/14/2023 23:27:48 - INFO -     <<< n_display: 1
+10/14/2023 23:27:48 - INFO -     <<< n_gpu: 1
+10/14/2023 23:27:48 - INFO -     <<< n_pair: 1
+10/14/2023 23:27:48 - INFO -     <<< negative_weighting: 1
+10/14/2023 23:27:48 - INFO -     <<< num_thread_reader: 8
+10/14/2023 23:27:48 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/14/2023 23:27:48 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 23:27:48 - INFO -     <<< rank: 0
+10/14/2023 23:27:48 - INFO -     <<< resume_model: None
+10/14/2023 23:27:48 - INFO -     <<< sampled_use_mil: False
+10/14/2023 23:27:48 - INFO -     <<< scale: 0
+10/14/2023 23:27:48 - INFO -     <<< seed: 2
+10/14/2023 23:27:48 - INFO -     <<< sim_header: seqTransf
+10/14/2023 23:27:48 - INFO -     <<< slice_framepos: 2
+10/14/2023 23:27:48 - INFO -     <<< task_type: retrieval
+10/14/2023 23:27:48 - INFO -     <<< test_file: counter_contact.csv
+10/14/2023 23:27:48 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 23:27:48 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 23:27:48 - INFO -     <<< train_file: train_1.csv
+10/14/2023 23:27:48 - INFO -     <<< train_frame_order: 0
+10/14/2023 23:27:48 - INFO -     <<< use_mil: False
+10/14/2023 23:27:48 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 23:27:48 - INFO -     <<< val_file: counter_contact.csv
+10/14/2023 23:27:48 - INFO -     <<< video_dim: 1024
+10/14/2023 23:27:48 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 23:27:48 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 23:27:48 - INFO -     <<< world_size: 1
+10/14/2023 23:27:48 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 23:27:49 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 23:27:49 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 23:27:49 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 23:27:49 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 23:27:49 - WARNING -   Test retrieval by loose type.
+10/14/2023 23:27:49 - WARNING -   	 embed_dim: 512
+10/14/2023 23:27:49 - WARNING -   	 image_resolution: 224
+10/14/2023 23:27:49 - WARNING -   	 vision_layers: 12
+10/14/2023 23:27:49 - WARNING -   	 vision_width: 768
+10/14/2023 23:27:49 - WARNING -   	 vision_patch_size: 32
+10/14/2023 23:27:49 - WARNING -   	 context_length: 77
+10/14/2023 23:27:49 - WARNING -   	 vocab_size: 49408
+10/14/2023 23:27:49 - WARNING -   	 transformer_width: 512
+10/14/2023 23:27:49 - WARNING -   	 transformer_heads: 8
+10/14/2023 23:27:49 - WARNING -   	 transformer_layers: 12
+10/14/2023 23:27:49 - WARNING -   		 linear_patch: 2d
+10/14/2023 23:27:49 - WARNING -   	 cut_top_layer: 0
+10/14/2023 23:27:52 - WARNING -   	 sim_header: seqTransf
+10/14/2023 23:28:01 - INFO -   --------------------
+10/14/2023 23:28:01 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 23:28:02 - INFO -   ***** Running test *****
+10/14/2023 23:28:02 - INFO -     Num examples = 1008
+10/14/2023 23:28:02 - INFO -     Batch size = 1
+10/14/2023 23:28:02 - INFO -     Num steps = 1008
+10/14/2023 23:28:02 - INFO -   ***** Running val *****
+10/14/2023 23:28:02 - INFO -     Num examples = 1008
+10/15/2023 03:35:09 - INFO -   sim matrix size: 1008, 1008
+10/15/2023 03:35:09 - INFO -   	 Length-T: 1008, Length-V:1008
+10/15/2023 03:35:09 - INFO -   Text-to-Video:
+10/15/2023 03:35:09 - INFO -   	>>>  R@1: 22.9 - R@5: 53.6 - R@10: 66.1 - Median R: 5.0 - Mean R: 33.0
+10/15/2023 03:35:09 - INFO -   Video-to-Text:
+10/15/2023 03:35:09 - INFO -   	>>>  V2T$R@1: 26.3 - V2T$R@5: 52.3 - V2T$R@10: 65.4 - V2T$Median R: 5.0 - V2T$Mean R: 29.7
+10/15/2023 03:35:16 - INFO -   Effective parameters:
+10/15/2023 03:35:16 - INFO -     <<< batch_size: 64
+10/15/2023 03:35:16 - INFO -     <<< batch_size_val: 1
+10/15/2023 03:35:16 - INFO -     <<< cache_dir: 
+10/15/2023 03:35:16 - INFO -     <<< coef_lr: 0.001
+10/15/2023 03:35:16 - INFO -     <<< cross_model: cross-base
+10/15/2023 03:35:16 - INFO -     <<< cross_num_hidden_layers: 4
+10/15/2023 03:35:16 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/15/2023 03:35:16 - INFO -     <<< dataset_ckpt: seed2
+10/15/2023 03:35:16 - INFO -     <<< datatype: moviegraph
+10/15/2023 03:35:16 - INFO -     <<< do_eval: True
+10/15/2023 03:35:16 - INFO -     <<< do_lower_case: False
+10/15/2023 03:35:16 - INFO -     <<< do_pretrain: False
+10/15/2023 03:35:16 - INFO -     <<< do_train: False
+10/15/2023 03:35:16 - INFO -     <<< epochs: 10
+10/15/2023 03:35:16 - INFO -     <<< eval_frame_order: 0
+10/15/2023 03:35:16 - INFO -     <<< expand_msrvtt_sentences: False
+10/15/2023 03:35:16 - INFO -     <<< feature_framerate: 1
+10/15/2023 03:35:16 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/15/2023 03:35:16 - INFO -     <<< fp16: False
+10/15/2023 03:35:16 - INFO -     <<< fp16_opt_level: O1
+10/15/2023 03:35:16 - INFO -     <<< freeze_layer_num: 0
+10/15/2023 03:35:16 - INFO -     <<< gradient_accumulation_steps: 1
+10/15/2023 03:35:16 - INFO -     <<< hard_negative_rate: 0.5
+10/15/2023 03:35:16 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/15/2023 03:35:16 - INFO -     <<< linear_patch: 2d
+10/15/2023 03:35:16 - INFO -     <<< local_rank: 0
+10/15/2023 03:35:16 - INFO -     <<< loose_type: True
+10/15/2023 03:35:16 - INFO -     <<< lr: 0.0001
+10/15/2023 03:35:16 - INFO -     <<< lr_decay: 0.9
+10/15/2023 03:35:16 - INFO -     <<< manipulation: counter_contact_mani
+10/15/2023 03:35:16 - INFO -     <<< margin: 0.1
+10/15/2023 03:35:16 - INFO -     <<< max_frames: 12
+10/15/2023 03:35:16 - INFO -     <<< max_words: 60
+10/15/2023 03:35:16 - INFO -     <<< n_display: 1
+10/15/2023 03:35:16 - INFO -     <<< n_gpu: 1
+10/15/2023 03:35:16 - INFO -     <<< n_pair: 1
+10/15/2023 03:35:16 - INFO -     <<< negative_weighting: 1
+10/15/2023 03:35:16 - INFO -     <<< num_thread_reader: 8
+10/15/2023 03:35:16 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/15/2023 03:35:16 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/15/2023 03:35:16 - INFO -     <<< rank: 0
+10/15/2023 03:35:16 - INFO -     <<< resume_model: None
+10/15/2023 03:35:16 - INFO -     <<< sampled_use_mil: False
+10/15/2023 03:35:16 - INFO -     <<< scale: 1
+10/15/2023 03:35:16 - INFO -     <<< seed: 2
+10/15/2023 03:35:16 - INFO -     <<< sim_header: seqTransf
+10/15/2023 03:35:16 - INFO -     <<< slice_framepos: 2
+10/15/2023 03:35:16 - INFO -     <<< task_type: retrieval
+10/15/2023 03:35:16 - INFO -     <<< test_file: counter_contact_mani.csv
+10/15/2023 03:35:16 - INFO -     <<< text_num_hidden_layers: 12
+10/15/2023 03:35:16 - INFO -     <<< train_csv: data/.train.csv
+10/15/2023 03:35:16 - INFO -     <<< train_file: train_1.csv
+10/15/2023 03:35:16 - INFO -     <<< train_frame_order: 0
+10/15/2023 03:35:16 - INFO -     <<< use_mil: False
+10/15/2023 03:35:16 - INFO -     <<< val_csv: data/.val.csv
+10/15/2023 03:35:16 - INFO -     <<< val_file: counter_contact_mani.csv
+10/15/2023 03:35:16 - INFO -     <<< video_dim: 1024
+10/15/2023 03:35:16 - INFO -     <<< visual_num_hidden_layers: 12
+10/15/2023 03:35:16 - INFO -     <<< warmup_proportion: 0.1
+10/15/2023 03:35:16 - INFO -     <<< world_size: 1
+10/15/2023 03:35:16 - INFO -   device: cuda:0 n_gpu: 1
+10/15/2023 03:35:17 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/15/2023 03:35:17 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/15/2023 03:35:17 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/15/2023 03:35:17 - WARNING -   Stage-One:True, Stage-Two:False
+10/15/2023 03:35:17 - WARNING -   Test retrieval by loose type.
+10/15/2023 03:35:17 - WARNING -   	 embed_dim: 512
+10/15/2023 03:35:17 - WARNING -   	 image_resolution: 224
+10/15/2023 03:35:17 - WARNING -   	 vision_layers: 12
+10/15/2023 03:35:17 - WARNING -   	 vision_width: 768
+10/15/2023 03:35:17 - WARNING -   	 vision_patch_size: 32
+10/15/2023 03:35:17 - WARNING -   	 context_length: 77
+10/15/2023 03:35:17 - WARNING -   	 vocab_size: 49408
+10/15/2023 03:35:17 - WARNING -   	 transformer_width: 512
+10/15/2023 03:35:17 - WARNING -   	 transformer_heads: 8
+10/15/2023 03:35:17 - WARNING -   	 transformer_layers: 12
+10/15/2023 03:35:17 - WARNING -   		 linear_patch: 2d
+10/15/2023 03:35:17 - WARNING -   	 cut_top_layer: 0
+10/15/2023 03:35:19 - WARNING -   	 sim_header: seqTransf
+10/15/2023 03:35:29 - INFO -   --------------------
+10/15/2023 03:35:29 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/15/2023 03:35:30 - INFO -   ***** Running test *****
+10/15/2023 03:35:30 - INFO -     Num examples = 1008
+10/15/2023 03:35:30 - INFO -     Batch size = 1
+10/15/2023 03:35:30 - INFO -     Num steps = 1008
+10/15/2023 03:35:30 - INFO -   ***** Running val *****
+10/15/2023 03:35:30 - INFO -     Num examples = 1008
+10/15/2023 07:43:01 - INFO -   sim matrix size: 1008, 1008
+10/15/2023 07:43:01 - INFO -   	 Length-T: 1008, Length-V:1008
+10/15/2023 07:43:01 - INFO -   Text-to-Video:
+10/15/2023 07:43:01 - INFO -   	>>>  R@1: 22.2 - R@5: 50.3 - R@10: 62.4 - Median R: 5.0 - Mean R: 41.2
+10/15/2023 07:43:01 - INFO -   Video-to-Text:
+10/15/2023 07:43:01 - INFO -   	>>>  V2T$R@1: 23.4 - V2T$R@5: 48.9 - V2T$R@10: 60.5 - V2T$Median R: 6.0 - V2T$Mean R: 35.6
+10/15/2023 07:43:08 - INFO -   Effective parameters:
+10/15/2023 07:43:08 - INFO -     <<< batch_size: 64
+10/15/2023 07:43:08 - INFO -     <<< batch_size_val: 1
+10/15/2023 07:43:08 - INFO -     <<< cache_dir: 
+10/15/2023 07:43:08 - INFO -     <<< coef_lr: 0.001
+10/15/2023 07:43:08 - INFO -     <<< cross_model: cross-base
+10/15/2023 07:43:08 - INFO -     <<< cross_num_hidden_layers: 4
+10/15/2023 07:43:08 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/15/2023 07:43:08 - INFO -     <<< dataset_ckpt: seed2
+10/15/2023 07:43:08 - INFO -     <<< datatype: moviegraph
+10/15/2023 07:43:08 - INFO -     <<< do_eval: True
+10/15/2023 07:43:08 - INFO -     <<< do_lower_case: False
+10/15/2023 07:43:08 - INFO -     <<< do_pretrain: False
+10/15/2023 07:43:08 - INFO -     <<< do_train: False
+10/15/2023 07:43:08 - INFO -     <<< epochs: 10
+10/15/2023 07:43:08 - INFO -     <<< eval_frame_order: 0
+10/15/2023 07:43:08 - INFO -     <<< expand_msrvtt_sentences: False
+10/15/2023 07:43:08 - INFO -     <<< feature_framerate: 1
+10/15/2023 07:43:08 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/15/2023 07:43:08 - INFO -     <<< fp16: False
+10/15/2023 07:43:08 - INFO -     <<< fp16_opt_level: O1
+10/15/2023 07:43:08 - INFO -     <<< freeze_layer_num: 0
+10/15/2023 07:43:08 - INFO -     <<< gradient_accumulation_steps: 1
+10/15/2023 07:43:08 - INFO -     <<< hard_negative_rate: 0.5
+10/15/2023 07:43:08 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/15/2023 07:43:08 - INFO -     <<< linear_patch: 2d
+10/15/2023 07:43:08 - INFO -     <<< local_rank: 0
+10/15/2023 07:43:08 - INFO -     <<< loose_type: True
+10/15/2023 07:43:08 - INFO -     <<< lr: 0.0001
+10/15/2023 07:43:08 - INFO -     <<< lr_decay: 0.9
+10/15/2023 07:43:08 - INFO -     <<< manipulation: counter_action
+10/15/2023 07:43:08 - INFO -     <<< margin: 0.1
+10/15/2023 07:43:08 - INFO -     <<< max_frames: 12
+10/15/2023 07:43:08 - INFO -     <<< max_words: 60
+10/15/2023 07:43:08 - INFO -     <<< n_display: 1
+10/15/2023 07:43:08 - INFO -     <<< n_gpu: 1
+10/15/2023 07:43:08 - INFO -     <<< n_pair: 1
+10/15/2023 07:43:08 - INFO -     <<< negative_weighting: 1
+10/15/2023 07:43:08 - INFO -     <<< num_thread_reader: 8
+10/15/2023 07:43:08 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/15/2023 07:43:08 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/15/2023 07:43:08 - INFO -     <<< rank: 0
+10/15/2023 07:43:08 - INFO -     <<< resume_model: None
+10/15/2023 07:43:08 - INFO -     <<< sampled_use_mil: False
+10/15/2023 07:43:08 - INFO -     <<< scale: 0
+10/15/2023 07:43:08 - INFO -     <<< seed: 2
+10/15/2023 07:43:08 - INFO -     <<< sim_header: seqTransf
+10/15/2023 07:43:08 - INFO -     <<< slice_framepos: 2
+10/15/2023 07:43:08 - INFO -     <<< task_type: retrieval
+10/15/2023 07:43:08 - INFO -     <<< test_file: counter_action.csv
+10/15/2023 07:43:08 - INFO -     <<< text_num_hidden_layers: 12
+10/15/2023 07:43:08 - INFO -     <<< train_csv: data/.train.csv
+10/15/2023 07:43:08 - INFO -     <<< train_file: train_1.csv
+10/15/2023 07:43:08 - INFO -     <<< train_frame_order: 0
+10/15/2023 07:43:08 - INFO -     <<< use_mil: False
+10/15/2023 07:43:08 - INFO -     <<< val_csv: data/.val.csv
+10/15/2023 07:43:08 - INFO -     <<< val_file: counter_action.csv
+10/15/2023 07:43:08 - INFO -     <<< video_dim: 1024
+10/15/2023 07:43:08 - INFO -     <<< visual_num_hidden_layers: 12
+10/15/2023 07:43:08 - INFO -     <<< warmup_proportion: 0.1
+10/15/2023 07:43:08 - INFO -     <<< world_size: 1
+10/15/2023 07:43:08 - INFO -   device: cuda:0 n_gpu: 1
+10/15/2023 07:43:09 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/15/2023 07:43:09 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/15/2023 07:43:09 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/15/2023 07:43:09 - WARNING -   Stage-One:True, Stage-Two:False
+10/15/2023 07:43:09 - WARNING -   Test retrieval by loose type.
+10/15/2023 07:43:09 - WARNING -   	 embed_dim: 512
+10/15/2023 07:43:09 - WARNING -   	 image_resolution: 224
+10/15/2023 07:43:09 - WARNING -   	 vision_layers: 12
+10/15/2023 07:43:09 - WARNING -   	 vision_width: 768
+10/15/2023 07:43:09 - WARNING -   	 vision_patch_size: 32
+10/15/2023 07:43:09 - WARNING -   	 context_length: 77
+10/15/2023 07:43:09 - WARNING -   	 vocab_size: 49408
+10/15/2023 07:43:09 - WARNING -   	 transformer_width: 512
+10/15/2023 07:43:09 - WARNING -   	 transformer_heads: 8
+10/15/2023 07:43:09 - WARNING -   	 transformer_layers: 12
+10/15/2023 07:43:09 - WARNING -   		 linear_patch: 2d
+10/15/2023 07:43:09 - WARNING -   	 cut_top_layer: 0
+10/15/2023 07:43:11 - WARNING -   	 sim_header: seqTransf
+10/15/2023 07:43:21 - INFO -   --------------------
+10/15/2023 07:43:21 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/15/2023 07:43:22 - INFO -   ***** Running test *****
+10/15/2023 07:43:22 - INFO -     Num examples = 1168
+10/15/2023 07:43:22 - INFO -     Batch size = 1
+10/15/2023 07:43:22 - INFO -     Num steps = 1168
+10/15/2023 07:43:22 - INFO -   ***** Running val *****
+10/15/2023 07:43:22 - INFO -     Num examples = 1168
+10/15/2023 12:56:21 - INFO -   sim matrix size: 1168, 1168
+10/15/2023 12:56:21 - INFO -   	 Length-T: 1168, Length-V:1168
+10/15/2023 12:56:21 - INFO -   Text-to-Video:
+10/15/2023 12:56:21 - INFO -   	>>>  R@1: 6.8 - R@5: 23.8 - R@10: 33.4 - Median R: 30.0 - Mean R: 123.1
+10/15/2023 12:56:21 - INFO -   Video-to-Text:
+10/15/2023 12:56:21 - INFO -   	>>>  V2T$R@1: 5.1 - V2T$R@5: 16.2 - V2T$R@10: 23.1 - V2T$Median R: 56.0 - V2T$Mean R: 117.6
+10/15/2023 12:56:29 - INFO -   Effective parameters:
+10/15/2023 12:56:29 - INFO -     <<< batch_size: 64
+10/15/2023 12:56:29 - INFO -     <<< batch_size_val: 1
+10/15/2023 12:56:29 - INFO -     <<< cache_dir: 
+10/15/2023 12:56:29 - INFO -     <<< coef_lr: 0.001
+10/15/2023 12:56:29 - INFO -     <<< cross_model: cross-base
+10/15/2023 12:56:29 - INFO -     <<< cross_num_hidden_layers: 4
+10/15/2023 12:56:29 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/15/2023 12:56:29 - INFO -     <<< dataset_ckpt: seed2
+10/15/2023 12:56:29 - INFO -     <<< datatype: moviegraph
+10/15/2023 12:56:29 - INFO -     <<< do_eval: True
+10/15/2023 12:56:29 - INFO -     <<< do_lower_case: False
+10/15/2023 12:56:29 - INFO -     <<< do_pretrain: False
+10/15/2023 12:56:29 - INFO -     <<< do_train: False
+10/15/2023 12:56:29 - INFO -     <<< epochs: 10
+10/15/2023 12:56:29 - INFO -     <<< eval_frame_order: 0
+10/15/2023 12:56:29 - INFO -     <<< expand_msrvtt_sentences: False
+10/15/2023 12:56:29 - INFO -     <<< feature_framerate: 1
+10/15/2023 12:56:29 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/15/2023 12:56:29 - INFO -     <<< fp16: False
+10/15/2023 12:56:29 - INFO -     <<< fp16_opt_level: O1
+10/15/2023 12:56:29 - INFO -     <<< freeze_layer_num: 0
+10/15/2023 12:56:29 - INFO -     <<< gradient_accumulation_steps: 1
+10/15/2023 12:56:29 - INFO -     <<< hard_negative_rate: 0.5
+10/15/2023 12:56:29 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/15/2023 12:56:29 - INFO -     <<< linear_patch: 2d
+10/15/2023 12:56:29 - INFO -     <<< local_rank: 0
+10/15/2023 12:56:29 - INFO -     <<< loose_type: True
+10/15/2023 12:56:29 - INFO -     <<< lr: 0.0001
+10/15/2023 12:56:29 - INFO -     <<< lr_decay: 0.9
+10/15/2023 12:56:29 - INFO -     <<< manipulation: counter_action_mani
+10/15/2023 12:56:29 - INFO -     <<< margin: 0.1
+10/15/2023 12:56:29 - INFO -     <<< max_frames: 12
+10/15/2023 12:56:29 - INFO -     <<< max_words: 60
+10/15/2023 12:56:29 - INFO -     <<< n_display: 1
+10/15/2023 12:56:29 - INFO -     <<< n_gpu: 1
+10/15/2023 12:56:29 - INFO -     <<< n_pair: 1
+10/15/2023 12:56:29 - INFO -     <<< negative_weighting: 1
+10/15/2023 12:56:29 - INFO -     <<< num_thread_reader: 8
+10/15/2023 12:56:29 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/15/2023 12:56:29 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/15/2023 12:56:29 - INFO -     <<< rank: 0
+10/15/2023 12:56:29 - INFO -     <<< resume_model: None
+10/15/2023 12:56:29 - INFO -     <<< sampled_use_mil: False
+10/15/2023 12:56:29 - INFO -     <<< scale: 1
+10/15/2023 12:56:29 - INFO -     <<< seed: 2
+10/15/2023 12:56:29 - INFO -     <<< sim_header: seqTransf
+10/15/2023 12:56:29 - INFO -     <<< slice_framepos: 2
+10/15/2023 12:56:29 - INFO -     <<< task_type: retrieval
+10/15/2023 12:56:29 - INFO -     <<< test_file: counter_action_mani.csv
+10/15/2023 12:56:29 - INFO -     <<< text_num_hidden_layers: 12
+10/15/2023 12:56:29 - INFO -     <<< train_csv: data/.train.csv
+10/15/2023 12:56:29 - INFO -     <<< train_file: train_1.csv
+10/15/2023 12:56:29 - INFO -     <<< train_frame_order: 0
+10/15/2023 12:56:29 - INFO -     <<< use_mil: False
+10/15/2023 12:56:29 - INFO -     <<< val_csv: data/.val.csv
+10/15/2023 12:56:29 - INFO -     <<< val_file: counter_action_mani.csv
+10/15/2023 12:56:29 - INFO -     <<< video_dim: 1024
+10/15/2023 12:56:29 - INFO -     <<< visual_num_hidden_layers: 12
+10/15/2023 12:56:29 - INFO -     <<< warmup_proportion: 0.1
+10/15/2023 12:56:29 - INFO -     <<< world_size: 1
+10/15/2023 12:56:29 - INFO -   device: cuda:0 n_gpu: 1
+10/15/2023 12:56:30 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/15/2023 12:56:30 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/15/2023 12:56:30 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/15/2023 12:56:30 - WARNING -   Stage-One:True, Stage-Two:False
+10/15/2023 12:56:30 - WARNING -   Test retrieval by loose type.
+10/15/2023 12:56:30 - WARNING -   	 embed_dim: 512
+10/15/2023 12:56:30 - WARNING -   	 image_resolution: 224
+10/15/2023 12:56:30 - WARNING -   	 vision_layers: 12
+10/15/2023 12:56:30 - WARNING -   	 vision_width: 768
+10/15/2023 12:56:30 - WARNING -   	 vision_patch_size: 32
+10/15/2023 12:56:30 - WARNING -   	 context_length: 77
+10/15/2023 12:56:30 - WARNING -   	 vocab_size: 49408
+10/15/2023 12:56:30 - WARNING -   	 transformer_width: 512
+10/15/2023 12:56:30 - WARNING -   	 transformer_heads: 8
+10/15/2023 12:56:30 - WARNING -   	 transformer_layers: 12
+10/15/2023 12:56:30 - WARNING -   		 linear_patch: 2d
+10/15/2023 12:56:30 - WARNING -   	 cut_top_layer: 0
+10/15/2023 12:56:32 - WARNING -   	 sim_header: seqTransf
+10/15/2023 12:56:42 - INFO -   --------------------
+10/15/2023 12:56:42 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/15/2023 12:56:43 - INFO -   ***** Running test *****
+10/15/2023 12:56:43 - INFO -     Num examples = 1168
+10/15/2023 12:56:43 - INFO -     Batch size = 1
+10/15/2023 12:56:43 - INFO -     Num steps = 1168
+10/15/2023 12:56:43 - INFO -   ***** Running val *****
+10/15/2023 12:56:43 - INFO -     Num examples = 1168
+10/15/2023 18:10:46 - INFO -   sim matrix size: 1168, 1168
+10/15/2023 18:10:46 - INFO -   	 Length-T: 1168, Length-V:1168
+10/15/2023 18:10:46 - INFO -   Text-to-Video:
+10/15/2023 18:10:46 - INFO -   	>>>  R@1: 4.6 - R@5: 17.6 - R@10: 25.5 - Median R: 60.0 - Mean R: 183.8
+10/15/2023 18:10:46 - INFO -   Video-to-Text:
+10/15/2023 18:10:46 - INFO -   	>>>  V2T$R@1: 4.7 - V2T$R@5: 13.9 - V2T$R@10: 19.9 - V2T$Median R: 103.5 - V2T$Mean R: 175.7
+10/15/2023 18:10:52 - INFO -   Effective parameters:
+10/15/2023 18:10:52 - INFO -     <<< batch_size: 64
+10/15/2023 18:10:52 - INFO -     <<< batch_size_val: 1
+10/15/2023 18:10:52 - INFO -     <<< cache_dir: 
+10/15/2023 18:10:52 - INFO -     <<< coef_lr: 0.001
+10/15/2023 18:10:52 - INFO -     <<< cross_model: cross-base
+10/15/2023 18:10:52 - INFO -     <<< cross_num_hidden_layers: 4
+10/15/2023 18:10:52 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/15/2023 18:10:52 - INFO -     <<< dataset_ckpt: seed2
+10/15/2023 18:10:52 - INFO -     <<< datatype: moviegraph
+10/15/2023 18:10:52 - INFO -     <<< do_eval: True
+10/15/2023 18:10:52 - INFO -     <<< do_lower_case: False
+10/15/2023 18:10:52 - INFO -     <<< do_pretrain: False
+10/15/2023 18:10:52 - INFO -     <<< do_train: False
+10/15/2023 18:10:52 - INFO -     <<< epochs: 10
+10/15/2023 18:10:52 - INFO -     <<< eval_frame_order: 0
+10/15/2023 18:10:52 - INFO -     <<< expand_msrvtt_sentences: False
+10/15/2023 18:10:52 - INFO -     <<< feature_framerate: 1
+10/15/2023 18:10:52 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/15/2023 18:10:52 - INFO -     <<< fp16: False
+10/15/2023 18:10:52 - INFO -     <<< fp16_opt_level: O1
+10/15/2023 18:10:52 - INFO -     <<< freeze_layer_num: 0
+10/15/2023 18:10:52 - INFO -     <<< gradient_accumulation_steps: 1
+10/15/2023 18:10:52 - INFO -     <<< hard_negative_rate: 0.5
+10/15/2023 18:10:52 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/15/2023 18:10:52 - INFO -     <<< linear_patch: 2d
+10/15/2023 18:10:52 - INFO -     <<< local_rank: 0
+10/15/2023 18:10:52 - INFO -     <<< loose_type: True
+10/15/2023 18:10:52 - INFO -     <<< lr: 0.0001
+10/15/2023 18:10:52 - INFO -     <<< lr_decay: 0.9
+10/15/2023 18:10:52 - INFO -     <<< manipulation: counter_attribute
+10/15/2023 18:10:52 - INFO -     <<< margin: 0.1
+10/15/2023 18:10:52 - INFO -     <<< max_frames: 12
+10/15/2023 18:10:52 - INFO -     <<< max_words: 60
+10/15/2023 18:10:52 - INFO -     <<< n_display: 1
+10/15/2023 18:10:52 - INFO -     <<< n_gpu: 1
+10/15/2023 18:10:52 - INFO -     <<< n_pair: 1
+10/15/2023 18:10:52 - INFO -     <<< negative_weighting: 1
+10/15/2023 18:10:52 - INFO -     <<< num_thread_reader: 8
+10/15/2023 18:10:52 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/15/2023 18:10:52 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/15/2023 18:10:52 - INFO -     <<< rank: 0
+10/15/2023 18:10:52 - INFO -     <<< resume_model: None
+10/15/2023 18:10:52 - INFO -     <<< sampled_use_mil: False
+10/15/2023 18:10:52 - INFO -     <<< scale: 0
+10/15/2023 18:10:52 - INFO -     <<< seed: 2
+10/15/2023 18:10:52 - INFO -     <<< sim_header: seqTransf
+10/15/2023 18:10:52 - INFO -     <<< slice_framepos: 2
+10/15/2023 18:10:52 - INFO -     <<< task_type: retrieval
+10/15/2023 18:10:52 - INFO -     <<< test_file: counter_attribute.csv
+10/15/2023 18:10:52 - INFO -     <<< text_num_hidden_layers: 12
+10/15/2023 18:10:52 - INFO -     <<< train_csv: data/.train.csv
+10/15/2023 18:10:52 - INFO -     <<< train_file: train_1.csv
+10/15/2023 18:10:52 - INFO -     <<< train_frame_order: 0
+10/15/2023 18:10:52 - INFO -     <<< use_mil: False
+10/15/2023 18:10:52 - INFO -     <<< val_csv: data/.val.csv
+10/15/2023 18:10:52 - INFO -     <<< val_file: counter_attribute.csv
+10/15/2023 18:10:52 - INFO -     <<< video_dim: 1024
+10/15/2023 18:10:52 - INFO -     <<< visual_num_hidden_layers: 12
+10/15/2023 18:10:52 - INFO -     <<< warmup_proportion: 0.1
+10/15/2023 18:10:52 - INFO -     <<< world_size: 1
+10/15/2023 18:10:52 - INFO -   device: cuda:0 n_gpu: 1
+10/15/2023 18:10:53 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/15/2023 18:10:53 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/15/2023 18:10:53 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/15/2023 18:10:53 - WARNING -   Stage-One:True, Stage-Two:False
+10/15/2023 18:10:53 - WARNING -   Test retrieval by loose type.
+10/15/2023 18:10:53 - WARNING -   	 embed_dim: 512
+10/15/2023 18:10:53 - WARNING -   	 image_resolution: 224
+10/15/2023 18:10:53 - WARNING -   	 vision_layers: 12
+10/15/2023 18:10:53 - WARNING -   	 vision_width: 768
+10/15/2023 18:10:53 - WARNING -   	 vision_patch_size: 32
+10/15/2023 18:10:53 - WARNING -   	 context_length: 77
+10/15/2023 18:10:53 - WARNING -   	 vocab_size: 49408
+10/15/2023 18:10:53 - WARNING -   	 transformer_width: 512
+10/15/2023 18:10:53 - WARNING -   	 transformer_heads: 8
+10/15/2023 18:10:53 - WARNING -   	 transformer_layers: 12
+10/15/2023 18:10:53 - WARNING -   		 linear_patch: 2d
+10/15/2023 18:10:53 - WARNING -   	 cut_top_layer: 0
+10/15/2023 18:10:55 - WARNING -   	 sim_header: seqTransf
+10/15/2023 18:11:05 - INFO -   --------------------
+10/15/2023 18:11:05 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/15/2023 18:11:06 - INFO -   ***** Running test *****
+10/15/2023 18:11:06 - INFO -     Num examples = 818
+10/15/2023 18:11:06 - INFO -     Batch size = 1
+10/15/2023 18:11:06 - INFO -     Num steps = 818
+10/15/2023 18:11:06 - INFO -   ***** Running val *****
+10/15/2023 18:11:06 - INFO -     Num examples = 818
+10/15/2023 21:38:00 - INFO -   sim matrix size: 818, 818
+10/15/2023 21:38:00 - INFO -   	 Length-T: 818, Length-V:818
+10/15/2023 21:38:00 - INFO -   Text-to-Video:
+10/15/2023 21:38:00 - INFO -   	>>>  R@1: 10.0 - R@5: 29.6 - R@10: 37.5 - Median R: 22.0 - Mean R: 87.4
+10/15/2023 21:38:00 - INFO -   Video-to-Text:
+10/15/2023 21:38:00 - INFO -   	>>>  V2T$R@1: 7.4 - V2T$R@5: 20.6 - V2T$R@10: 29.2 - V2T$Median R: 36.0 - V2T$Mean R: 77.8
+10/15/2023 21:38:09 - INFO -   Effective parameters:
+10/15/2023 21:38:09 - INFO -     <<< batch_size: 64
+10/15/2023 21:38:09 - INFO -     <<< batch_size_val: 1
+10/15/2023 21:38:09 - INFO -     <<< cache_dir: 
+10/15/2023 21:38:09 - INFO -     <<< coef_lr: 0.001
+10/15/2023 21:38:09 - INFO -     <<< cross_model: cross-base
+10/15/2023 21:38:09 - INFO -     <<< cross_num_hidden_layers: 4
+10/15/2023 21:38:09 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/AnetQA/
+10/15/2023 21:38:09 - INFO -     <<< dataset_ckpt: seed2
+10/15/2023 21:38:09 - INFO -     <<< datatype: moviegraph
+10/15/2023 21:38:09 - INFO -     <<< do_eval: True
+10/15/2023 21:38:09 - INFO -     <<< do_lower_case: False
+10/15/2023 21:38:09 - INFO -     <<< do_pretrain: False
+10/15/2023 21:38:09 - INFO -     <<< do_train: False
+10/15/2023 21:38:09 - INFO -     <<< epochs: 10
+10/15/2023 21:38:09 - INFO -     <<< eval_frame_order: 0
+10/15/2023 21:38:09 - INFO -     <<< expand_msrvtt_sentences: False
+10/15/2023 21:38:09 - INFO -     <<< feature_framerate: 1
+10/15/2023 21:38:09 - INFO -     <<< features_path: /home/wiss/zhang/nfs/Anet-compressed
+10/15/2023 21:38:09 - INFO -     <<< fp16: False
+10/15/2023 21:38:09 - INFO -     <<< fp16_opt_level: O1
+10/15/2023 21:38:09 - INFO -     <<< freeze_layer_num: 0
+10/15/2023 21:38:09 - INFO -     <<< gradient_accumulation_steps: 1
+10/15/2023 21:38:09 - INFO -     <<< hard_negative_rate: 0.5
+10/15/2023 21:38:09 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/anet_train2_seed2/pytorch_model.bin.2
+10/15/2023 21:38:09 - INFO -     <<< linear_patch: 2d
+10/15/2023 21:38:09 - INFO -     <<< local_rank: 0
+10/15/2023 21:38:09 - INFO -     <<< loose_type: True
+10/15/2023 21:38:09 - INFO -     <<< lr: 0.0001
+10/15/2023 21:38:09 - INFO -     <<< lr_decay: 0.9
+10/15/2023 21:38:09 - INFO -     <<< manipulation: counter_attribute_mani
+10/15/2023 21:38:09 - INFO -     <<< margin: 0.1
+10/15/2023 21:38:09 - INFO -     <<< max_frames: 12
+10/15/2023 21:38:09 - INFO -     <<< max_words: 60
+10/15/2023 21:38:09 - INFO -     <<< n_display: 1
+10/15/2023 21:38:09 - INFO -     <<< n_gpu: 1
+10/15/2023 21:38:09 - INFO -     <<< n_pair: 1
+10/15/2023 21:38:09 - INFO -     <<< negative_weighting: 1
+10/15/2023 21:38:09 - INFO -     <<< num_thread_reader: 8
+10/15/2023 21:38:09 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/anet_eval_seed2/
+10/15/2023 21:38:09 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/15/2023 21:38:09 - INFO -     <<< rank: 0
+10/15/2023 21:38:09 - INFO -     <<< resume_model: None
+10/15/2023 21:38:09 - INFO -     <<< sampled_use_mil: False
+10/15/2023 21:38:09 - INFO -     <<< scale: 1
+10/15/2023 21:38:09 - INFO -     <<< seed: 2
+10/15/2023 21:38:09 - INFO -     <<< sim_header: seqTransf
+10/15/2023 21:38:09 - INFO -     <<< slice_framepos: 2
+10/15/2023 21:38:09 - INFO -     <<< task_type: retrieval
+10/15/2023 21:38:09 - INFO -     <<< test_file: counter_attribute_mani.csv
+10/15/2023 21:38:09 - INFO -     <<< text_num_hidden_layers: 12
+10/15/2023 21:38:09 - INFO -     <<< train_csv: data/.train.csv
+10/15/2023 21:38:09 - INFO -     <<< train_file: train_1.csv
+10/15/2023 21:38:09 - INFO -     <<< train_frame_order: 0
+10/15/2023 21:38:09 - INFO -     <<< use_mil: False
+10/15/2023 21:38:09 - INFO -     <<< val_csv: data/.val.csv
+10/15/2023 21:38:09 - INFO -     <<< val_file: counter_attribute_mani.csv
+10/15/2023 21:38:09 - INFO -     <<< video_dim: 1024
+10/15/2023 21:38:09 - INFO -     <<< visual_num_hidden_layers: 12
+10/15/2023 21:38:09 - INFO -     <<< warmup_proportion: 0.1
+10/15/2023 21:38:09 - INFO -     <<< world_size: 1
+10/15/2023 21:38:09 - INFO -   device: cuda:0 n_gpu: 1
+10/15/2023 21:38:11 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/15/2023 21:38:11 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/15/2023 21:38:11 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/15/2023 21:38:11 - WARNING -   Stage-One:True, Stage-Two:False
+10/15/2023 21:38:11 - WARNING -   Test retrieval by loose type.
+10/15/2023 21:38:11 - WARNING -   	 embed_dim: 512
+10/15/2023 21:38:11 - WARNING -   	 image_resolution: 224
+10/15/2023 21:38:11 - WARNING -   	 vision_layers: 12
+10/15/2023 21:38:11 - WARNING -   	 vision_width: 768
+10/15/2023 21:38:11 - WARNING -   	 vision_patch_size: 32
+10/15/2023 21:38:11 - WARNING -   	 context_length: 77
+10/15/2023 21:38:11 - WARNING -   	 vocab_size: 49408
+10/15/2023 21:38:11 - WARNING -   	 transformer_width: 512
+10/15/2023 21:38:11 - WARNING -   	 transformer_heads: 8
+10/15/2023 21:38:11 - WARNING -   	 transformer_layers: 12
+10/15/2023 21:38:11 - WARNING -   		 linear_patch: 2d
+10/15/2023 21:38:11 - WARNING -   	 cut_top_layer: 0
+10/15/2023 21:38:14 - WARNING -   	 sim_header: seqTransf
+10/15/2023 21:38:25 - INFO -   --------------------
+10/15/2023 21:38:25 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/15/2023 21:38:26 - INFO -   ***** Running test *****
+10/15/2023 21:38:26 - INFO -     Num examples = 818
+10/15/2023 21:38:26 - INFO -     Batch size = 1
+10/15/2023 21:38:26 - INFO -     Num steps = 818
+10/15/2023 21:38:26 - INFO -   ***** Running val *****
+10/15/2023 21:38:26 - INFO -     Num examples = 818
+10/16/2023 01:16:14 - INFO -   sim matrix size: 818, 818
+10/16/2023 01:16:14 - INFO -   	 Length-T: 818, Length-V:818
+10/16/2023 01:16:14 - INFO -   Text-to-Video:
+10/16/2023 01:16:14 - INFO -   	>>>  R@1: 7.6 - R@5: 23.8 - R@10: 32.8 - Median R: 33.5 - Mean R: 109.8
+10/16/2023 01:16:14 - INFO -   Video-to-Text:
+10/16/2023 01:16:14 - INFO -   	>>>  V2T$R@1: 8.2 - V2T$R@5: 20.1 - V2T$R@10: 28.4 - V2T$Median R: 44.0 - V2T$Mean R: 111.6

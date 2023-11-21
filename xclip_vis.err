@@ -1,0 +1,27 @@
+Stage-One:True, Stage-Two:False
+Test retrieval by loose type.
+	 embed_dim: 512
+	 image_resolution: 224
+	 vision_layers: 12
+	 vision_width: 768
+	 vision_patch_size: 32
+	 context_length: 77
+	 vocab_size: 49408
+	 transformer_width: 512
+	 transformer_heads: 8
+	 transformer_layers: 12
+		 linear_patch: 2d
+	 cut_top_layer: 0
+	 sim_header: seqTransf
+Traceback (most recent call last):
+  File "visual.py", line 204, in <module>
+    visual_output =seqtransf(video_output, video_mask)
+  File "visual.py", line 176, in seqtransf
+    frame_position_embeddings = model.frame_position_embeddings(position_ids)
+  File "/home/wiss/zhang/anaconda3/envs/clip4clip/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/wiss/zhang/anaconda3/envs/clip4clip/lib/python3.8/site-packages/torch/nn/modules/sparse.py", line 124, in forward
+    return F.embedding(
+  File "/home/wiss/zhang/anaconda3/envs/clip4clip/lib/python3.8/site-packages/torch/nn/functional.py", line 1852, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+RuntimeError: Input, output and indices must be on the current device

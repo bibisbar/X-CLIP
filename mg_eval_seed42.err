@@ -1,0 +1,1760 @@
+10/13/2023 15:15:32 - INFO -   Effective parameters:
+10/13/2023 15:15:32 - INFO -     <<< batch_size: 64
+10/13/2023 15:15:32 - INFO -     <<< batch_size_val: 1
+10/13/2023 15:15:32 - INFO -     <<< cache_dir: 
+10/13/2023 15:15:32 - INFO -     <<< coef_lr: 0.001
+10/13/2023 15:15:32 - INFO -     <<< cross_model: cross-base
+10/13/2023 15:15:32 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 15:15:32 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 15:15:32 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 15:15:32 - INFO -     <<< datatype: moviegraph
+10/13/2023 15:15:32 - INFO -     <<< do_eval: True
+10/13/2023 15:15:32 - INFO -     <<< do_lower_case: False
+10/13/2023 15:15:32 - INFO -     <<< do_pretrain: False
+10/13/2023 15:15:32 - INFO -     <<< do_train: False
+10/13/2023 15:15:32 - INFO -     <<< epochs: 10
+10/13/2023 15:15:32 - INFO -     <<< eval_frame_order: 0
+10/13/2023 15:15:32 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 15:15:32 - INFO -     <<< feature_framerate: 1
+10/13/2023 15:15:32 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 15:15:32 - INFO -     <<< fp16: False
+10/13/2023 15:15:32 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 15:15:32 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 15:15:32 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 15:15:32 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 15:15:32 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 15:15:32 - INFO -     <<< linear_patch: 2d
+10/13/2023 15:15:32 - INFO -     <<< local_rank: 0
+10/13/2023 15:15:32 - INFO -     <<< loose_type: True
+10/13/2023 15:15:32 - INFO -     <<< lr: 0.0001
+10/13/2023 15:15:32 - INFO -     <<< lr_decay: 0.9
+10/13/2023 15:15:32 - INFO -     <<< manipulation: temporal_int
+10/13/2023 15:15:32 - INFO -     <<< margin: 0.1
+10/13/2023 15:15:32 - INFO -     <<< max_frames: 12
+10/13/2023 15:15:32 - INFO -     <<< max_words: 60
+10/13/2023 15:15:32 - INFO -     <<< n_display: 1
+10/13/2023 15:15:32 - INFO -     <<< n_gpu: 1
+10/13/2023 15:15:32 - INFO -     <<< n_pair: 1
+10/13/2023 15:15:32 - INFO -     <<< negative_weighting: 1
+10/13/2023 15:15:32 - INFO -     <<< num_thread_reader: 8
+10/13/2023 15:15:32 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 15:15:32 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 15:15:32 - INFO -     <<< rank: 0
+10/13/2023 15:15:32 - INFO -     <<< resume_model: None
+10/13/2023 15:15:32 - INFO -     <<< sampled_use_mil: False
+10/13/2023 15:15:32 - INFO -     <<< scale: 0
+10/13/2023 15:15:32 - INFO -     <<< seed: 42
+10/13/2023 15:15:32 - INFO -     <<< sim_header: seqTransf
+10/13/2023 15:15:32 - INFO -     <<< slice_framepos: 2
+10/13/2023 15:15:32 - INFO -     <<< task_type: retrieval
+10/13/2023 15:15:32 - INFO -     <<< test_file: test_data_full/temporal_int.csv
+10/13/2023 15:15:32 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 15:15:32 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 15:15:32 - INFO -     <<< train_file: train1.csv
+10/13/2023 15:15:32 - INFO -     <<< train_frame_order: 0
+10/13/2023 15:15:32 - INFO -     <<< use_mil: False
+10/13/2023 15:15:32 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 15:15:32 - INFO -     <<< val_file: test_data_full/temporal_int.csv
+10/13/2023 15:15:32 - INFO -     <<< video_dim: 1024
+10/13/2023 15:15:32 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 15:15:32 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 15:15:32 - INFO -     <<< world_size: 1
+10/13/2023 15:15:32 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 15:15:36 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 15:15:36 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 15:15:36 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 15:15:36 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 15:15:36 - WARNING -   Test retrieval by loose type.
+10/13/2023 15:15:36 - WARNING -   	 embed_dim: 512
+10/13/2023 15:15:36 - WARNING -   	 image_resolution: 224
+10/13/2023 15:15:36 - WARNING -   	 vision_layers: 12
+10/13/2023 15:15:36 - WARNING -   	 vision_width: 768
+10/13/2023 15:15:36 - WARNING -   	 vision_patch_size: 32
+10/13/2023 15:15:36 - WARNING -   	 context_length: 77
+10/13/2023 15:15:36 - WARNING -   	 vocab_size: 49408
+10/13/2023 15:15:36 - WARNING -   	 transformer_width: 512
+10/13/2023 15:15:36 - WARNING -   	 transformer_heads: 8
+10/13/2023 15:15:36 - WARNING -   	 transformer_layers: 12
+10/13/2023 15:15:36 - WARNING -   		 linear_patch: 2d
+10/13/2023 15:15:36 - WARNING -   	 cut_top_layer: 0
+10/13/2023 15:15:38 - WARNING -   	 sim_header: seqTransf
+10/13/2023 15:15:45 - INFO -   --------------------
+10/13/2023 15:15:45 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 15:15:46 - INFO -   ***** Running test *****
+10/13/2023 15:15:46 - INFO -     Num examples = 563
+10/13/2023 15:15:46 - INFO -     Batch size = 1
+10/13/2023 15:15:46 - INFO -     Num steps = 563
+10/13/2023 15:15:46 - INFO -   ***** Running val *****
+10/13/2023 15:15:46 - INFO -     Num examples = 563
+10/13/2023 16:00:03 - INFO -   sim matrix size: 563, 563
+10/13/2023 16:00:03 - INFO -   	 Length-T: 563, Length-V:563
+10/13/2023 16:00:03 - INFO -   Text-to-Video:
+10/13/2023 16:00:03 - INFO -   	>>>  R@1: 28.8 - R@5: 64.8 - R@10: 80.3 - Median R: 3.0 - Mean R: 7.7
+10/13/2023 16:00:03 - INFO -   Video-to-Text:
+10/13/2023 16:00:03 - INFO -   	>>>  V2T$R@1: 28.9 - V2T$R@5: 64.6 - V2T$R@10: 82.2 - V2T$Median R: 4.0 - V2T$Mean R: 7.6
+10/13/2023 16:00:12 - INFO -   Effective parameters:
+10/13/2023 16:00:12 - INFO -     <<< batch_size: 64
+10/13/2023 16:00:12 - INFO -     <<< batch_size_val: 1
+10/13/2023 16:00:12 - INFO -     <<< cache_dir: 
+10/13/2023 16:00:12 - INFO -     <<< coef_lr: 0.001
+10/13/2023 16:00:12 - INFO -     <<< cross_model: cross-base
+10/13/2023 16:00:12 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 16:00:12 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 16:00:12 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 16:00:12 - INFO -     <<< datatype: moviegraph
+10/13/2023 16:00:12 - INFO -     <<< do_eval: True
+10/13/2023 16:00:12 - INFO -     <<< do_lower_case: False
+10/13/2023 16:00:12 - INFO -     <<< do_pretrain: False
+10/13/2023 16:00:12 - INFO -     <<< do_train: False
+10/13/2023 16:00:12 - INFO -     <<< epochs: 10
+10/13/2023 16:00:12 - INFO -     <<< eval_frame_order: 0
+10/13/2023 16:00:12 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 16:00:12 - INFO -     <<< feature_framerate: 1
+10/13/2023 16:00:12 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 16:00:12 - INFO -     <<< fp16: False
+10/13/2023 16:00:12 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 16:00:12 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 16:00:12 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 16:00:12 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 16:00:12 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 16:00:12 - INFO -     <<< linear_patch: 2d
+10/13/2023 16:00:12 - INFO -     <<< local_rank: 0
+10/13/2023 16:00:12 - INFO -     <<< loose_type: True
+10/13/2023 16:00:12 - INFO -     <<< lr: 0.0001
+10/13/2023 16:00:12 - INFO -     <<< lr_decay: 0.9
+10/13/2023 16:00:12 - INFO -     <<< manipulation: temporal_int_mani
+10/13/2023 16:00:12 - INFO -     <<< margin: 0.1
+10/13/2023 16:00:12 - INFO -     <<< max_frames: 12
+10/13/2023 16:00:12 - INFO -     <<< max_words: 60
+10/13/2023 16:00:12 - INFO -     <<< n_display: 1
+10/13/2023 16:00:12 - INFO -     <<< n_gpu: 1
+10/13/2023 16:00:12 - INFO -     <<< n_pair: 1
+10/13/2023 16:00:12 - INFO -     <<< negative_weighting: 1
+10/13/2023 16:00:12 - INFO -     <<< num_thread_reader: 8
+10/13/2023 16:00:12 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 16:00:12 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 16:00:12 - INFO -     <<< rank: 0
+10/13/2023 16:00:12 - INFO -     <<< resume_model: None
+10/13/2023 16:00:12 - INFO -     <<< sampled_use_mil: False
+10/13/2023 16:00:12 - INFO -     <<< scale: 1
+10/13/2023 16:00:12 - INFO -     <<< seed: 42
+10/13/2023 16:00:12 - INFO -     <<< sim_header: seqTransf
+10/13/2023 16:00:12 - INFO -     <<< slice_framepos: 2
+10/13/2023 16:00:12 - INFO -     <<< task_type: retrieval
+10/13/2023 16:00:12 - INFO -     <<< test_file: test_data_full/temporal_int_mani.csv
+10/13/2023 16:00:12 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 16:00:12 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 16:00:12 - INFO -     <<< train_file: train1.csv
+10/13/2023 16:00:12 - INFO -     <<< train_frame_order: 0
+10/13/2023 16:00:12 - INFO -     <<< use_mil: False
+10/13/2023 16:00:12 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 16:00:12 - INFO -     <<< val_file: test_data_full/temporal_int_mani.csv
+10/13/2023 16:00:12 - INFO -     <<< video_dim: 1024
+10/13/2023 16:00:12 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 16:00:12 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 16:00:12 - INFO -     <<< world_size: 1
+10/13/2023 16:00:12 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 16:00:13 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 16:00:13 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 16:00:13 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 16:00:13 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 16:00:13 - WARNING -   Test retrieval by loose type.
+10/13/2023 16:00:13 - WARNING -   	 embed_dim: 512
+10/13/2023 16:00:13 - WARNING -   	 image_resolution: 224
+10/13/2023 16:00:13 - WARNING -   	 vision_layers: 12
+10/13/2023 16:00:13 - WARNING -   	 vision_width: 768
+10/13/2023 16:00:13 - WARNING -   	 vision_patch_size: 32
+10/13/2023 16:00:13 - WARNING -   	 context_length: 77
+10/13/2023 16:00:13 - WARNING -   	 vocab_size: 49408
+10/13/2023 16:00:13 - WARNING -   	 transformer_width: 512
+10/13/2023 16:00:13 - WARNING -   	 transformer_heads: 8
+10/13/2023 16:00:13 - WARNING -   	 transformer_layers: 12
+10/13/2023 16:00:13 - WARNING -   		 linear_patch: 2d
+10/13/2023 16:00:13 - WARNING -   	 cut_top_layer: 0
+10/13/2023 16:00:15 - WARNING -   	 sim_header: seqTransf
+10/13/2023 16:00:22 - INFO -   --------------------
+10/13/2023 16:00:22 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 16:00:22 - INFO -   ***** Running test *****
+10/13/2023 16:00:22 - INFO -     Num examples = 563
+10/13/2023 16:00:22 - INFO -     Batch size = 1
+10/13/2023 16:00:22 - INFO -     Num steps = 563
+10/13/2023 16:00:22 - INFO -   ***** Running val *****
+10/13/2023 16:00:22 - INFO -     Num examples = 563
+10/13/2023 16:42:07 - INFO -   sim matrix size: 563, 563
+10/13/2023 16:42:07 - INFO -   	 Length-T: 563, Length-V:563
+10/13/2023 16:42:07 - INFO -   Text-to-Video:
+10/13/2023 16:42:07 - INFO -   	>>>  R@1: 28.2 - R@5: 63.9 - R@10: 79.4 - Median R: 3.0 - Mean R: 7.8
+10/13/2023 16:42:07 - INFO -   Video-to-Text:
+10/13/2023 16:42:07 - INFO -   	>>>  V2T$R@1: 29.7 - V2T$R@5: 64.5 - V2T$R@10: 82.8 - V2T$Median R: 4.0 - V2T$Mean R: 7.6
+10/13/2023 16:42:12 - INFO -   Effective parameters:
+10/13/2023 16:42:12 - INFO -     <<< batch_size: 64
+10/13/2023 16:42:12 - INFO -     <<< batch_size_val: 1
+10/13/2023 16:42:12 - INFO -     <<< cache_dir: 
+10/13/2023 16:42:12 - INFO -     <<< coef_lr: 0.001
+10/13/2023 16:42:12 - INFO -     <<< cross_model: cross-base
+10/13/2023 16:42:12 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 16:42:12 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 16:42:12 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 16:42:12 - INFO -     <<< datatype: moviegraph
+10/13/2023 16:42:12 - INFO -     <<< do_eval: True
+10/13/2023 16:42:12 - INFO -     <<< do_lower_case: False
+10/13/2023 16:42:12 - INFO -     <<< do_pretrain: False
+10/13/2023 16:42:12 - INFO -     <<< do_train: False
+10/13/2023 16:42:12 - INFO -     <<< epochs: 10
+10/13/2023 16:42:12 - INFO -     <<< eval_frame_order: 0
+10/13/2023 16:42:12 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 16:42:12 - INFO -     <<< feature_framerate: 1
+10/13/2023 16:42:12 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 16:42:12 - INFO -     <<< fp16: False
+10/13/2023 16:42:12 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 16:42:12 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 16:42:12 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 16:42:12 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 16:42:12 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 16:42:12 - INFO -     <<< linear_patch: 2d
+10/13/2023 16:42:12 - INFO -     <<< local_rank: 0
+10/13/2023 16:42:12 - INFO -     <<< loose_type: True
+10/13/2023 16:42:12 - INFO -     <<< lr: 0.0001
+10/13/2023 16:42:12 - INFO -     <<< lr_decay: 0.9
+10/13/2023 16:42:12 - INFO -     <<< manipulation: temporal_act
+10/13/2023 16:42:12 - INFO -     <<< margin: 0.1
+10/13/2023 16:42:12 - INFO -     <<< max_frames: 12
+10/13/2023 16:42:12 - INFO -     <<< max_words: 60
+10/13/2023 16:42:12 - INFO -     <<< n_display: 1
+10/13/2023 16:42:12 - INFO -     <<< n_gpu: 1
+10/13/2023 16:42:12 - INFO -     <<< n_pair: 1
+10/13/2023 16:42:12 - INFO -     <<< negative_weighting: 1
+10/13/2023 16:42:12 - INFO -     <<< num_thread_reader: 8
+10/13/2023 16:42:12 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 16:42:12 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 16:42:12 - INFO -     <<< rank: 0
+10/13/2023 16:42:12 - INFO -     <<< resume_model: None
+10/13/2023 16:42:12 - INFO -     <<< sampled_use_mil: False
+10/13/2023 16:42:12 - INFO -     <<< scale: 0
+10/13/2023 16:42:12 - INFO -     <<< seed: 42
+10/13/2023 16:42:12 - INFO -     <<< sim_header: seqTransf
+10/13/2023 16:42:12 - INFO -     <<< slice_framepos: 2
+10/13/2023 16:42:12 - INFO -     <<< task_type: retrieval
+10/13/2023 16:42:12 - INFO -     <<< test_file: test_data_full/temporal_act.csv
+10/13/2023 16:42:12 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 16:42:12 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 16:42:12 - INFO -     <<< train_file: train1.csv
+10/13/2023 16:42:12 - INFO -     <<< train_frame_order: 0
+10/13/2023 16:42:12 - INFO -     <<< use_mil: False
+10/13/2023 16:42:12 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 16:42:12 - INFO -     <<< val_file: test_data_full/temporal_act.csv
+10/13/2023 16:42:12 - INFO -     <<< video_dim: 1024
+10/13/2023 16:42:12 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 16:42:12 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 16:42:12 - INFO -     <<< world_size: 1
+10/13/2023 16:42:12 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 16:42:13 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 16:42:13 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 16:42:13 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 16:42:13 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 16:42:13 - WARNING -   Test retrieval by loose type.
+10/13/2023 16:42:13 - WARNING -   	 embed_dim: 512
+10/13/2023 16:42:13 - WARNING -   	 image_resolution: 224
+10/13/2023 16:42:13 - WARNING -   	 vision_layers: 12
+10/13/2023 16:42:13 - WARNING -   	 vision_width: 768
+10/13/2023 16:42:13 - WARNING -   	 vision_patch_size: 32
+10/13/2023 16:42:13 - WARNING -   	 context_length: 77
+10/13/2023 16:42:13 - WARNING -   	 vocab_size: 49408
+10/13/2023 16:42:13 - WARNING -   	 transformer_width: 512
+10/13/2023 16:42:13 - WARNING -   	 transformer_heads: 8
+10/13/2023 16:42:13 - WARNING -   	 transformer_layers: 12
+10/13/2023 16:42:13 - WARNING -   		 linear_patch: 2d
+10/13/2023 16:42:13 - WARNING -   	 cut_top_layer: 0
+10/13/2023 16:42:14 - WARNING -   	 sim_header: seqTransf
+10/13/2023 16:42:21 - INFO -   --------------------
+10/13/2023 16:42:21 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 16:42:21 - INFO -   ***** Running test *****
+10/13/2023 16:42:21 - INFO -     Num examples = 489
+10/13/2023 16:42:21 - INFO -     Batch size = 1
+10/13/2023 16:42:21 - INFO -     Num steps = 489
+10/13/2023 16:42:21 - INFO -   ***** Running val *****
+10/13/2023 16:42:21 - INFO -     Num examples = 489
+10/13/2023 17:15:36 - INFO -   sim matrix size: 489, 489
+10/13/2023 17:15:36 - INFO -   	 Length-T: 489, Length-V:489
+10/13/2023 17:15:36 - INFO -   Text-to-Video:
+10/13/2023 17:15:36 - INFO -   	>>>  R@1: 38.4 - R@5: 73.6 - R@10: 86.3 - Median R: 2.0 - Mean R: 7.0
+10/13/2023 17:15:36 - INFO -   Video-to-Text:
+10/13/2023 17:15:36 - INFO -   	>>>  V2T$R@1: 37.2 - V2T$R@5: 74.6 - V2T$R@10: 85.7 - V2T$Median R: 2.0 - V2T$Mean R: 6.8
+10/13/2023 17:15:42 - INFO -   Effective parameters:
+10/13/2023 17:15:42 - INFO -     <<< batch_size: 64
+10/13/2023 17:15:42 - INFO -     <<< batch_size_val: 1
+10/13/2023 17:15:42 - INFO -     <<< cache_dir: 
+10/13/2023 17:15:42 - INFO -     <<< coef_lr: 0.001
+10/13/2023 17:15:42 - INFO -     <<< cross_model: cross-base
+10/13/2023 17:15:42 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 17:15:42 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 17:15:42 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 17:15:42 - INFO -     <<< datatype: moviegraph
+10/13/2023 17:15:42 - INFO -     <<< do_eval: True
+10/13/2023 17:15:42 - INFO -     <<< do_lower_case: False
+10/13/2023 17:15:42 - INFO -     <<< do_pretrain: False
+10/13/2023 17:15:42 - INFO -     <<< do_train: False
+10/13/2023 17:15:42 - INFO -     <<< epochs: 10
+10/13/2023 17:15:42 - INFO -     <<< eval_frame_order: 0
+10/13/2023 17:15:42 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 17:15:42 - INFO -     <<< feature_framerate: 1
+10/13/2023 17:15:42 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 17:15:42 - INFO -     <<< fp16: False
+10/13/2023 17:15:42 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 17:15:42 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 17:15:42 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 17:15:42 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 17:15:42 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 17:15:42 - INFO -     <<< linear_patch: 2d
+10/13/2023 17:15:42 - INFO -     <<< local_rank: 0
+10/13/2023 17:15:42 - INFO -     <<< loose_type: True
+10/13/2023 17:15:42 - INFO -     <<< lr: 0.0001
+10/13/2023 17:15:42 - INFO -     <<< lr_decay: 0.9
+10/13/2023 17:15:42 - INFO -     <<< manipulation: temporal_act_mani
+10/13/2023 17:15:42 - INFO -     <<< margin: 0.1
+10/13/2023 17:15:42 - INFO -     <<< max_frames: 12
+10/13/2023 17:15:42 - INFO -     <<< max_words: 60
+10/13/2023 17:15:42 - INFO -     <<< n_display: 1
+10/13/2023 17:15:42 - INFO -     <<< n_gpu: 1
+10/13/2023 17:15:42 - INFO -     <<< n_pair: 1
+10/13/2023 17:15:42 - INFO -     <<< negative_weighting: 1
+10/13/2023 17:15:42 - INFO -     <<< num_thread_reader: 8
+10/13/2023 17:15:42 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 17:15:42 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 17:15:42 - INFO -     <<< rank: 0
+10/13/2023 17:15:42 - INFO -     <<< resume_model: None
+10/13/2023 17:15:42 - INFO -     <<< sampled_use_mil: False
+10/13/2023 17:15:42 - INFO -     <<< scale: 1
+10/13/2023 17:15:42 - INFO -     <<< seed: 42
+10/13/2023 17:15:42 - INFO -     <<< sim_header: seqTransf
+10/13/2023 17:15:42 - INFO -     <<< slice_framepos: 2
+10/13/2023 17:15:42 - INFO -     <<< task_type: retrieval
+10/13/2023 17:15:42 - INFO -     <<< test_file: test_data_full/temporal_act_mani.csv
+10/13/2023 17:15:42 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 17:15:42 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 17:15:42 - INFO -     <<< train_file: train1.csv
+10/13/2023 17:15:42 - INFO -     <<< train_frame_order: 0
+10/13/2023 17:15:42 - INFO -     <<< use_mil: False
+10/13/2023 17:15:42 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 17:15:42 - INFO -     <<< val_file: test_data_full/temporal_act_mani.csv
+10/13/2023 17:15:42 - INFO -     <<< video_dim: 1024
+10/13/2023 17:15:42 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 17:15:42 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 17:15:42 - INFO -     <<< world_size: 1
+10/13/2023 17:15:42 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 17:15:42 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 17:15:42 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 17:15:42 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 17:15:42 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 17:15:42 - WARNING -   Test retrieval by loose type.
+10/13/2023 17:15:42 - WARNING -   	 embed_dim: 512
+10/13/2023 17:15:42 - WARNING -   	 image_resolution: 224
+10/13/2023 17:15:42 - WARNING -   	 vision_layers: 12
+10/13/2023 17:15:42 - WARNING -   	 vision_width: 768
+10/13/2023 17:15:42 - WARNING -   	 vision_patch_size: 32
+10/13/2023 17:15:42 - WARNING -   	 context_length: 77
+10/13/2023 17:15:42 - WARNING -   	 vocab_size: 49408
+10/13/2023 17:15:42 - WARNING -   	 transformer_width: 512
+10/13/2023 17:15:42 - WARNING -   	 transformer_heads: 8
+10/13/2023 17:15:42 - WARNING -   	 transformer_layers: 12
+10/13/2023 17:15:42 - WARNING -   		 linear_patch: 2d
+10/13/2023 17:15:42 - WARNING -   	 cut_top_layer: 0
+10/13/2023 17:15:44 - WARNING -   	 sim_header: seqTransf
+10/13/2023 17:15:50 - INFO -   --------------------
+10/13/2023 17:15:50 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 17:15:51 - INFO -   ***** Running test *****
+10/13/2023 17:15:51 - INFO -     Num examples = 489
+10/13/2023 17:15:51 - INFO -     Batch size = 1
+10/13/2023 17:15:51 - INFO -     Num steps = 489
+10/13/2023 17:15:51 - INFO -   ***** Running val *****
+10/13/2023 17:15:51 - INFO -     Num examples = 489
+10/13/2023 17:49:01 - INFO -   sim matrix size: 489, 489
+10/13/2023 17:49:01 - INFO -   	 Length-T: 489, Length-V:489
+10/13/2023 17:49:01 - INFO -   Text-to-Video:
+10/13/2023 17:49:01 - INFO -   	>>>  R@1: 36.6 - R@5: 73.8 - R@10: 86.1 - Median R: 2.0 - Mean R: 7.2
+10/13/2023 17:49:01 - INFO -   Video-to-Text:
+10/13/2023 17:49:01 - INFO -   	>>>  V2T$R@1: 38.0 - V2T$R@5: 74.2 - V2T$R@10: 86.3 - V2T$Median R: 2.0 - V2T$Mean R: 7.1
+10/13/2023 17:49:06 - INFO -   Effective parameters:
+10/13/2023 17:49:06 - INFO -     <<< batch_size: 64
+10/13/2023 17:49:06 - INFO -     <<< batch_size_val: 1
+10/13/2023 17:49:06 - INFO -     <<< cache_dir: 
+10/13/2023 17:49:06 - INFO -     <<< coef_lr: 0.001
+10/13/2023 17:49:06 - INFO -     <<< cross_model: cross-base
+10/13/2023 17:49:06 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 17:49:06 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 17:49:06 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 17:49:06 - INFO -     <<< datatype: moviegraph
+10/13/2023 17:49:06 - INFO -     <<< do_eval: True
+10/13/2023 17:49:06 - INFO -     <<< do_lower_case: False
+10/13/2023 17:49:06 - INFO -     <<< do_pretrain: False
+10/13/2023 17:49:06 - INFO -     <<< do_train: False
+10/13/2023 17:49:06 - INFO -     <<< epochs: 10
+10/13/2023 17:49:06 - INFO -     <<< eval_frame_order: 0
+10/13/2023 17:49:06 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 17:49:06 - INFO -     <<< feature_framerate: 1
+10/13/2023 17:49:06 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 17:49:06 - INFO -     <<< fp16: False
+10/13/2023 17:49:06 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 17:49:06 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 17:49:06 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 17:49:06 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 17:49:06 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 17:49:06 - INFO -     <<< linear_patch: 2d
+10/13/2023 17:49:06 - INFO -     <<< local_rank: 0
+10/13/2023 17:49:06 - INFO -     <<< loose_type: True
+10/13/2023 17:49:06 - INFO -     <<< lr: 0.0001
+10/13/2023 17:49:06 - INFO -     <<< lr_decay: 0.9
+10/13/2023 17:49:06 - INFO -     <<< manipulation: neighborhood_same_entity
+10/13/2023 17:49:06 - INFO -     <<< margin: 0.1
+10/13/2023 17:49:06 - INFO -     <<< max_frames: 12
+10/13/2023 17:49:06 - INFO -     <<< max_words: 60
+10/13/2023 17:49:06 - INFO -     <<< n_display: 1
+10/13/2023 17:49:06 - INFO -     <<< n_gpu: 1
+10/13/2023 17:49:06 - INFO -     <<< n_pair: 1
+10/13/2023 17:49:06 - INFO -     <<< negative_weighting: 1
+10/13/2023 17:49:06 - INFO -     <<< num_thread_reader: 8
+10/13/2023 17:49:06 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 17:49:06 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 17:49:06 - INFO -     <<< rank: 0
+10/13/2023 17:49:06 - INFO -     <<< resume_model: None
+10/13/2023 17:49:06 - INFO -     <<< sampled_use_mil: False
+10/13/2023 17:49:06 - INFO -     <<< scale: 0
+10/13/2023 17:49:06 - INFO -     <<< seed: 42
+10/13/2023 17:49:06 - INFO -     <<< sim_header: seqTransf
+10/13/2023 17:49:06 - INFO -     <<< slice_framepos: 2
+10/13/2023 17:49:06 - INFO -     <<< task_type: retrieval
+10/13/2023 17:49:06 - INFO -     <<< test_file: test_data_full/neighborhood_same_entity.csv
+10/13/2023 17:49:06 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 17:49:06 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 17:49:06 - INFO -     <<< train_file: train1.csv
+10/13/2023 17:49:06 - INFO -     <<< train_frame_order: 0
+10/13/2023 17:49:06 - INFO -     <<< use_mil: False
+10/13/2023 17:49:06 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 17:49:06 - INFO -     <<< val_file: test_data_full/neighborhood_same_entity.csv
+10/13/2023 17:49:06 - INFO -     <<< video_dim: 1024
+10/13/2023 17:49:06 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 17:49:06 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 17:49:06 - INFO -     <<< world_size: 1
+10/13/2023 17:49:06 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 17:49:06 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 17:49:06 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 17:49:06 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 17:49:06 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 17:49:06 - WARNING -   Test retrieval by loose type.
+10/13/2023 17:49:06 - WARNING -   	 embed_dim: 512
+10/13/2023 17:49:06 - WARNING -   	 image_resolution: 224
+10/13/2023 17:49:06 - WARNING -   	 vision_layers: 12
+10/13/2023 17:49:06 - WARNING -   	 vision_width: 768
+10/13/2023 17:49:06 - WARNING -   	 vision_patch_size: 32
+10/13/2023 17:49:06 - WARNING -   	 context_length: 77
+10/13/2023 17:49:06 - WARNING -   	 vocab_size: 49408
+10/13/2023 17:49:06 - WARNING -   	 transformer_width: 512
+10/13/2023 17:49:06 - WARNING -   	 transformer_heads: 8
+10/13/2023 17:49:06 - WARNING -   	 transformer_layers: 12
+10/13/2023 17:49:06 - WARNING -   		 linear_patch: 2d
+10/13/2023 17:49:06 - WARNING -   	 cut_top_layer: 0
+10/13/2023 17:49:08 - WARNING -   	 sim_header: seqTransf
+10/13/2023 17:49:14 - INFO -   --------------------
+10/13/2023 17:49:14 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 17:49:14 - INFO -   ***** Running test *****
+10/13/2023 17:49:14 - INFO -     Num examples = 160
+10/13/2023 17:49:14 - INFO -     Batch size = 1
+10/13/2023 17:49:14 - INFO -     Num steps = 160
+10/13/2023 17:49:14 - INFO -   ***** Running val *****
+10/13/2023 17:49:14 - INFO -     Num examples = 160
+10/13/2023 17:55:31 - INFO -   sim matrix size: 160, 160
+10/13/2023 17:55:31 - INFO -   	 Length-T: 160, Length-V:160
+10/13/2023 17:55:31 - INFO -   Text-to-Video:
+10/13/2023 17:55:31 - INFO -   	>>>  R@1: 18.8 - R@5: 56.9 - R@10: 70.0 - Median R: 4.5 - Mean R: 10.9
+10/13/2023 17:55:31 - INFO -   Video-to-Text:
+10/13/2023 17:55:31 - INFO -   	>>>  V2T$R@1: 20.7 - V2T$R@5: 48.8 - V2T$R@10: 68.9 - V2T$Median R: 6.0 - V2T$Mean R: 9.9
+10/13/2023 17:55:36 - INFO -   Effective parameters:
+10/13/2023 17:55:36 - INFO -     <<< batch_size: 64
+10/13/2023 17:55:36 - INFO -     <<< batch_size_val: 1
+10/13/2023 17:55:36 - INFO -     <<< cache_dir: 
+10/13/2023 17:55:36 - INFO -     <<< coef_lr: 0.001
+10/13/2023 17:55:36 - INFO -     <<< cross_model: cross-base
+10/13/2023 17:55:36 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 17:55:36 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 17:55:36 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 17:55:36 - INFO -     <<< datatype: moviegraph
+10/13/2023 17:55:36 - INFO -     <<< do_eval: True
+10/13/2023 17:55:36 - INFO -     <<< do_lower_case: False
+10/13/2023 17:55:36 - INFO -     <<< do_pretrain: False
+10/13/2023 17:55:36 - INFO -     <<< do_train: False
+10/13/2023 17:55:36 - INFO -     <<< epochs: 10
+10/13/2023 17:55:36 - INFO -     <<< eval_frame_order: 0
+10/13/2023 17:55:36 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 17:55:36 - INFO -     <<< feature_framerate: 1
+10/13/2023 17:55:36 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 17:55:36 - INFO -     <<< fp16: False
+10/13/2023 17:55:36 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 17:55:36 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 17:55:36 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 17:55:36 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 17:55:36 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 17:55:36 - INFO -     <<< linear_patch: 2d
+10/13/2023 17:55:36 - INFO -     <<< local_rank: 0
+10/13/2023 17:55:36 - INFO -     <<< loose_type: True
+10/13/2023 17:55:36 - INFO -     <<< lr: 0.0001
+10/13/2023 17:55:36 - INFO -     <<< lr_decay: 0.9
+10/13/2023 17:55:36 - INFO -     <<< manipulation: neighborhood_same_entity_mani
+10/13/2023 17:55:36 - INFO -     <<< margin: 0.1
+10/13/2023 17:55:36 - INFO -     <<< max_frames: 12
+10/13/2023 17:55:36 - INFO -     <<< max_words: 60
+10/13/2023 17:55:36 - INFO -     <<< n_display: 1
+10/13/2023 17:55:36 - INFO -     <<< n_gpu: 1
+10/13/2023 17:55:36 - INFO -     <<< n_pair: 1
+10/13/2023 17:55:36 - INFO -     <<< negative_weighting: 1
+10/13/2023 17:55:36 - INFO -     <<< num_thread_reader: 8
+10/13/2023 17:55:36 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 17:55:36 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 17:55:36 - INFO -     <<< rank: 0
+10/13/2023 17:55:36 - INFO -     <<< resume_model: None
+10/13/2023 17:55:36 - INFO -     <<< sampled_use_mil: False
+10/13/2023 17:55:36 - INFO -     <<< scale: 1
+10/13/2023 17:55:36 - INFO -     <<< seed: 42
+10/13/2023 17:55:36 - INFO -     <<< sim_header: seqTransf
+10/13/2023 17:55:36 - INFO -     <<< slice_framepos: 2
+10/13/2023 17:55:36 - INFO -     <<< task_type: retrieval
+10/13/2023 17:55:36 - INFO -     <<< test_file: test_data_full/neighborhood_same_entity_mani.csv
+10/13/2023 17:55:36 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 17:55:36 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 17:55:36 - INFO -     <<< train_file: train1.csv
+10/13/2023 17:55:36 - INFO -     <<< train_frame_order: 0
+10/13/2023 17:55:36 - INFO -     <<< use_mil: False
+10/13/2023 17:55:36 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 17:55:36 - INFO -     <<< val_file: test_data_full/neighborhood_same_entity_mani.csv
+10/13/2023 17:55:36 - INFO -     <<< video_dim: 1024
+10/13/2023 17:55:36 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 17:55:36 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 17:55:36 - INFO -     <<< world_size: 1
+10/13/2023 17:55:36 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 17:55:37 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 17:55:37 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 17:55:37 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 17:55:37 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 17:55:37 - WARNING -   Test retrieval by loose type.
+10/13/2023 17:55:37 - WARNING -   	 embed_dim: 512
+10/13/2023 17:55:37 - WARNING -   	 image_resolution: 224
+10/13/2023 17:55:37 - WARNING -   	 vision_layers: 12
+10/13/2023 17:55:37 - WARNING -   	 vision_width: 768
+10/13/2023 17:55:37 - WARNING -   	 vision_patch_size: 32
+10/13/2023 17:55:37 - WARNING -   	 context_length: 77
+10/13/2023 17:55:37 - WARNING -   	 vocab_size: 49408
+10/13/2023 17:55:37 - WARNING -   	 transformer_width: 512
+10/13/2023 17:55:37 - WARNING -   	 transformer_heads: 8
+10/13/2023 17:55:37 - WARNING -   	 transformer_layers: 12
+10/13/2023 17:55:37 - WARNING -   		 linear_patch: 2d
+10/13/2023 17:55:37 - WARNING -   	 cut_top_layer: 0
+10/13/2023 17:55:38 - WARNING -   	 sim_header: seqTransf
+10/13/2023 17:55:45 - INFO -   --------------------
+10/13/2023 17:55:45 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 17:55:45 - INFO -   ***** Running test *****
+10/13/2023 17:55:45 - INFO -     Num examples = 160
+10/13/2023 17:55:45 - INFO -     Batch size = 1
+10/13/2023 17:55:45 - INFO -     Num steps = 160
+10/13/2023 17:55:45 - INFO -   ***** Running val *****
+10/13/2023 17:55:45 - INFO -     Num examples = 160
+10/13/2023 18:02:12 - INFO -   sim matrix size: 160, 160
+10/13/2023 18:02:12 - INFO -   	 Length-T: 160, Length-V:160
+10/13/2023 18:02:12 - INFO -   Text-to-Video:
+10/13/2023 18:02:12 - INFO -   	>>>  R@1: 23.1 - R@5: 55.0 - R@10: 68.1 - Median R: 4.0 - Mean R: 10.8
+10/13/2023 18:02:12 - INFO -   Video-to-Text:
+10/13/2023 18:02:12 - INFO -   	>>>  V2T$R@1: 25.0 - V2T$R@5: 48.8 - V2T$R@10: 69.5 - V2T$Median R: 6.0 - V2T$Mean R: 9.6
+10/13/2023 18:02:17 - INFO -   Effective parameters:
+10/13/2023 18:02:17 - INFO -     <<< batch_size: 64
+10/13/2023 18:02:17 - INFO -     <<< batch_size_val: 1
+10/13/2023 18:02:17 - INFO -     <<< cache_dir: 
+10/13/2023 18:02:17 - INFO -     <<< coef_lr: 0.001
+10/13/2023 18:02:17 - INFO -     <<< cross_model: cross-base
+10/13/2023 18:02:17 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 18:02:17 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 18:02:17 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 18:02:17 - INFO -     <<< datatype: moviegraph
+10/13/2023 18:02:17 - INFO -     <<< do_eval: True
+10/13/2023 18:02:17 - INFO -     <<< do_lower_case: False
+10/13/2023 18:02:17 - INFO -     <<< do_pretrain: False
+10/13/2023 18:02:17 - INFO -     <<< do_train: False
+10/13/2023 18:02:17 - INFO -     <<< epochs: 10
+10/13/2023 18:02:17 - INFO -     <<< eval_frame_order: 0
+10/13/2023 18:02:17 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 18:02:17 - INFO -     <<< feature_framerate: 1
+10/13/2023 18:02:17 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 18:02:17 - INFO -     <<< fp16: False
+10/13/2023 18:02:17 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 18:02:17 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 18:02:17 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 18:02:17 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 18:02:17 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 18:02:17 - INFO -     <<< linear_patch: 2d
+10/13/2023 18:02:17 - INFO -     <<< local_rank: 0
+10/13/2023 18:02:17 - INFO -     <<< loose_type: True
+10/13/2023 18:02:17 - INFO -     <<< lr: 0.0001
+10/13/2023 18:02:17 - INFO -     <<< lr_decay: 0.9
+10/13/2023 18:02:17 - INFO -     <<< manipulation: neighborhood_diff_entity
+10/13/2023 18:02:17 - INFO -     <<< margin: 0.1
+10/13/2023 18:02:17 - INFO -     <<< max_frames: 12
+10/13/2023 18:02:17 - INFO -     <<< max_words: 60
+10/13/2023 18:02:17 - INFO -     <<< n_display: 1
+10/13/2023 18:02:17 - INFO -     <<< n_gpu: 1
+10/13/2023 18:02:17 - INFO -     <<< n_pair: 1
+10/13/2023 18:02:17 - INFO -     <<< negative_weighting: 1
+10/13/2023 18:02:17 - INFO -     <<< num_thread_reader: 8
+10/13/2023 18:02:17 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 18:02:17 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 18:02:17 - INFO -     <<< rank: 0
+10/13/2023 18:02:17 - INFO -     <<< resume_model: None
+10/13/2023 18:02:17 - INFO -     <<< sampled_use_mil: False
+10/13/2023 18:02:17 - INFO -     <<< scale: 0
+10/13/2023 18:02:17 - INFO -     <<< seed: 42
+10/13/2023 18:02:17 - INFO -     <<< sim_header: seqTransf
+10/13/2023 18:02:17 - INFO -     <<< slice_framepos: 2
+10/13/2023 18:02:17 - INFO -     <<< task_type: retrieval
+10/13/2023 18:02:17 - INFO -     <<< test_file: test_data_full/neighborhood_diff_entity.csv
+10/13/2023 18:02:17 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 18:02:17 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 18:02:17 - INFO -     <<< train_file: train1.csv
+10/13/2023 18:02:17 - INFO -     <<< train_frame_order: 0
+10/13/2023 18:02:17 - INFO -     <<< use_mil: False
+10/13/2023 18:02:17 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 18:02:17 - INFO -     <<< val_file: test_data_full/neighborhood_diff_entity.csv
+10/13/2023 18:02:17 - INFO -     <<< video_dim: 1024
+10/13/2023 18:02:17 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 18:02:17 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 18:02:17 - INFO -     <<< world_size: 1
+10/13/2023 18:02:17 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 18:02:18 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 18:02:18 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 18:02:18 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 18:02:18 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 18:02:18 - WARNING -   Test retrieval by loose type.
+10/13/2023 18:02:18 - WARNING -   	 embed_dim: 512
+10/13/2023 18:02:18 - WARNING -   	 image_resolution: 224
+10/13/2023 18:02:18 - WARNING -   	 vision_layers: 12
+10/13/2023 18:02:18 - WARNING -   	 vision_width: 768
+10/13/2023 18:02:18 - WARNING -   	 vision_patch_size: 32
+10/13/2023 18:02:18 - WARNING -   	 context_length: 77
+10/13/2023 18:02:18 - WARNING -   	 vocab_size: 49408
+10/13/2023 18:02:18 - WARNING -   	 transformer_width: 512
+10/13/2023 18:02:18 - WARNING -   	 transformer_heads: 8
+10/13/2023 18:02:18 - WARNING -   	 transformer_layers: 12
+10/13/2023 18:02:18 - WARNING -   		 linear_patch: 2d
+10/13/2023 18:02:18 - WARNING -   	 cut_top_layer: 0
+10/13/2023 18:02:19 - WARNING -   	 sim_header: seqTransf
+10/13/2023 18:02:26 - INFO -   --------------------
+10/13/2023 18:02:26 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 18:02:26 - INFO -   ***** Running test *****
+10/13/2023 18:02:26 - INFO -     Num examples = 597
+10/13/2023 18:02:26 - INFO -     Batch size = 1
+10/13/2023 18:02:26 - INFO -     Num steps = 597
+10/13/2023 18:02:26 - INFO -   ***** Running val *****
+10/13/2023 18:02:26 - INFO -     Num examples = 597
+10/13/2023 18:47:18 - INFO -   sim matrix size: 597, 597
+10/13/2023 18:47:18 - INFO -   	 Length-T: 597, Length-V:597
+10/13/2023 18:47:18 - INFO -   Text-to-Video:
+10/13/2023 18:47:18 - INFO -   	>>>  R@1: 20.3 - R@5: 54.6 - R@10: 72.0 - Median R: 5.0 - Mean R: 11.4
+10/13/2023 18:47:18 - INFO -   Video-to-Text:
+10/13/2023 18:47:18 - INFO -   	>>>  V2T$R@1: 9.3 - V2T$R@5: 35.6 - V2T$R@10: 57.8 - V2T$Median R: 8.0 - V2T$Mean R: 15.4
+10/13/2023 18:47:24 - INFO -   Effective parameters:
+10/13/2023 18:47:24 - INFO -     <<< batch_size: 64
+10/13/2023 18:47:24 - INFO -     <<< batch_size_val: 1
+10/13/2023 18:47:24 - INFO -     <<< cache_dir: 
+10/13/2023 18:47:24 - INFO -     <<< coef_lr: 0.001
+10/13/2023 18:47:24 - INFO -     <<< cross_model: cross-base
+10/13/2023 18:47:24 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 18:47:24 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 18:47:24 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 18:47:24 - INFO -     <<< datatype: moviegraph
+10/13/2023 18:47:24 - INFO -     <<< do_eval: True
+10/13/2023 18:47:24 - INFO -     <<< do_lower_case: False
+10/13/2023 18:47:24 - INFO -     <<< do_pretrain: False
+10/13/2023 18:47:24 - INFO -     <<< do_train: False
+10/13/2023 18:47:24 - INFO -     <<< epochs: 10
+10/13/2023 18:47:24 - INFO -     <<< eval_frame_order: 0
+10/13/2023 18:47:24 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 18:47:24 - INFO -     <<< feature_framerate: 1
+10/13/2023 18:47:24 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 18:47:24 - INFO -     <<< fp16: False
+10/13/2023 18:47:24 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 18:47:24 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 18:47:24 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 18:47:24 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 18:47:24 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 18:47:24 - INFO -     <<< linear_patch: 2d
+10/13/2023 18:47:24 - INFO -     <<< local_rank: 0
+10/13/2023 18:47:24 - INFO -     <<< loose_type: True
+10/13/2023 18:47:24 - INFO -     <<< lr: 0.0001
+10/13/2023 18:47:24 - INFO -     <<< lr_decay: 0.9
+10/13/2023 18:47:24 - INFO -     <<< manipulation: neighborhood_diff_entity_mani
+10/13/2023 18:47:24 - INFO -     <<< margin: 0.1
+10/13/2023 18:47:24 - INFO -     <<< max_frames: 12
+10/13/2023 18:47:24 - INFO -     <<< max_words: 60
+10/13/2023 18:47:24 - INFO -     <<< n_display: 1
+10/13/2023 18:47:24 - INFO -     <<< n_gpu: 1
+10/13/2023 18:47:24 - INFO -     <<< n_pair: 1
+10/13/2023 18:47:24 - INFO -     <<< negative_weighting: 1
+10/13/2023 18:47:24 - INFO -     <<< num_thread_reader: 8
+10/13/2023 18:47:24 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 18:47:24 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 18:47:24 - INFO -     <<< rank: 0
+10/13/2023 18:47:24 - INFO -     <<< resume_model: None
+10/13/2023 18:47:24 - INFO -     <<< sampled_use_mil: False
+10/13/2023 18:47:24 - INFO -     <<< scale: 1
+10/13/2023 18:47:24 - INFO -     <<< seed: 42
+10/13/2023 18:47:24 - INFO -     <<< sim_header: seqTransf
+10/13/2023 18:47:24 - INFO -     <<< slice_framepos: 2
+10/13/2023 18:47:24 - INFO -     <<< task_type: retrieval
+10/13/2023 18:47:24 - INFO -     <<< test_file: test_data_full/neighborhood_diff_entity_mani.csv
+10/13/2023 18:47:24 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 18:47:24 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 18:47:24 - INFO -     <<< train_file: train1.csv
+10/13/2023 18:47:24 - INFO -     <<< train_frame_order: 0
+10/13/2023 18:47:24 - INFO -     <<< use_mil: False
+10/13/2023 18:47:24 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 18:47:24 - INFO -     <<< val_file: test_data_full/neighborhood_diff_entity_mani.csv
+10/13/2023 18:47:24 - INFO -     <<< video_dim: 1024
+10/13/2023 18:47:24 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 18:47:24 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 18:47:24 - INFO -     <<< world_size: 1
+10/13/2023 18:47:24 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 18:47:24 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 18:47:24 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 18:47:24 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 18:47:24 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 18:47:24 - WARNING -   Test retrieval by loose type.
+10/13/2023 18:47:24 - WARNING -   	 embed_dim: 512
+10/13/2023 18:47:24 - WARNING -   	 image_resolution: 224
+10/13/2023 18:47:24 - WARNING -   	 vision_layers: 12
+10/13/2023 18:47:24 - WARNING -   	 vision_width: 768
+10/13/2023 18:47:24 - WARNING -   	 vision_patch_size: 32
+10/13/2023 18:47:24 - WARNING -   	 context_length: 77
+10/13/2023 18:47:24 - WARNING -   	 vocab_size: 49408
+10/13/2023 18:47:24 - WARNING -   	 transformer_width: 512
+10/13/2023 18:47:24 - WARNING -   	 transformer_heads: 8
+10/13/2023 18:47:24 - WARNING -   	 transformer_layers: 12
+10/13/2023 18:47:24 - WARNING -   		 linear_patch: 2d
+10/13/2023 18:47:24 - WARNING -   	 cut_top_layer: 0
+10/13/2023 18:47:26 - WARNING -   	 sim_header: seqTransf
+10/13/2023 18:47:32 - INFO -   --------------------
+10/13/2023 18:47:32 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 18:47:33 - INFO -   ***** Running test *****
+10/13/2023 18:47:33 - INFO -     Num examples = 597
+10/13/2023 18:47:33 - INFO -     Batch size = 1
+10/13/2023 18:47:33 - INFO -     Num steps = 597
+10/13/2023 18:47:33 - INFO -   ***** Running val *****
+10/13/2023 18:47:33 - INFO -     Num examples = 597
+10/13/2023 19:32:10 - INFO -   sim matrix size: 597, 597
+10/13/2023 19:32:10 - INFO -   	 Length-T: 597, Length-V:597
+10/13/2023 19:32:10 - INFO -   Text-to-Video:
+10/13/2023 19:32:10 - INFO -   	>>>  R@1: 19.9 - R@5: 52.3 - R@10: 71.5 - Median R: 5.0 - Mean R: 11.5
+10/13/2023 19:32:10 - INFO -   Video-to-Text:
+10/13/2023 19:32:10 - INFO -   	>>>  V2T$R@1: 9.5 - V2T$R@5: 34.2 - V2T$R@10: 56.7 - V2T$Median R: 9.0 - V2T$Mean R: 16.6
+10/13/2023 19:32:15 - INFO -   Effective parameters:
+10/13/2023 19:32:15 - INFO -     <<< batch_size: 64
+10/13/2023 19:32:15 - INFO -     <<< batch_size_val: 1
+10/13/2023 19:32:15 - INFO -     <<< cache_dir: 
+10/13/2023 19:32:15 - INFO -     <<< coef_lr: 0.001
+10/13/2023 19:32:15 - INFO -     <<< cross_model: cross-base
+10/13/2023 19:32:15 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 19:32:15 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 19:32:15 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 19:32:15 - INFO -     <<< datatype: moviegraph
+10/13/2023 19:32:15 - INFO -     <<< do_eval: True
+10/13/2023 19:32:15 - INFO -     <<< do_lower_case: False
+10/13/2023 19:32:15 - INFO -     <<< do_pretrain: False
+10/13/2023 19:32:15 - INFO -     <<< do_train: False
+10/13/2023 19:32:15 - INFO -     <<< epochs: 10
+10/13/2023 19:32:15 - INFO -     <<< eval_frame_order: 0
+10/13/2023 19:32:15 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 19:32:15 - INFO -     <<< feature_framerate: 1
+10/13/2023 19:32:15 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 19:32:15 - INFO -     <<< fp16: False
+10/13/2023 19:32:15 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 19:32:15 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 19:32:15 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 19:32:15 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 19:32:15 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 19:32:15 - INFO -     <<< linear_patch: 2d
+10/13/2023 19:32:15 - INFO -     <<< local_rank: 0
+10/13/2023 19:32:15 - INFO -     <<< loose_type: True
+10/13/2023 19:32:15 - INFO -     <<< lr: 0.0001
+10/13/2023 19:32:15 - INFO -     <<< lr_decay: 0.9
+10/13/2023 19:32:15 - INFO -     <<< manipulation: counter_rel
+10/13/2023 19:32:15 - INFO -     <<< margin: 0.1
+10/13/2023 19:32:15 - INFO -     <<< max_frames: 12
+10/13/2023 19:32:15 - INFO -     <<< max_words: 60
+10/13/2023 19:32:15 - INFO -     <<< n_display: 1
+10/13/2023 19:32:15 - INFO -     <<< n_gpu: 1
+10/13/2023 19:32:15 - INFO -     <<< n_pair: 1
+10/13/2023 19:32:15 - INFO -     <<< negative_weighting: 1
+10/13/2023 19:32:15 - INFO -     <<< num_thread_reader: 8
+10/13/2023 19:32:15 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 19:32:15 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 19:32:15 - INFO -     <<< rank: 0
+10/13/2023 19:32:15 - INFO -     <<< resume_model: None
+10/13/2023 19:32:15 - INFO -     <<< sampled_use_mil: False
+10/13/2023 19:32:15 - INFO -     <<< scale: 0
+10/13/2023 19:32:15 - INFO -     <<< seed: 42
+10/13/2023 19:32:15 - INFO -     <<< sim_header: seqTransf
+10/13/2023 19:32:15 - INFO -     <<< slice_framepos: 2
+10/13/2023 19:32:15 - INFO -     <<< task_type: retrieval
+10/13/2023 19:32:15 - INFO -     <<< test_file: test_data_full/counter_rel.csv
+10/13/2023 19:32:15 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 19:32:15 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 19:32:15 - INFO -     <<< train_file: train1.csv
+10/13/2023 19:32:15 - INFO -     <<< train_frame_order: 0
+10/13/2023 19:32:15 - INFO -     <<< use_mil: False
+10/13/2023 19:32:15 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 19:32:15 - INFO -     <<< val_file: test_data_full/counter_rel.csv
+10/13/2023 19:32:15 - INFO -     <<< video_dim: 1024
+10/13/2023 19:32:15 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 19:32:15 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 19:32:15 - INFO -     <<< world_size: 1
+10/13/2023 19:32:15 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 19:32:16 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 19:32:16 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 19:32:16 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 19:32:16 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 19:32:16 - WARNING -   Test retrieval by loose type.
+10/13/2023 19:32:16 - WARNING -   	 embed_dim: 512
+10/13/2023 19:32:16 - WARNING -   	 image_resolution: 224
+10/13/2023 19:32:16 - WARNING -   	 vision_layers: 12
+10/13/2023 19:32:16 - WARNING -   	 vision_width: 768
+10/13/2023 19:32:16 - WARNING -   	 vision_patch_size: 32
+10/13/2023 19:32:16 - WARNING -   	 context_length: 77
+10/13/2023 19:32:16 - WARNING -   	 vocab_size: 49408
+10/13/2023 19:32:16 - WARNING -   	 transformer_width: 512
+10/13/2023 19:32:16 - WARNING -   	 transformer_heads: 8
+10/13/2023 19:32:16 - WARNING -   	 transformer_layers: 12
+10/13/2023 19:32:16 - WARNING -   		 linear_patch: 2d
+10/13/2023 19:32:16 - WARNING -   	 cut_top_layer: 0
+10/13/2023 19:32:18 - WARNING -   	 sim_header: seqTransf
+10/13/2023 19:32:24 - INFO -   --------------------
+10/13/2023 19:32:24 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 19:32:24 - INFO -   ***** Running test *****
+10/13/2023 19:32:24 - INFO -     Num examples = 583
+10/13/2023 19:32:24 - INFO -     Batch size = 1
+10/13/2023 19:32:24 - INFO -     Num steps = 583
+10/13/2023 19:32:24 - INFO -   ***** Running val *****
+10/13/2023 19:32:24 - INFO -     Num examples = 583
+10/13/2023 20:15:30 - INFO -   sim matrix size: 583, 583
+10/13/2023 20:15:30 - INFO -   	 Length-T: 583, Length-V:583
+10/13/2023 20:15:30 - INFO -   Text-to-Video:
+10/13/2023 20:15:30 - INFO -   	>>>  R@1: 17.3 - R@5: 53.9 - R@10: 71.7 - Median R: 5.0 - Mean R: 11.1
+10/13/2023 20:15:30 - INFO -   Video-to-Text:
+10/13/2023 20:15:30 - INFO -   	>>>  V2T$R@1: 18.1 - V2T$R@5: 52.1 - V2T$R@10: 72.8 - V2T$Median R: 5.0 - V2T$Mean R: 11.8
+10/13/2023 20:15:35 - INFO -   Effective parameters:
+10/13/2023 20:15:35 - INFO -     <<< batch_size: 64
+10/13/2023 20:15:35 - INFO -     <<< batch_size_val: 1
+10/13/2023 20:15:35 - INFO -     <<< cache_dir: 
+10/13/2023 20:15:35 - INFO -     <<< coef_lr: 0.001
+10/13/2023 20:15:35 - INFO -     <<< cross_model: cross-base
+10/13/2023 20:15:35 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 20:15:35 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 20:15:35 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 20:15:35 - INFO -     <<< datatype: moviegraph
+10/13/2023 20:15:35 - INFO -     <<< do_eval: True
+10/13/2023 20:15:35 - INFO -     <<< do_lower_case: False
+10/13/2023 20:15:35 - INFO -     <<< do_pretrain: False
+10/13/2023 20:15:35 - INFO -     <<< do_train: False
+10/13/2023 20:15:35 - INFO -     <<< epochs: 10
+10/13/2023 20:15:35 - INFO -     <<< eval_frame_order: 0
+10/13/2023 20:15:35 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 20:15:35 - INFO -     <<< feature_framerate: 1
+10/13/2023 20:15:35 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 20:15:35 - INFO -     <<< fp16: False
+10/13/2023 20:15:35 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 20:15:35 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 20:15:35 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 20:15:35 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 20:15:35 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 20:15:35 - INFO -     <<< linear_patch: 2d
+10/13/2023 20:15:35 - INFO -     <<< local_rank: 0
+10/13/2023 20:15:35 - INFO -     <<< loose_type: True
+10/13/2023 20:15:35 - INFO -     <<< lr: 0.0001
+10/13/2023 20:15:35 - INFO -     <<< lr_decay: 0.9
+10/13/2023 20:15:35 - INFO -     <<< manipulation: counter_rel_mani
+10/13/2023 20:15:35 - INFO -     <<< margin: 0.1
+10/13/2023 20:15:35 - INFO -     <<< max_frames: 12
+10/13/2023 20:15:35 - INFO -     <<< max_words: 60
+10/13/2023 20:15:35 - INFO -     <<< n_display: 1
+10/13/2023 20:15:35 - INFO -     <<< n_gpu: 1
+10/13/2023 20:15:35 - INFO -     <<< n_pair: 1
+10/13/2023 20:15:35 - INFO -     <<< negative_weighting: 1
+10/13/2023 20:15:35 - INFO -     <<< num_thread_reader: 8
+10/13/2023 20:15:35 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 20:15:35 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 20:15:35 - INFO -     <<< rank: 0
+10/13/2023 20:15:35 - INFO -     <<< resume_model: None
+10/13/2023 20:15:35 - INFO -     <<< sampled_use_mil: False
+10/13/2023 20:15:35 - INFO -     <<< scale: 1
+10/13/2023 20:15:35 - INFO -     <<< seed: 42
+10/13/2023 20:15:35 - INFO -     <<< sim_header: seqTransf
+10/13/2023 20:15:35 - INFO -     <<< slice_framepos: 2
+10/13/2023 20:15:35 - INFO -     <<< task_type: retrieval
+10/13/2023 20:15:35 - INFO -     <<< test_file: test_data_full/counter_rel_mani.csv
+10/13/2023 20:15:35 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 20:15:35 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 20:15:35 - INFO -     <<< train_file: train1.csv
+10/13/2023 20:15:35 - INFO -     <<< train_frame_order: 0
+10/13/2023 20:15:35 - INFO -     <<< use_mil: False
+10/13/2023 20:15:35 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 20:15:35 - INFO -     <<< val_file: test_data_full/counter_rel_mani.csv
+10/13/2023 20:15:35 - INFO -     <<< video_dim: 1024
+10/13/2023 20:15:35 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 20:15:35 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 20:15:35 - INFO -     <<< world_size: 1
+10/13/2023 20:15:35 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 20:15:35 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 20:15:35 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 20:15:35 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 20:15:35 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 20:15:35 - WARNING -   Test retrieval by loose type.
+10/13/2023 20:15:35 - WARNING -   	 embed_dim: 512
+10/13/2023 20:15:35 - WARNING -   	 image_resolution: 224
+10/13/2023 20:15:35 - WARNING -   	 vision_layers: 12
+10/13/2023 20:15:35 - WARNING -   	 vision_width: 768
+10/13/2023 20:15:35 - WARNING -   	 vision_patch_size: 32
+10/13/2023 20:15:35 - WARNING -   	 context_length: 77
+10/13/2023 20:15:35 - WARNING -   	 vocab_size: 49408
+10/13/2023 20:15:35 - WARNING -   	 transformer_width: 512
+10/13/2023 20:15:35 - WARNING -   	 transformer_heads: 8
+10/13/2023 20:15:35 - WARNING -   	 transformer_layers: 12
+10/13/2023 20:15:35 - WARNING -   		 linear_patch: 2d
+10/13/2023 20:15:35 - WARNING -   	 cut_top_layer: 0
+10/13/2023 20:15:37 - WARNING -   	 sim_header: seqTransf
+10/13/2023 20:15:43 - INFO -   --------------------
+10/13/2023 20:15:43 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 20:15:44 - INFO -   ***** Running test *****
+10/13/2023 20:15:44 - INFO -     Num examples = 583
+10/13/2023 20:15:44 - INFO -     Batch size = 1
+10/13/2023 20:15:44 - INFO -     Num steps = 583
+10/13/2023 20:15:44 - INFO -   ***** Running val *****
+10/13/2023 20:15:44 - INFO -     Num examples = 583
+10/13/2023 20:59:08 - INFO -   sim matrix size: 583, 583
+10/13/2023 20:59:08 - INFO -   	 Length-T: 583, Length-V:583
+10/13/2023 20:59:08 - INFO -   Text-to-Video:
+10/13/2023 20:59:08 - INFO -   	>>>  R@1: 18.2 - R@5: 51.6 - R@10: 71.4 - Median R: 5.0 - Mean R: 11.7
+10/13/2023 20:59:08 - INFO -   Video-to-Text:
+10/13/2023 20:59:08 - INFO -   	>>>  V2T$R@1: 18.4 - V2T$R@5: 50.6 - V2T$R@10: 71.6 - V2T$Median R: 5.0 - V2T$Mean R: 11.6
+10/13/2023 20:59:13 - INFO -   Effective parameters:
+10/13/2023 20:59:13 - INFO -     <<< batch_size: 64
+10/13/2023 20:59:13 - INFO -     <<< batch_size_val: 1
+10/13/2023 20:59:13 - INFO -     <<< cache_dir: 
+10/13/2023 20:59:13 - INFO -     <<< coef_lr: 0.001
+10/13/2023 20:59:13 - INFO -     <<< cross_model: cross-base
+10/13/2023 20:59:13 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 20:59:13 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 20:59:13 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 20:59:13 - INFO -     <<< datatype: moviegraph
+10/13/2023 20:59:13 - INFO -     <<< do_eval: True
+10/13/2023 20:59:13 - INFO -     <<< do_lower_case: False
+10/13/2023 20:59:13 - INFO -     <<< do_pretrain: False
+10/13/2023 20:59:13 - INFO -     <<< do_train: False
+10/13/2023 20:59:13 - INFO -     <<< epochs: 10
+10/13/2023 20:59:13 - INFO -     <<< eval_frame_order: 0
+10/13/2023 20:59:13 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 20:59:13 - INFO -     <<< feature_framerate: 1
+10/13/2023 20:59:13 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 20:59:13 - INFO -     <<< fp16: False
+10/13/2023 20:59:13 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 20:59:13 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 20:59:13 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 20:59:13 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 20:59:13 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 20:59:13 - INFO -     <<< linear_patch: 2d
+10/13/2023 20:59:13 - INFO -     <<< local_rank: 0
+10/13/2023 20:59:13 - INFO -     <<< loose_type: True
+10/13/2023 20:59:13 - INFO -     <<< lr: 0.0001
+10/13/2023 20:59:13 - INFO -     <<< lr_decay: 0.9
+10/13/2023 20:59:13 - INFO -     <<< manipulation: counter_act
+10/13/2023 20:59:13 - INFO -     <<< margin: 0.1
+10/13/2023 20:59:13 - INFO -     <<< max_frames: 12
+10/13/2023 20:59:13 - INFO -     <<< max_words: 60
+10/13/2023 20:59:13 - INFO -     <<< n_display: 1
+10/13/2023 20:59:13 - INFO -     <<< n_gpu: 1
+10/13/2023 20:59:13 - INFO -     <<< n_pair: 1
+10/13/2023 20:59:13 - INFO -     <<< negative_weighting: 1
+10/13/2023 20:59:13 - INFO -     <<< num_thread_reader: 8
+10/13/2023 20:59:13 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 20:59:13 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 20:59:13 - INFO -     <<< rank: 0
+10/13/2023 20:59:13 - INFO -     <<< resume_model: None
+10/13/2023 20:59:13 - INFO -     <<< sampled_use_mil: False
+10/13/2023 20:59:13 - INFO -     <<< scale: 0
+10/13/2023 20:59:13 - INFO -     <<< seed: 42
+10/13/2023 20:59:13 - INFO -     <<< sim_header: seqTransf
+10/13/2023 20:59:13 - INFO -     <<< slice_framepos: 2
+10/13/2023 20:59:13 - INFO -     <<< task_type: retrieval
+10/13/2023 20:59:13 - INFO -     <<< test_file: test_data_full/counter_act.csv
+10/13/2023 20:59:13 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 20:59:13 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 20:59:13 - INFO -     <<< train_file: train1.csv
+10/13/2023 20:59:13 - INFO -     <<< train_frame_order: 0
+10/13/2023 20:59:13 - INFO -     <<< use_mil: False
+10/13/2023 20:59:13 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 20:59:13 - INFO -     <<< val_file: test_data_full/counter_act.csv
+10/13/2023 20:59:13 - INFO -     <<< video_dim: 1024
+10/13/2023 20:59:13 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 20:59:13 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 20:59:13 - INFO -     <<< world_size: 1
+10/13/2023 20:59:13 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 20:59:14 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 20:59:14 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 20:59:14 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 20:59:14 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 20:59:14 - WARNING -   Test retrieval by loose type.
+10/13/2023 20:59:14 - WARNING -   	 embed_dim: 512
+10/13/2023 20:59:14 - WARNING -   	 image_resolution: 224
+10/13/2023 20:59:14 - WARNING -   	 vision_layers: 12
+10/13/2023 20:59:14 - WARNING -   	 vision_width: 768
+10/13/2023 20:59:14 - WARNING -   	 vision_patch_size: 32
+10/13/2023 20:59:14 - WARNING -   	 context_length: 77
+10/13/2023 20:59:14 - WARNING -   	 vocab_size: 49408
+10/13/2023 20:59:14 - WARNING -   	 transformer_width: 512
+10/13/2023 20:59:14 - WARNING -   	 transformer_heads: 8
+10/13/2023 20:59:14 - WARNING -   	 transformer_layers: 12
+10/13/2023 20:59:14 - WARNING -   		 linear_patch: 2d
+10/13/2023 20:59:14 - WARNING -   	 cut_top_layer: 0
+10/13/2023 20:59:16 - WARNING -   	 sim_header: seqTransf
+10/13/2023 20:59:22 - INFO -   --------------------
+10/13/2023 20:59:22 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 20:59:22 - INFO -   ***** Running test *****
+10/13/2023 20:59:22 - INFO -     Num examples = 535
+10/13/2023 20:59:22 - INFO -     Batch size = 1
+10/13/2023 20:59:22 - INFO -     Num steps = 535
+10/13/2023 20:59:22 - INFO -   ***** Running val *****
+10/13/2023 20:59:22 - INFO -     Num examples = 535
+10/13/2023 21:37:20 - INFO -   sim matrix size: 535, 535
+10/13/2023 21:37:20 - INFO -   	 Length-T: 535, Length-V:535
+10/13/2023 21:37:20 - INFO -   Text-to-Video:
+10/13/2023 21:37:20 - INFO -   	>>>  R@1: 26.9 - R@5: 57.0 - R@10: 72.0 - Median R: 4.0 - Mean R: 15.5
+10/13/2023 21:37:20 - INFO -   Video-to-Text:
+10/13/2023 21:37:20 - INFO -   	>>>  V2T$R@1: 26.0 - V2T$R@5: 56.7 - V2T$R@10: 73.3 - V2T$Median R: 4.0 - V2T$Mean R: 14.3
+10/13/2023 21:37:25 - INFO -   Effective parameters:
+10/13/2023 21:37:25 - INFO -     <<< batch_size: 64
+10/13/2023 21:37:25 - INFO -     <<< batch_size_val: 1
+10/13/2023 21:37:25 - INFO -     <<< cache_dir: 
+10/13/2023 21:37:25 - INFO -     <<< coef_lr: 0.001
+10/13/2023 21:37:25 - INFO -     <<< cross_model: cross-base
+10/13/2023 21:37:25 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 21:37:25 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 21:37:25 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 21:37:25 - INFO -     <<< datatype: moviegraph
+10/13/2023 21:37:25 - INFO -     <<< do_eval: True
+10/13/2023 21:37:25 - INFO -     <<< do_lower_case: False
+10/13/2023 21:37:25 - INFO -     <<< do_pretrain: False
+10/13/2023 21:37:25 - INFO -     <<< do_train: False
+10/13/2023 21:37:25 - INFO -     <<< epochs: 10
+10/13/2023 21:37:25 - INFO -     <<< eval_frame_order: 0
+10/13/2023 21:37:25 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 21:37:25 - INFO -     <<< feature_framerate: 1
+10/13/2023 21:37:25 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 21:37:25 - INFO -     <<< fp16: False
+10/13/2023 21:37:25 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 21:37:25 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 21:37:25 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 21:37:25 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 21:37:25 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 21:37:25 - INFO -     <<< linear_patch: 2d
+10/13/2023 21:37:25 - INFO -     <<< local_rank: 0
+10/13/2023 21:37:25 - INFO -     <<< loose_type: True
+10/13/2023 21:37:25 - INFO -     <<< lr: 0.0001
+10/13/2023 21:37:25 - INFO -     <<< lr_decay: 0.9
+10/13/2023 21:37:25 - INFO -     <<< manipulation: counter_act_mani
+10/13/2023 21:37:25 - INFO -     <<< margin: 0.1
+10/13/2023 21:37:25 - INFO -     <<< max_frames: 12
+10/13/2023 21:37:25 - INFO -     <<< max_words: 60
+10/13/2023 21:37:25 - INFO -     <<< n_display: 1
+10/13/2023 21:37:25 - INFO -     <<< n_gpu: 1
+10/13/2023 21:37:25 - INFO -     <<< n_pair: 1
+10/13/2023 21:37:25 - INFO -     <<< negative_weighting: 1
+10/13/2023 21:37:25 - INFO -     <<< num_thread_reader: 8
+10/13/2023 21:37:25 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 21:37:25 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 21:37:25 - INFO -     <<< rank: 0
+10/13/2023 21:37:25 - INFO -     <<< resume_model: None
+10/13/2023 21:37:25 - INFO -     <<< sampled_use_mil: False
+10/13/2023 21:37:25 - INFO -     <<< scale: 1
+10/13/2023 21:37:25 - INFO -     <<< seed: 42
+10/13/2023 21:37:25 - INFO -     <<< sim_header: seqTransf
+10/13/2023 21:37:25 - INFO -     <<< slice_framepos: 2
+10/13/2023 21:37:25 - INFO -     <<< task_type: retrieval
+10/13/2023 21:37:25 - INFO -     <<< test_file: test_data_full/counter_act_mani.csv
+10/13/2023 21:37:25 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 21:37:25 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 21:37:25 - INFO -     <<< train_file: train1.csv
+10/13/2023 21:37:25 - INFO -     <<< train_frame_order: 0
+10/13/2023 21:37:25 - INFO -     <<< use_mil: False
+10/13/2023 21:37:25 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 21:37:25 - INFO -     <<< val_file: test_data_full/counter_act_mani.csv
+10/13/2023 21:37:25 - INFO -     <<< video_dim: 1024
+10/13/2023 21:37:25 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 21:37:25 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 21:37:25 - INFO -     <<< world_size: 1
+10/13/2023 21:37:25 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 21:37:26 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 21:37:26 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 21:37:26 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 21:37:26 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 21:37:26 - WARNING -   Test retrieval by loose type.
+10/13/2023 21:37:26 - WARNING -   	 embed_dim: 512
+10/13/2023 21:37:26 - WARNING -   	 image_resolution: 224
+10/13/2023 21:37:26 - WARNING -   	 vision_layers: 12
+10/13/2023 21:37:26 - WARNING -   	 vision_width: 768
+10/13/2023 21:37:26 - WARNING -   	 vision_patch_size: 32
+10/13/2023 21:37:26 - WARNING -   	 context_length: 77
+10/13/2023 21:37:26 - WARNING -   	 vocab_size: 49408
+10/13/2023 21:37:26 - WARNING -   	 transformer_width: 512
+10/13/2023 21:37:26 - WARNING -   	 transformer_heads: 8
+10/13/2023 21:37:26 - WARNING -   	 transformer_layers: 12
+10/13/2023 21:37:26 - WARNING -   		 linear_patch: 2d
+10/13/2023 21:37:26 - WARNING -   	 cut_top_layer: 0
+10/13/2023 21:37:27 - WARNING -   	 sim_header: seqTransf
+10/13/2023 21:37:34 - INFO -   --------------------
+10/13/2023 21:37:34 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 21:37:34 - INFO -   ***** Running test *****
+10/13/2023 21:37:34 - INFO -     Num examples = 535
+10/13/2023 21:37:34 - INFO -     Batch size = 1
+10/13/2023 21:37:34 - INFO -     Num steps = 535
+10/13/2023 21:37:34 - INFO -   ***** Running val *****
+10/13/2023 21:37:34 - INFO -     Num examples = 535
+10/13/2023 22:15:32 - INFO -   sim matrix size: 535, 535
+10/13/2023 22:15:32 - INFO -   	 Length-T: 535, Length-V:535
+10/13/2023 22:15:32 - INFO -   Text-to-Video:
+10/13/2023 22:15:32 - INFO -   	>>>  R@1: 23.9 - R@5: 54.2 - R@10: 67.3 - Median R: 5.0 - Mean R: 18.6
+10/13/2023 22:15:32 - INFO -   Video-to-Text:
+10/13/2023 22:15:32 - INFO -   	>>>  V2T$R@1: 22.9 - V2T$R@5: 51.0 - V2T$R@10: 69.0 - V2T$Median R: 5.0 - V2T$Mean R: 17.3
+10/13/2023 22:15:37 - INFO -   Effective parameters:
+10/13/2023 22:15:37 - INFO -     <<< batch_size: 64
+10/13/2023 22:15:37 - INFO -     <<< batch_size_val: 1
+10/13/2023 22:15:37 - INFO -     <<< cache_dir: 
+10/13/2023 22:15:37 - INFO -     <<< coef_lr: 0.001
+10/13/2023 22:15:37 - INFO -     <<< cross_model: cross-base
+10/13/2023 22:15:37 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 22:15:37 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 22:15:37 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 22:15:37 - INFO -     <<< datatype: moviegraph
+10/13/2023 22:15:37 - INFO -     <<< do_eval: True
+10/13/2023 22:15:37 - INFO -     <<< do_lower_case: False
+10/13/2023 22:15:37 - INFO -     <<< do_pretrain: False
+10/13/2023 22:15:37 - INFO -     <<< do_train: False
+10/13/2023 22:15:37 - INFO -     <<< epochs: 10
+10/13/2023 22:15:37 - INFO -     <<< eval_frame_order: 0
+10/13/2023 22:15:37 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 22:15:37 - INFO -     <<< feature_framerate: 1
+10/13/2023 22:15:37 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 22:15:37 - INFO -     <<< fp16: False
+10/13/2023 22:15:37 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 22:15:37 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 22:15:37 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 22:15:37 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 22:15:37 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 22:15:37 - INFO -     <<< linear_patch: 2d
+10/13/2023 22:15:37 - INFO -     <<< local_rank: 0
+10/13/2023 22:15:37 - INFO -     <<< loose_type: True
+10/13/2023 22:15:37 - INFO -     <<< lr: 0.0001
+10/13/2023 22:15:37 - INFO -     <<< lr_decay: 0.9
+10/13/2023 22:15:37 - INFO -     <<< manipulation: counter_int
+10/13/2023 22:15:37 - INFO -     <<< margin: 0.1
+10/13/2023 22:15:37 - INFO -     <<< max_frames: 12
+10/13/2023 22:15:37 - INFO -     <<< max_words: 60
+10/13/2023 22:15:37 - INFO -     <<< n_display: 1
+10/13/2023 22:15:37 - INFO -     <<< n_gpu: 1
+10/13/2023 22:15:37 - INFO -     <<< n_pair: 1
+10/13/2023 22:15:37 - INFO -     <<< negative_weighting: 1
+10/13/2023 22:15:37 - INFO -     <<< num_thread_reader: 8
+10/13/2023 22:15:37 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 22:15:37 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 22:15:37 - INFO -     <<< rank: 0
+10/13/2023 22:15:37 - INFO -     <<< resume_model: None
+10/13/2023 22:15:37 - INFO -     <<< sampled_use_mil: False
+10/13/2023 22:15:37 - INFO -     <<< scale: 0
+10/13/2023 22:15:37 - INFO -     <<< seed: 42
+10/13/2023 22:15:37 - INFO -     <<< sim_header: seqTransf
+10/13/2023 22:15:37 - INFO -     <<< slice_framepos: 2
+10/13/2023 22:15:37 - INFO -     <<< task_type: retrieval
+10/13/2023 22:15:37 - INFO -     <<< test_file: test_data_full/counter_int.csv
+10/13/2023 22:15:37 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 22:15:37 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 22:15:37 - INFO -     <<< train_file: train1.csv
+10/13/2023 22:15:37 - INFO -     <<< train_frame_order: 0
+10/13/2023 22:15:37 - INFO -     <<< use_mil: False
+10/13/2023 22:15:37 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 22:15:37 - INFO -     <<< val_file: test_data_full/counter_int.csv
+10/13/2023 22:15:37 - INFO -     <<< video_dim: 1024
+10/13/2023 22:15:37 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 22:15:37 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 22:15:37 - INFO -     <<< world_size: 1
+10/13/2023 22:15:37 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 22:15:37 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 22:15:37 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 22:15:37 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 22:15:37 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 22:15:37 - WARNING -   Test retrieval by loose type.
+10/13/2023 22:15:37 - WARNING -   	 embed_dim: 512
+10/13/2023 22:15:37 - WARNING -   	 image_resolution: 224
+10/13/2023 22:15:37 - WARNING -   	 vision_layers: 12
+10/13/2023 22:15:37 - WARNING -   	 vision_width: 768
+10/13/2023 22:15:37 - WARNING -   	 vision_patch_size: 32
+10/13/2023 22:15:37 - WARNING -   	 context_length: 77
+10/13/2023 22:15:37 - WARNING -   	 vocab_size: 49408
+10/13/2023 22:15:37 - WARNING -   	 transformer_width: 512
+10/13/2023 22:15:37 - WARNING -   	 transformer_heads: 8
+10/13/2023 22:15:37 - WARNING -   	 transformer_layers: 12
+10/13/2023 22:15:37 - WARNING -   		 linear_patch: 2d
+10/13/2023 22:15:37 - WARNING -   	 cut_top_layer: 0
+10/13/2023 22:15:39 - WARNING -   	 sim_header: seqTransf
+10/13/2023 22:15:45 - INFO -   --------------------
+10/13/2023 22:15:45 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 22:15:46 - INFO -   ***** Running test *****
+10/13/2023 22:15:46 - INFO -     Num examples = 591
+10/13/2023 22:15:46 - INFO -     Batch size = 1
+10/13/2023 22:15:46 - INFO -     Num steps = 591
+10/13/2023 22:15:46 - INFO -   ***** Running val *****
+10/13/2023 22:15:46 - INFO -     Num examples = 591
+10/13/2023 22:59:58 - INFO -   sim matrix size: 591, 591
+10/13/2023 22:59:58 - INFO -   	 Length-T: 591, Length-V:591
+10/13/2023 22:59:58 - INFO -   Text-to-Video:
+10/13/2023 22:59:58 - INFO -   	>>>  R@1: 24.2 - R@5: 58.0 - R@10: 75.3 - Median R: 4.0 - Mean R: 10.7
+10/13/2023 22:59:58 - INFO -   Video-to-Text:
+10/13/2023 22:59:58 - INFO -   	>>>  V2T$R@1: 22.0 - V2T$R@5: 58.3 - V2T$R@10: 74.5 - V2T$Median R: 4.0 - V2T$Mean R: 11.3
+10/13/2023 23:00:03 - INFO -   Effective parameters:
+10/13/2023 23:00:03 - INFO -     <<< batch_size: 64
+10/13/2023 23:00:03 - INFO -     <<< batch_size_val: 1
+10/13/2023 23:00:03 - INFO -     <<< cache_dir: 
+10/13/2023 23:00:03 - INFO -     <<< coef_lr: 0.001
+10/13/2023 23:00:03 - INFO -     <<< cross_model: cross-base
+10/13/2023 23:00:03 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 23:00:03 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 23:00:03 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 23:00:03 - INFO -     <<< datatype: moviegraph
+10/13/2023 23:00:03 - INFO -     <<< do_eval: True
+10/13/2023 23:00:03 - INFO -     <<< do_lower_case: False
+10/13/2023 23:00:03 - INFO -     <<< do_pretrain: False
+10/13/2023 23:00:03 - INFO -     <<< do_train: False
+10/13/2023 23:00:03 - INFO -     <<< epochs: 10
+10/13/2023 23:00:03 - INFO -     <<< eval_frame_order: 0
+10/13/2023 23:00:03 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 23:00:03 - INFO -     <<< feature_framerate: 1
+10/13/2023 23:00:03 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 23:00:03 - INFO -     <<< fp16: False
+10/13/2023 23:00:03 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 23:00:03 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 23:00:03 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 23:00:03 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 23:00:03 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 23:00:03 - INFO -     <<< linear_patch: 2d
+10/13/2023 23:00:03 - INFO -     <<< local_rank: 0
+10/13/2023 23:00:03 - INFO -     <<< loose_type: True
+10/13/2023 23:00:03 - INFO -     <<< lr: 0.0001
+10/13/2023 23:00:03 - INFO -     <<< lr_decay: 0.9
+10/13/2023 23:00:03 - INFO -     <<< manipulation: counter_int_mani
+10/13/2023 23:00:03 - INFO -     <<< margin: 0.1
+10/13/2023 23:00:03 - INFO -     <<< max_frames: 12
+10/13/2023 23:00:03 - INFO -     <<< max_words: 60
+10/13/2023 23:00:03 - INFO -     <<< n_display: 1
+10/13/2023 23:00:03 - INFO -     <<< n_gpu: 1
+10/13/2023 23:00:03 - INFO -     <<< n_pair: 1
+10/13/2023 23:00:03 - INFO -     <<< negative_weighting: 1
+10/13/2023 23:00:03 - INFO -     <<< num_thread_reader: 8
+10/13/2023 23:00:03 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 23:00:03 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 23:00:03 - INFO -     <<< rank: 0
+10/13/2023 23:00:03 - INFO -     <<< resume_model: None
+10/13/2023 23:00:03 - INFO -     <<< sampled_use_mil: False
+10/13/2023 23:00:03 - INFO -     <<< scale: 1
+10/13/2023 23:00:03 - INFO -     <<< seed: 42
+10/13/2023 23:00:03 - INFO -     <<< sim_header: seqTransf
+10/13/2023 23:00:03 - INFO -     <<< slice_framepos: 2
+10/13/2023 23:00:03 - INFO -     <<< task_type: retrieval
+10/13/2023 23:00:03 - INFO -     <<< test_file: test_data_full/counter_int_mani.csv
+10/13/2023 23:00:03 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 23:00:03 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 23:00:03 - INFO -     <<< train_file: train1.csv
+10/13/2023 23:00:03 - INFO -     <<< train_frame_order: 0
+10/13/2023 23:00:03 - INFO -     <<< use_mil: False
+10/13/2023 23:00:03 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 23:00:03 - INFO -     <<< val_file: test_data_full/counter_int_mani.csv
+10/13/2023 23:00:03 - INFO -     <<< video_dim: 1024
+10/13/2023 23:00:03 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 23:00:03 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 23:00:03 - INFO -     <<< world_size: 1
+10/13/2023 23:00:03 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 23:00:04 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 23:00:04 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 23:00:04 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 23:00:04 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 23:00:04 - WARNING -   Test retrieval by loose type.
+10/13/2023 23:00:04 - WARNING -   	 embed_dim: 512
+10/13/2023 23:00:04 - WARNING -   	 image_resolution: 224
+10/13/2023 23:00:04 - WARNING -   	 vision_layers: 12
+10/13/2023 23:00:04 - WARNING -   	 vision_width: 768
+10/13/2023 23:00:04 - WARNING -   	 vision_patch_size: 32
+10/13/2023 23:00:04 - WARNING -   	 context_length: 77
+10/13/2023 23:00:04 - WARNING -   	 vocab_size: 49408
+10/13/2023 23:00:04 - WARNING -   	 transformer_width: 512
+10/13/2023 23:00:04 - WARNING -   	 transformer_heads: 8
+10/13/2023 23:00:04 - WARNING -   	 transformer_layers: 12
+10/13/2023 23:00:04 - WARNING -   		 linear_patch: 2d
+10/13/2023 23:00:04 - WARNING -   	 cut_top_layer: 0
+10/13/2023 23:00:06 - WARNING -   	 sim_header: seqTransf
+10/13/2023 23:00:12 - INFO -   --------------------
+10/13/2023 23:00:12 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 23:00:12 - INFO -   ***** Running test *****
+10/13/2023 23:00:12 - INFO -     Num examples = 591
+10/13/2023 23:00:12 - INFO -     Batch size = 1
+10/13/2023 23:00:12 - INFO -     Num steps = 591
+10/13/2023 23:00:12 - INFO -   ***** Running val *****
+10/13/2023 23:00:12 - INFO -     Num examples = 591
+10/13/2023 23:44:27 - INFO -   sim matrix size: 591, 591
+10/13/2023 23:44:27 - INFO -   	 Length-T: 591, Length-V:591
+10/13/2023 23:44:27 - INFO -   Text-to-Video:
+10/13/2023 23:44:27 - INFO -   	>>>  R@1: 19.0 - R@5: 56.2 - R@10: 74.3 - Median R: 4.0 - Mean R: 11.9
+10/13/2023 23:44:27 - INFO -   Video-to-Text:
+10/13/2023 23:44:27 - INFO -   	>>>  V2T$R@1: 19.8 - V2T$R@5: 55.2 - V2T$R@10: 72.8 - V2T$Median R: 5.0 - V2T$Mean R: 13.4
+10/13/2023 23:44:32 - INFO -   Effective parameters:
+10/13/2023 23:44:32 - INFO -     <<< batch_size: 64
+10/13/2023 23:44:32 - INFO -     <<< batch_size_val: 1
+10/13/2023 23:44:32 - INFO -     <<< cache_dir: 
+10/13/2023 23:44:32 - INFO -     <<< coef_lr: 0.001
+10/13/2023 23:44:32 - INFO -     <<< cross_model: cross-base
+10/13/2023 23:44:32 - INFO -     <<< cross_num_hidden_layers: 4
+10/13/2023 23:44:32 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/13/2023 23:44:32 - INFO -     <<< dataset_ckpt: seed42
+10/13/2023 23:44:32 - INFO -     <<< datatype: moviegraph
+10/13/2023 23:44:32 - INFO -     <<< do_eval: True
+10/13/2023 23:44:32 - INFO -     <<< do_lower_case: False
+10/13/2023 23:44:32 - INFO -     <<< do_pretrain: False
+10/13/2023 23:44:32 - INFO -     <<< do_train: False
+10/13/2023 23:44:32 - INFO -     <<< epochs: 10
+10/13/2023 23:44:32 - INFO -     <<< eval_frame_order: 0
+10/13/2023 23:44:32 - INFO -     <<< expand_msrvtt_sentences: False
+10/13/2023 23:44:32 - INFO -     <<< feature_framerate: 1
+10/13/2023 23:44:32 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/13/2023 23:44:32 - INFO -     <<< fp16: False
+10/13/2023 23:44:32 - INFO -     <<< fp16_opt_level: O1
+10/13/2023 23:44:32 - INFO -     <<< freeze_layer_num: 0
+10/13/2023 23:44:32 - INFO -     <<< gradient_accumulation_steps: 1
+10/13/2023 23:44:32 - INFO -     <<< hard_negative_rate: 0.5
+10/13/2023 23:44:32 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/13/2023 23:44:32 - INFO -     <<< linear_patch: 2d
+10/13/2023 23:44:32 - INFO -     <<< local_rank: 0
+10/13/2023 23:44:32 - INFO -     <<< loose_type: True
+10/13/2023 23:44:32 - INFO -     <<< lr: 0.0001
+10/13/2023 23:44:32 - INFO -     <<< lr_decay: 0.9
+10/13/2023 23:44:32 - INFO -     <<< manipulation: counter_attr
+10/13/2023 23:44:32 - INFO -     <<< margin: 0.1
+10/13/2023 23:44:32 - INFO -     <<< max_frames: 12
+10/13/2023 23:44:32 - INFO -     <<< max_words: 60
+10/13/2023 23:44:32 - INFO -     <<< n_display: 1
+10/13/2023 23:44:32 - INFO -     <<< n_gpu: 1
+10/13/2023 23:44:32 - INFO -     <<< n_pair: 1
+10/13/2023 23:44:32 - INFO -     <<< negative_weighting: 1
+10/13/2023 23:44:32 - INFO -     <<< num_thread_reader: 8
+10/13/2023 23:44:32 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/13/2023 23:44:32 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/13/2023 23:44:32 - INFO -     <<< rank: 0
+10/13/2023 23:44:32 - INFO -     <<< resume_model: None
+10/13/2023 23:44:32 - INFO -     <<< sampled_use_mil: False
+10/13/2023 23:44:32 - INFO -     <<< scale: 0
+10/13/2023 23:44:32 - INFO -     <<< seed: 42
+10/13/2023 23:44:32 - INFO -     <<< sim_header: seqTransf
+10/13/2023 23:44:32 - INFO -     <<< slice_framepos: 2
+10/13/2023 23:44:32 - INFO -     <<< task_type: retrieval
+10/13/2023 23:44:32 - INFO -     <<< test_file: test_data_full/counter_attr.csv
+10/13/2023 23:44:32 - INFO -     <<< text_num_hidden_layers: 12
+10/13/2023 23:44:32 - INFO -     <<< train_csv: data/.train.csv
+10/13/2023 23:44:32 - INFO -     <<< train_file: train1.csv
+10/13/2023 23:44:32 - INFO -     <<< train_frame_order: 0
+10/13/2023 23:44:32 - INFO -     <<< use_mil: False
+10/13/2023 23:44:32 - INFO -     <<< val_csv: data/.val.csv
+10/13/2023 23:44:32 - INFO -     <<< val_file: test_data_full/counter_attr.csv
+10/13/2023 23:44:32 - INFO -     <<< video_dim: 1024
+10/13/2023 23:44:32 - INFO -     <<< visual_num_hidden_layers: 12
+10/13/2023 23:44:32 - INFO -     <<< warmup_proportion: 0.1
+10/13/2023 23:44:32 - INFO -     <<< world_size: 1
+10/13/2023 23:44:32 - INFO -   device: cuda:0 n_gpu: 1
+10/13/2023 23:44:33 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/13/2023 23:44:33 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/13/2023 23:44:33 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/13/2023 23:44:33 - WARNING -   Stage-One:True, Stage-Two:False
+10/13/2023 23:44:33 - WARNING -   Test retrieval by loose type.
+10/13/2023 23:44:33 - WARNING -   	 embed_dim: 512
+10/13/2023 23:44:33 - WARNING -   	 image_resolution: 224
+10/13/2023 23:44:33 - WARNING -   	 vision_layers: 12
+10/13/2023 23:44:33 - WARNING -   	 vision_width: 768
+10/13/2023 23:44:33 - WARNING -   	 vision_patch_size: 32
+10/13/2023 23:44:33 - WARNING -   	 context_length: 77
+10/13/2023 23:44:33 - WARNING -   	 vocab_size: 49408
+10/13/2023 23:44:33 - WARNING -   	 transformer_width: 512
+10/13/2023 23:44:33 - WARNING -   	 transformer_heads: 8
+10/13/2023 23:44:33 - WARNING -   	 transformer_layers: 12
+10/13/2023 23:44:33 - WARNING -   		 linear_patch: 2d
+10/13/2023 23:44:33 - WARNING -   	 cut_top_layer: 0
+10/13/2023 23:44:35 - WARNING -   	 sim_header: seqTransf
+10/13/2023 23:44:41 - INFO -   --------------------
+10/13/2023 23:44:41 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/13/2023 23:44:41 - INFO -   ***** Running test *****
+10/13/2023 23:44:41 - INFO -     Num examples = 591
+10/13/2023 23:44:41 - INFO -     Batch size = 1
+10/13/2023 23:44:41 - INFO -     Num steps = 591
+10/13/2023 23:44:41 - INFO -   ***** Running val *****
+10/13/2023 23:44:41 - INFO -     Num examples = 591
+10/14/2023 00:29:17 - INFO -   sim matrix size: 591, 591
+10/14/2023 00:29:17 - INFO -   	 Length-T: 591, Length-V:591
+10/14/2023 00:29:17 - INFO -   Text-to-Video:
+10/14/2023 00:29:17 - INFO -   	>>>  R@1: 19.0 - R@5: 46.5 - R@10: 62.6 - Median R: 6.0 - Mean R: 29.1
+10/14/2023 00:29:17 - INFO -   Video-to-Text:
+10/14/2023 00:29:17 - INFO -   	>>>  V2T$R@1: 19.4 - V2T$R@5: 45.8 - V2T$R@10: 60.7 - V2T$Median R: 7.0 - V2T$Mean R: 24.7
+10/14/2023 00:29:23 - INFO -   Effective parameters:
+10/14/2023 00:29:23 - INFO -     <<< batch_size: 64
+10/14/2023 00:29:23 - INFO -     <<< batch_size_val: 1
+10/14/2023 00:29:23 - INFO -     <<< cache_dir: 
+10/14/2023 00:29:23 - INFO -     <<< coef_lr: 0.001
+10/14/2023 00:29:23 - INFO -     <<< cross_model: cross-base
+10/14/2023 00:29:23 - INFO -     <<< cross_num_hidden_layers: 4
+10/14/2023 00:29:23 - INFO -     <<< data_path: /home/wiss/zhang/Jinhe/video-attr-prober/Data/MovieGraph/
+10/14/2023 00:29:23 - INFO -     <<< dataset_ckpt: seed42
+10/14/2023 00:29:23 - INFO -     <<< datatype: moviegraph
+10/14/2023 00:29:23 - INFO -     <<< do_eval: True
+10/14/2023 00:29:23 - INFO -     <<< do_lower_case: False
+10/14/2023 00:29:23 - INFO -     <<< do_pretrain: False
+10/14/2023 00:29:23 - INFO -     <<< do_train: False
+10/14/2023 00:29:23 - INFO -     <<< epochs: 10
+10/14/2023 00:29:23 - INFO -     <<< eval_frame_order: 0
+10/14/2023 00:29:23 - INFO -     <<< expand_msrvtt_sentences: False
+10/14/2023 00:29:23 - INFO -     <<< feature_framerate: 1
+10/14/2023 00:29:23 - INFO -     <<< features_path: /nfs/data2/zhang/MovieGraph/clips_compressed
+10/14/2023 00:29:23 - INFO -     <<< fp16: False
+10/14/2023 00:29:23 - INFO -     <<< fp16_opt_level: O1
+10/14/2023 00:29:23 - INFO -     <<< freeze_layer_num: 0
+10/14/2023 00:29:23 - INFO -     <<< gradient_accumulation_steps: 1
+10/14/2023 00:29:23 - INFO -     <<< hard_negative_rate: 0.5
+10/14/2023 00:29:23 - INFO -     <<< init_model: /home/wiss/zhang/nfs/video_prober/xclip/mg_train1_seed42/pytorch_model.bin.6
+10/14/2023 00:29:23 - INFO -     <<< linear_patch: 2d
+10/14/2023 00:29:23 - INFO -     <<< local_rank: 0
+10/14/2023 00:29:23 - INFO -     <<< loose_type: True
+10/14/2023 00:29:23 - INFO -     <<< lr: 0.0001
+10/14/2023 00:29:23 - INFO -     <<< lr_decay: 0.9
+10/14/2023 00:29:23 - INFO -     <<< manipulation: counter_attr_mani
+10/14/2023 00:29:23 - INFO -     <<< margin: 0.1
+10/14/2023 00:29:23 - INFO -     <<< max_frames: 12
+10/14/2023 00:29:23 - INFO -     <<< max_words: 60
+10/14/2023 00:29:23 - INFO -     <<< n_display: 1
+10/14/2023 00:29:23 - INFO -     <<< n_gpu: 1
+10/14/2023 00:29:23 - INFO -     <<< n_pair: 1
+10/14/2023 00:29:23 - INFO -     <<< negative_weighting: 1
+10/14/2023 00:29:23 - INFO -     <<< num_thread_reader: 8
+10/14/2023 00:29:23 - INFO -     <<< output_dir: /home/wiss/zhang/nfs/Mg_ckpt/xclip/
+10/14/2023 00:29:23 - INFO -     <<< pretrained_clip_name: ViT-B/32
+10/14/2023 00:29:23 - INFO -     <<< rank: 0
+10/14/2023 00:29:23 - INFO -     <<< resume_model: None
+10/14/2023 00:29:23 - INFO -     <<< sampled_use_mil: False
+10/14/2023 00:29:23 - INFO -     <<< scale: 1
+10/14/2023 00:29:23 - INFO -     <<< seed: 42
+10/14/2023 00:29:23 - INFO -     <<< sim_header: seqTransf
+10/14/2023 00:29:23 - INFO -     <<< slice_framepos: 2
+10/14/2023 00:29:23 - INFO -     <<< task_type: retrieval
+10/14/2023 00:29:23 - INFO -     <<< test_file: test_data_full/counter_attr_mani.csv
+10/14/2023 00:29:23 - INFO -     <<< text_num_hidden_layers: 12
+10/14/2023 00:29:23 - INFO -     <<< train_csv: data/.train.csv
+10/14/2023 00:29:23 - INFO -     <<< train_file: train1.csv
+10/14/2023 00:29:23 - INFO -     <<< train_frame_order: 0
+10/14/2023 00:29:23 - INFO -     <<< use_mil: False
+10/14/2023 00:29:23 - INFO -     <<< val_csv: data/.val.csv
+10/14/2023 00:29:23 - INFO -     <<< val_file: test_data_full/counter_attr_mani.csv
+10/14/2023 00:29:23 - INFO -     <<< video_dim: 1024
+10/14/2023 00:29:23 - INFO -     <<< visual_num_hidden_layers: 12
+10/14/2023 00:29:23 - INFO -     <<< warmup_proportion: 0.1
+10/14/2023 00:29:23 - INFO -     <<< world_size: 1
+10/14/2023 00:29:23 - INFO -   device: cuda:0 n_gpu: 1
+10/14/2023 00:29:23 - INFO -   loading archive file /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base
+10/14/2023 00:29:23 - INFO -   Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 512,
+  "initializer_range": 0.02,
+  "intermediate_size": 2048,
+  "max_position_embeddings": 128,
+  "num_attention_heads": 8,
+  "num_hidden_layers": 4,
+  "type_vocab_size": 2,
+  "vocab_size": 512
+}
+
+10/14/2023 00:29:23 - INFO -   Weight doesn't exsits. /home/wiss/zhang/Jinhe/X-CLIP/modules/cross-base/cross_pytorch_model.bin
+10/14/2023 00:29:23 - WARNING -   Stage-One:True, Stage-Two:False
+10/14/2023 00:29:23 - WARNING -   Test retrieval by loose type.
+10/14/2023 00:29:23 - WARNING -   	 embed_dim: 512
+10/14/2023 00:29:23 - WARNING -   	 image_resolution: 224
+10/14/2023 00:29:23 - WARNING -   	 vision_layers: 12
+10/14/2023 00:29:23 - WARNING -   	 vision_width: 768
+10/14/2023 00:29:23 - WARNING -   	 vision_patch_size: 32
+10/14/2023 00:29:23 - WARNING -   	 context_length: 77
+10/14/2023 00:29:23 - WARNING -   	 vocab_size: 49408
+10/14/2023 00:29:23 - WARNING -   	 transformer_width: 512
+10/14/2023 00:29:23 - WARNING -   	 transformer_heads: 8
+10/14/2023 00:29:23 - WARNING -   	 transformer_layers: 12
+10/14/2023 00:29:23 - WARNING -   		 linear_patch: 2d
+10/14/2023 00:29:23 - WARNING -   	 cut_top_layer: 0
+10/14/2023 00:29:25 - WARNING -   	 sim_header: seqTransf
+10/14/2023 00:29:31 - INFO -   --------------------
+10/14/2023 00:29:31 - INFO -   Weights from pretrained model not used in XCLIP: 
+   clip.input_resolution
+   clip.context_length
+   clip.vocab_size
+10/14/2023 00:29:32 - INFO -   ***** Running test *****
+10/14/2023 00:29:32 - INFO -     Num examples = 591
+10/14/2023 00:29:32 - INFO -     Batch size = 1
+10/14/2023 00:29:32 - INFO -     Num steps = 591
+10/14/2023 00:29:32 - INFO -   ***** Running val *****
+10/14/2023 00:29:32 - INFO -     Num examples = 591
+10/14/2023 01:13:41 - INFO -   sim matrix size: 591, 591
+10/14/2023 01:13:41 - INFO -   	 Length-T: 591, Length-V:591
+10/14/2023 01:13:41 - INFO -   Text-to-Video:
+10/14/2023 01:13:41 - INFO -   	>>>  R@1: 18.6 - R@5: 44.3 - R@10: 59.6 - Median R: 7.0 - Mean R: 32.4
+10/14/2023 01:13:41 - INFO -   Video-to-Text:
+10/14/2023 01:13:41 - INFO -   	>>>  V2T$R@1: 18.0 - V2T$R@5: 43.8 - V2T$R@10: 56.9 - V2T$Median R: 8.0 - V2T$Mean R: 28.2

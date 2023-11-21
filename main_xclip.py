@@ -103,7 +103,14 @@ def get_args(description='X-CLIP on Retrieval Task'):
                         help="choice a similarity header.")
 
     parser.add_argument("--pretrained_clip_name", default="ViT-B/32", type=str, help="Choose a CLIP version")
+    
+    parser.add_argument('--manipulation', type=str,help="type of manipulation")
+    parser.add_argument('--scale', type=str,help="scale of manipulation")
+    parser.add_argument('--dataset_ckpt', type=str,help="checkpoint of dataset")	
 
+    parser.add_argument('--train_file', type=str,help="train file")
+    parser.add_argument('--val_file', type=str,help="val file")
+    parser.add_argument('--test_file', type=str,help="test file")
     args = parser.parse_args()
 
     if args.sim_header == "tightTransf":
@@ -351,6 +358,7 @@ def eval_epoch(args, model, test_dataloader, device, n_gpu):
     with torch.no_grad():
         batch_list_t = []
         batch_list_v = []
+        batch_list_v_save = []
         batch_sequence_output_list, batch_visual_output_list = [], []
         batch_seq_features_list = []
         total_video_num = 0
@@ -387,9 +395,45 @@ def eval_epoch(args, model, test_dataloader, device, n_gpu):
                 batch_list_t.append((input_mask, segment_ids,))
                 batch_visual_output_list.append(visual_output)
                 batch_list_v.append((video_mask,))
-
+                batch_list_v_save.append(video_mask)
             print("{}/{}\r".format(bid, len(test_dataloader)), end="")
-
+        
+        batch_sequence_output_list_save = torch.stack(tuple(batch_sequence_output_list), dim=0)
+        batch_visual_output_list_save = torch.stack(tuple(batch_visual_output_list), dim=0)
+        batch_list_v_save = torch.stack(tuple(batch_list_v_save), dim=0)
+        save_embedding_folder ='/home/wiss/zhang/nfs/video_prober/xclip/anetqa/'+args.manipulation
+        if not os.path.exists(save_embedding_folder):
+            os.makedirs(save_embedding_folder)
+        file_path = save_embedding_folder + "/batch_sequence_output_list.{}".format(args.seed)
+        #file_path = args.dataset_ckpt + "batch_sequence_output_list.{}".format(epoch)
+        torch.save(batch_sequence_output_list_save, os.path.join(args.output_dir,file_path))
+        file_path2 = save_embedding_folder + "/batch_visual_output_list.{}".format(args.seed)
+        torch.save(batch_visual_output_list_save, os.path.join(args.output_dir,file_path2))
+        file_path3 = save_embedding_folder + "/batch_list_v.{}".format(args.seed)
+        torch.save(batch_list_v_save, os.path.join(args.output_dir,file_path3))
+        #third print the size of the tensor
+        print("batch_sequence_output_list size: {}".format(batch_sequence_output_list_save.size()))
+        print("batch_visual_output_list size: {}".format(batch_visual_output_list_save.size()))
+        print("batch_list_v size: {}".format(batch_list_v_save.size()))
+        
+        
+        # ----------------------------
+        # calculate video representation if head is seqtrasformer
+        if args.sim_header == "seqTransf":
+            #remove all 1 dimension in the tensor
+            batch_sequence_output_list_save = torch.squeeze(batch_sequence_output_list_save)
+            batch_visual_output_list_save = torch.squeeze(batch_visual_output_list_save)
+            batch_list_v_save = torch.squeeze(batch_list_v_save)
+            #print the size of the tensor
+            print("batch_sequence_output_list size: {}".format(batch_sequence_output_list_save.size()))
+            print("batch_visual_output_list size: {}".format(batch_visual_output_list_save.size()))
+            print("batch_list_v size: {}".format(batch_list_v_save.size()))
+            video_representations = model._seqtransf(batch_sequence_output_list_save,batch_visual_output_list_save,batch_list_v_save)
+            file_path4 = save_embedding_folder + "/video_representations.{}".format(args.seed)
+            torch.save(video_representations, os.path.join(args.output_dir,file_path4))
+            print("video_representations size: {}".format(video_representations.size()))
+        
+        # ----------------------------
         # ----------------------------------
         # 2. calculate the similarity
         # ----------------------------------
